@@ -4,6 +4,7 @@
 .login {
   @include autoMargin;
   @include flexbox($justify: center, $direction: column, $items: center);
+  transition: all 0.1s;
 
   &-title {
     font-size: rem(37.897px);
@@ -15,6 +16,7 @@
   @include desktop {
     @include containerMax;
     width: 732px;
+    font-size: rem(16px);
 
     &-title {
       font-size: rem(38px);
@@ -24,6 +26,7 @@
   @include tablet {
     @include containerMax(768px);
     width: 416px;
+    font-size: rem(14px);
 
     &-title {
       font-size: rem(28px);
@@ -33,6 +36,8 @@
   @include mobile {
     @include containerMax(576px);
     width: 319px;
+    font-size: rem(13px);
+
     &-title {
       font-size: rem(16px);
     }

@@ -1,3 +1,70 @@
 @use "./../utils" as *;
 @use "./../components" as *;
 
+.appFooter {
+  color: $gray500;
+  transition: all 0.3s;
+
+  @include desktop {
+    @include containerMax(1920px);
+    padding: 100px 68px 140px 68px;
+    font-size: rem(16px);
+  }
+
+  @include tablet {
+    @include containerMax(768px);
+    padding: 70px 40px 100px 40px;
+    font-size: rem(14px);
+  }
+
+  @include mobile {
+    @include containerMax(567px);
+    padding: 52px 16px 82px 16px;
+    font-size: rem(13px);
+  }
+}
+
+.footer-wrap {
+  @include flexbox($direction: column, $items: flex-start);
+  row-gap: rem(27px);
+  width: 100%;
+}
+
+// 네비게이션
+.footer-nav {
+  @include flexbox($items: flex-start);
+  column-gap: rem(36px);
+  color: $gray200;
+  margin-top: rem(27px);
+
+  @include mobile {
+    @include flexbox($direction: column);
+    gap: rem(16px);
+  }
+}
+
+.nav__item {
+  display: block;
+  flex-basis: content;
+}
+
+// 사업자 정보
+.buisness-wrap {
+  @include flexbox($direction: column);
+  gap: 8px;
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.buisness-wrap > p > span {
+  padding-right: rem(12px);
+}
+
+.link {
+  &__inquiry, &__buisiness {
+    text-decoration: underline;
+  }
+}
+

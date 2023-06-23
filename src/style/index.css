@@ -482,12 +482,117 @@ legend {
   background-size: 100% auto;
 }
 
+.sns {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  column-gap: 0.5rem;
+}
+
+.youtube {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: url(./../../assets/icon/desktop/d_youtube.svg) no-repeat;
+}
+@media (min-width: 768px) {
+  .youtube {
+    width: 55px;
+    height: 55px;
+    background-position: -19px -113px;
+  }
+}
+@media (max-width: 767px) {
+  .youtube {
+    background-position: -20px -64px;
+  }
+}
+@media (max-width: 575px) {
+  .youtube {
+    background-position: -17px -18px;
+  }
+}
+
+.insta {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: url(./../../assets/icon/desktop/d_insta.svg) no-repeat;
+}
+@media (min-width: 768px) {
+  .insta {
+    width: 55px;
+    height: 55px;
+    background-position: -19px -113px;
+  }
+}
+@media (max-width: 767px) {
+  .insta {
+    background-position: -20px -64px;
+  }
+}
+@media (max-width: 575px) {
+  .insta {
+    background-position: -17px -18px;
+  }
+}
+
+.twitter {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: url(./../../assets/icon/desktop/d_twitter.svg) no-repeat;
+}
+@media (min-width: 768px) {
+  .twitter {
+    width: 55px;
+    height: 55px;
+    background-position: -19px -113px;
+  }
+}
+@media (max-width: 767px) {
+  .twitter {
+    background-position: -20px -64px;
+  }
+}
+@media (max-width: 575px) {
+  .twitter {
+    background-position: -17px -18px;
+  }
+}
+
+.facebook {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: url(./../../assets/icon/desktop/d_facebook.svg) no-repeat;
+}
+@media (min-width: 768px) {
+  .facebook {
+    width: 55px;
+    height: 55px;
+    background-position: -19px -113px;
+  }
+}
+@media (max-width: 767px) {
+  .facebook {
+    background-position: -20px -64px;
+  }
+}
+@media (max-width: 575px) {
+  .facebook {
+    background-position: -17px -18px;
+  }
+}
+
 .login {
   margin: 0 auto;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+  transition: all 0.1s;
 }
 .login-title {
   font-size: 2.3685625rem;
@@ -500,6 +605,7 @@ legend {
     max-width: 64rem;
     margin: 0 auto;
     width: 732px;
+    font-size: 1rem;
   }
   .login-title {
     font-size: 2.375rem;
@@ -510,6 +616,7 @@ legend {
     max-width: 48rem;
     margin: 0 auto;
     width: 416px;
+    font-size: 0.875rem;
   }
   .login-title {
     font-size: 1.75rem;
@@ -520,6 +627,7 @@ legend {
     max-width: 36rem;
     margin: 0 auto;
     width: 319px;
+    font-size: 0.8125rem;
   }
   .login-title {
     font-size: 1rem;
@@ -580,6 +688,89 @@ legend {
 }
 .signup__text {
   color: #6B6B6B;
+}
+
+.appFooter {
+  color: #6B6B6B;
+  transition: all 0.3s;
+}
+@media (min-width: 768px) {
+  .appFooter {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 100px 68px 140px 68px;
+    font-size: 1rem;
+  }
+}
+@media (max-width: 767px) {
+  .appFooter {
+    max-width: 48rem;
+    margin: 0 auto;
+    padding: 70px 40px 100px 40px;
+    font-size: 0.875rem;
+  }
+}
+@media (max-width: 575px) {
+  .appFooter {
+    max-width: 35.4375rem;
+    margin: 0 auto;
+    padding: 52px 16px 82px 16px;
+    font-size: 0.8125rem;
+  }
+}
+
+.footer-wrap {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  row-gap: 1.6875rem;
+  width: 100%;
+}
+
+.footer-nav {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  column-gap: 2.25rem;
+  color: #C4C4C4;
+  margin-top: 1.6875rem;
+}
+@media (max-width: 575px) {
+  .footer-nav {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 1rem;
+  }
+}
+
+.nav__item {
+  display: block;
+  flex-basis: content;
+}
+
+.buisness-wrap {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 8px;
+}
+@media (max-width: 575px) {
+  .buisness-wrap {
+    display: none;
+  }
+}
+
+.buisness-wrap > p > span {
+  padding-right: 0.75rem;
+}
+
+.link__inquiry, .link__buisiness {
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=index.css.map */

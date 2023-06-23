@@ -24,9 +24,6 @@
   }
 
   // input active
-  &__input:active + .icon-close {
-
-  }
   &__input:active::placeholder {
     color: $white;
   }
