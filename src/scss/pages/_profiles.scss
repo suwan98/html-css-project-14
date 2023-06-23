@@ -1,0 +1,55 @@
+@use '../utils' as *;
+@use '../base' as *;
+
+.profile__container {
+  background: $black;
+  height: 100vh;
+  font-size: 28px;
+  color: $gray300;
+  @include flexbox(column,$justify:center, $items:center);
+  // padding: 70px 0;
+}
+
+.profile {
+  height: 620px;
+  text-align: center;
+
+  &__title {
+    font-size: 80px;
+    color: $white;
+  }
+  &__subtitle {
+    font-size: 28px;
+    font-weight: 600;
+  }
+}
+
+// 프로필 이미지 
+.profile__list {
+  list-style-type: none;
+  @include  flexbox;
+  gap: 52px;
+
+  padding-top: 44px;
+  &__item {
+    @include flexbox(column);
+    text-align: center;
+    gap: 16px;
+  }
+}
+
+// 버튼
+
+.profile__btn {
+  background: transparent;
+  border-radius: 4px;
+  border: 1px solid $gray600;
+  color: $gray300;
+  
+  @include desktop{
+    width: 272px;
+    height: 86px;
+    margin-top: 66px;
+    
+  }
+}
