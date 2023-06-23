@@ -471,20 +471,8 @@ legend {
   }
 }
 
-.icon-close {
-  position: absolute;
-  min-width: 3rem;
-  height: 2rem;
-  border-radius: 100%;
-  background-image: url(./../../assets/icon/desktop/d_close.svg);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: 100% auto;
-}
-
 .icon-hide {
   position: absolute;
-  right: 0;
   min-width: 3rem;
   height: 2rem;
   border-radius: 100%;
@@ -492,11 +480,6 @@ legend {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 100% auto;
-}
-
-icon-hide.layout-lastright {
-  margin-left: auto;
-  margin-right: 2rem;
 }
 
 .login {
