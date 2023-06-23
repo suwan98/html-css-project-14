@@ -24,15 +24,14 @@
   }
 }
 
-.footer-wrap {
-  @include flexbox($direction: column, $items: flex-start);
+.footer-section {
+  @include flexbox($direction: column, $justify: flex-start);
   row-gap: rem(27px);
-  width: 100%;
 }
 
 // 네비게이션
 .footer-nav {
-  @include flexbox($items: flex-start);
+  @include flexbox($justify: flex-start);
   column-gap: rem(36px);
   color: $gray200;
   margin-top: rem(27px);
@@ -58,13 +57,14 @@
   }
 }
 
-.buisness-wrap > p > span {
+.buisness-wrap>p>span {
   padding-right: rem(12px);
 }
 
 .link {
-  &__inquiry, &__buisiness {
+
+  &__inquiry,
+  &__buisiness {
     text-decoration: underline;
   }
 }
-

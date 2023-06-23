@@ -2,6 +2,7 @@
 @use "./../components" as *;
 
 .login {
+  padding-top: rem(70px);
   @include autoMargin;
   @include flexbox($justify: center, $direction: column, $items: center);
   transition: all 0.1s;
@@ -71,14 +72,15 @@
     background: url(./../../assets/icon/desktop/d_check_red.svg) no-repeat;
     padding-left: rem(24px);
     background-size: contain;
+    color: $white;
   }
 
   &__label {
-    color: $gray500;
-    padding-left: rem(24px);
     background: url(./../../assets/icon/desktop/d_check.svg) no-repeat;
+    padding-left: rem(24px);
     background-position: left;
     background-size: contain;
+    color: $gray500;
   }
 }
 
