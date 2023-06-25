@@ -15,7 +15,7 @@
   }
 
   @include desktop {
-    @include containerMax;
+    @include containerMax(1920px);
     width: 732px;
     font-size: rem(16px);
 
@@ -25,7 +25,7 @@
   }
 
   @include tablet {
-    @include containerMax(768px);
+    @include containerMax(1280px);
     width: 416px;
     font-size: rem(14px);
 
@@ -35,7 +35,7 @@
   }
 
   @include mobile {
-    @include containerMax(576px);
+    @include containerMax(768px);
     width: 319px;
     font-size: rem(13px);
 

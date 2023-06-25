@@ -12,13 +12,13 @@
   }
 
   @include tablet {
-    @include containerMax(768px);
+    @include containerMax(1280px);
     padding: 70px 40px 100px 40px;
     font-size: rem(14px);
   }
 
   @include mobile {
-    @include containerMax(567px);
+    @include containerMax(768px);
     padding: 52px 16px 82px 16px;
     font-size: rem(13px);
   }
@@ -44,7 +44,9 @@
 
 .nav__item {
   display: block;
-  flex-basis: content;
+  // flex-basis: content;
+  flex-grow: 0;
+  flex-shrink: 0;
 }
 
 // 사업자 정보
