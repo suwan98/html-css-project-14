@@ -4,6 +4,9 @@
 $rootUnit: 16px !default;
 // $rootUnit: 16px;
 
+// 스크롤바 기본 width --------------------------------------------------------------- /
+$scrollbar-width: 17px;
+
 // 단위 제거 함수 ------------------------------------------------------------------ /
 @function removeUnit($value) {
   // @return ($value / ($value * 0 + 1));
