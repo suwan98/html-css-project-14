@@ -641,7 +641,7 @@ legend {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  transition: all 0.1s;
+  transition: all 0.3s;
 }
 .login-title {
   font-size: 2.3685625rem;
@@ -749,6 +749,7 @@ legend {
   z-index: 200;
   width: calc(100vw - 17px);
   color: #C4C4C4;
+  transition: all 0.3s;
 }
 @media (min-width: 1280px) {
   .appHeader {

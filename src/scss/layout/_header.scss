@@ -7,6 +7,7 @@
   z-index: 200;
   width: calc(100vw - $scrollbar-width);
   color: $gray200;
+  transition: all 0.3s;
 
   @include desktop {
     @include containerMax(1920px);
@@ -136,7 +137,6 @@
     background: url(./../../assets/icon/tablet/t_para_hover.svg) no-repeat;
   }
 }
-
 
 // aside 그룹 (검색, 마이페이지)
 .menu__mypage {

@@ -5,7 +5,7 @@
   padding-top: rem(170px);
   @include autoMargin;
   @include flexbox($justify: center, $direction: column, $items: center);
-  transition: all 0.1s;
+  transition: all 0.3s;
 
   &-title {
     font-size: rem(37.897px);
