@@ -3,6 +3,7 @@
 // Breakpoints
 // map type
 $breakpoints: (
+  xs: 320px,
   sm: 576px,
   md: 768px,
   lg: 992px,
@@ -58,19 +59,22 @@ $breakpoints: (
 }
 
 // 미디어 쿼리 중단점 (Breakpoints) --------------------------------------------------------------- /
-$break1: 768px;
-$break2: 576px;
+$break1: 1280px;
+$break2: 768px;
 
+// 768px ~ 320px
 @mixin mobile {
   @media (max-width: #{$break2 - 1}) {
     @content;
   }
 }
+// 1280px ~ 768px
 @mixin tablet {
   @media (min-width:#{$break2}) and (max-width: #{$break1 - 1}) {
     @content;
   }
 }
+// 1920px ~ 1280px
 @mixin desktop {
   @media (min-width: #{$break1}) {
     @content;
