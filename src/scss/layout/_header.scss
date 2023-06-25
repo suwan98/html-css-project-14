@@ -1,3 +1,212 @@
 @use "./../utils" as *;
 @use "./../components" as *;
 
+.appHeader {
+  @include flexbox($items: center);
+  position: fixed;
+  z-index: 200;
+  width: calc(100vw - $scrollbar-width);
+  color: $gray200;
+
+  @include desktop {
+    @include containerMax(1920px);
+    @include paddingX(70px);
+    height: rem(100px);
+    column-gap: rem(52px);
+  }
+
+  @include tablet {
+    @include containerMax(1280px);
+    @include paddingX(40px);
+    height: rem(56px);
+    column-gap: rem(28px);
+
+  }
+
+  @include mobile {
+    @include containerMax(768px);
+    @include paddingX(16px);
+    height: rem(38px);
+  }
+}
+
+// 헤더 그라디언트
+.appHeader::before {
+  position: absolute;
+  content: '';
+  z-index: -1;
+  top: -1px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  backdrop-filter: blur(0px);
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+  transition: backdrop-filter 0.3s linear, background-color 0.3s linear;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+// 로고
+.logo {
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+@include desktop {
+  .logo {
+    width: rem(132px);
+    height: rem(42px);
+
+    &__link {
+      display: block;
+      height: 100%;
+      background: url(./../../assets/icon/desktop/d_tving.svg) no-repeat;
+    }
+  }
+}
+
+@include tablet {
+  .logo {
+    width: rem(77px);
+    height: rem(24px);
+
+    &__link {
+      display: block;
+      height: 100%;
+      background: url(./../../assets/icon/tablet/t_tving.svg) no-repeat;
+    }
+  }
+}
+
+@include mobile {
+  .logo {
+    width: rem(46px);
+    height: rem(15px);
+
+    &__link {
+      display: block;
+      height: 100%;
+      background: url(./../../assets/icon/mobile/m_tving.svg) no-repeat;
+    }
+  }
+}
+
+// 헤더 default 타입
+// 헤더 메뉴
+.menu {
+  flex-grow: 1; // 로고, 검색 버튼 제외한 자리 전부 차지
+  @include flexbox($items: center);
+  column-gap: rem(52px);
+
+  @include desktop {
+    &__paramount {
+      width: rem(112px);
+      height: rem(34px);
+      background: url(./../../assets/icon/desktop/d_para.svg) no-repeat;
+    }
+  }
+
+  @include tablet {
+    &__paramount {
+      width: rem(65px);
+      height: rem(20px);
+      background: url(./../../assets/icon/tablet/t_para.svg) no-repeat;
+    }
+  }
+
+  @include mobile {
+    visibility: hidden;
+  }
+
+  :hover {
+    color: $white;
+  }
+}
+
+// 메뉴 paramount hover event
+.menu__paramount:hover {
+  @include desktop {
+    width: rem(112px);
+    height: rem(34px);
+    background: url(./../../assets/icon/desktop/d_para_hover.svg) no-repeat;
+  }
+
+  @include tablet {
+    width: rem(65px);
+    height: rem(20px);
+    background: url(./../../assets/icon/tablet/t_para_hover.svg) no-repeat;
+  }
+}
+
+
+// aside 그룹 (검색, 마이페이지)
+.menu__mypage {
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.button {
+  &--search {
+    @include desktop {
+      width: rem(40px);
+      height: rem(40px);
+      background: url(./../../assets/icon/desktop/d_search.svg) no-repeat;
+      margin-right: rem(40px);
+    }
+
+    @include tablet {
+      width: rem(24px);
+      height: rem(24px);
+      background: url(./../../assets/icon/tablet/t_search.svg) no-repeat;
+      margin-right: rem(24px);
+    }
+
+    @include mobile {
+      width: rem(18px);
+      height: rem(18px);
+      background: url(./../../assets/icon/mobile/m_search.svg) no-repeat;
+      margin-right: rem(12px);
+    }
+  }
+  &--search:hover {
+    @include desktop {
+      width: rem(40px);
+      height: rem(40px);
+      background: url(./../../assets/icon/desktop/d_search_hover.svg) no-repeat;
+      margin-right: rem(40px);
+    }
+
+    @include tablet {
+      width: rem(24px);
+      height: rem(24px);
+      background: url(./../../assets/icon/tablet/t_search_hover.svg) no-repeat;
+      margin-right: rem(24px);
+    }
+
+    @include mobile {
+      width: rem(18px);
+      height: rem(18px);
+      background: url(./../../assets/icon/mobile/m_search_hover.svg) no-repeat;
+      margin-right: rem(12px);
+    }
+  }
+
+  &--profile {
+    @include desktop {
+      width: rem(40px);
+      height: rem(40px);
+      background: url(./../../assets/icon/desktop/d_profile.svg) no-repeat;
+    }
+
+    @include tablet {
+      width: rem(24px);
+      height: rem(24px);
+      background: url(./../../assets/icon/tablet/t_profile.svg) no-repeat;
+    }
+
+    @include mobile {
+      width: rem(18px);
+      height: rem(18px);
+      background: url(./../../assets/icon/mobile/m_profile.svg) no-repeat;
+    }
+  }
+}

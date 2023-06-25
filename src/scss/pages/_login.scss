@@ -2,7 +2,7 @@
 @use "./../components" as *;
 
 .login {
-  padding-top: rem(70px);
+  padding-top: rem(170px);
   @include autoMargin;
   @include flexbox($justify: center, $direction: column, $items: center);
   transition: all 0.1s;
