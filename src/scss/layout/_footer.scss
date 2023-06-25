@@ -44,7 +44,6 @@
 
 .nav__item {
   display: block;
-  // flex-basis: content;
   flex-grow: 0;
   flex-shrink: 0;
 }
@@ -64,7 +63,6 @@
 }
 
 .link {
-
   &__inquiry,
   &__buisiness {
     text-decoration: underline;
