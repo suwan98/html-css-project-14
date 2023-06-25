@@ -1,0 +1,91 @@
+@use "./../utils" as *;
+@use "./../components" as *;
+
+.scroll__section_0 {
+  @include flexbox($direction: column, $justify: center);
+  height: 95vh;
+  max-height: 68vw;
+  width: 100%;
+  color: $white;
+
+  @include desktop {
+    @include containerMax(1920px);
+    background-image:
+      url(./../../assets/images/figma-desktop/gradation-img.png),
+      url(./../../assets/images/figma-desktop/background-img.png);
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom, bottom;
+    // background-size: cover;
+  }
+
+  @include tablet {
+    @include containerMax(1280px);
+    background-image:
+      url(./../../assets/images/tablet/gradation-img.png),
+      url(./../../assets/images/tablet/background-img.png);
+      background-repeat: no-repeat, no-repeat;
+      background-position: bottom,bottom;
+      background-size: cover;
+  }
+
+  @include mobile {
+    @include containerMax(768px);
+    background-image:
+      url(./../../assets/images/figma-mobile/gradation-img.png),
+      url(./../../assets/images/figma-mobile/background-img.png);
+      background-repeat: no-repeat, no-repeat;
+      background-position: bottom,bottom;
+      background-size: cover;
+  }
+}
+
+.introduction-wrap {
+  padding-top: rem(160px);
+  @include flexbox($direction: column, $justify: center, $items: center);
+  line-height: 150%;
+
+  @include desktop {
+    > p {
+      font-size: rem(40px);
+      font-weight: 700;
+      line-height: 140%;
+    }
+
+    .text__signup {
+      color: $gray400;
+      font-size: rem(20px);
+      font-weight: 600;
+      line-height: 160%;
+    }
+  }
+
+  @include tablet {
+    > p {
+      font-size: rem(21px);
+      font-weight: 700;
+      line-height: 140%;
+    }
+
+    .text__signup {
+      color: $gray400;
+      font-size: rem(12px);
+      font-weight: 600;
+      line-height: 160%;
+    }
+  }
+
+  @include mobile {
+    > p {
+      font-size: rem(16px);
+      font-weight: 700;
+      line-height: 140%;
+    }
+
+    .text__signup {
+      color: $gray400;
+      font-size: rem(12px);
+      font-weight: 600;
+      line-height: 160%;
+    }
+  }
+}

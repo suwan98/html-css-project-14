@@ -409,12 +409,54 @@ legend {
 .button--no-border:hover {
   color: #FFFFFF;
 }
+.button--meet {
+  margin-top: 3.75rem;
+  border-radius: 4px;
+  color: #FFFFFF;
+  background: #E93945;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  line-height: 150%;
+}
+.button--meet-image {
+  background-size: cover;
+}
+@media (min-width: 1280px) {
+  .button--meet-image {
+    width: 3.9375rem;
+    height: 4.1875rem;
+    background: url(./../../assets/icon/desktop/d_simbol.svg) no-repeat;
+  }
+}
+@media (max-width: 1279px) {
+  .button--meet-image {
+    width: 2.25rem;
+    height: 3rem;
+    background: url(./../../assets/icon/tablet/t_simbol.svg) no-repeat;
+  }
+}
+@media (max-width: 767px) {
+  .button--meet-image {
+    width: 1.625rem;
+    height: 2.125rem;
+    background: url(./../../assets/icon/mobile/m_simbol.svg) no-repeat;
+  }
+}
 @media (min-width: 1280px) {
   .button--login {
     width: 45.75rem;
   }
   .button--ok {
     width: 45.75rem;
+  }
+  .button--meet {
+    width: 27.125rem;
+    height: 4.25rem;
+    padding: 8px 64px 8px 8px;
+    font-size: 1.25rem;
   }
 }
 @media (max-width: 1279px) {
@@ -424,6 +466,12 @@ legend {
   .button--ok {
     width: 26rem;
   }
+  .button--meet {
+    width: 17.6875rem;
+    height: 3rem;
+    padding: 0px 44px 0px 8px;
+    font-size: 1rem;
+  }
 }
 @media (max-width: 767px) {
   .button--login {
@@ -431,6 +479,12 @@ legend {
   }
   .button--ok {
     width: 18rem;
+  }
+  .button--meet {
+    width: 11.75rem;
+    height: 2.125rem;
+    padding: 0px 16px 0px 8px;
+    font-size: 0.75rem;
   }
 }
 
@@ -644,7 +698,7 @@ legend {
   transition: all 0.3s;
 }
 .login-title {
-  font-size: 2.3685625rem;
+  font-size: 2.3125rem;
   font-weight: 700;
   line-height: 140%;
   color: #FFFFFF;
@@ -738,6 +792,94 @@ legend {
 }
 .signup__text {
   color: #6B6B6B;
+}
+
+.scroll__section_0 {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: stretch;
+  height: 95vh;
+  max-height: 68vw;
+  width: 100%;
+  color: #FFFFFF;
+}
+@media (min-width: 1280px) {
+  .scroll__section_0 {
+    max-width: 120rem;
+    margin: 0 auto;
+    background-image: url(./../../assets/images/figma-desktop/gradation-img.png), url(./../../assets/images/figma-desktop/background-img.png);
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom, bottom;
+  }
+}
+@media (max-width: 1279px) {
+  .scroll__section_0 {
+    max-width: 80rem;
+    margin: 0 auto;
+    background-image: url(./../../assets/images/tablet/gradation-img.png), url(./../../assets/images/tablet/background-img.png);
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom, bottom;
+    background-size: cover;
+  }
+}
+@media (max-width: 767px) {
+  .scroll__section_0 {
+    max-width: 48rem;
+    margin: 0 auto;
+    background-image: url(./../../assets/images/figma-mobile/gradation-img.png), url(./../../assets/images/figma-mobile/background-img.png);
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom, bottom;
+    background-size: cover;
+  }
+}
+
+.introduction-wrap {
+  padding-top: 10rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  line-height: 150%;
+}
+@media (min-width: 1280px) {
+  .introduction-wrap > p {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 140%;
+  }
+  .introduction-wrap .text__signup {
+    color: #898989;
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 160%;
+  }
+}
+@media (max-width: 1279px) {
+  .introduction-wrap > p {
+    font-size: 1.3125rem;
+    font-weight: 700;
+    line-height: 140%;
+  }
+  .introduction-wrap .text__signup {
+    color: #898989;
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 160%;
+  }
+}
+@media (max-width: 767px) {
+  .introduction-wrap > p {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 140%;
+  }
+  .introduction-wrap .text__signup {
+    color: #898989;
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 160%;
+  }
 }
 
 .appHeader {
