@@ -5,10 +5,11 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>OttTaing</title>
+  <title>TAING</title>
+  <link href="./assets/favicon.ico" rel="shortcut icon" type="image/x-icon">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
-  <link rel="stylesheet" as="style" crossorigin
+  integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+  <link rel="preload" as="style" crossorigin
     href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.7/dist/web/static/pretendard.css" />
   <link rel="stylesheet" href="./../style/index.css" />
 </head>
@@ -35,6 +36,7 @@
   </header>
 
   <main class="onboading">
+    <!-- 온보딩 첫번째 섹션 - 시작 -->
     <section class="scroll__section_0">
       <div class="intro__section_0">
         <p>티빙 오리지널 콘텐츠</p>
@@ -42,13 +44,14 @@
         <p>재미를 플레이해보세요.</p>
         <p class="text__signup">간편하게 가입하고, 원하실 때 해지할 수 있어요.</p>
 
-        <button type="button" class="button button--meet">
+        <button type="button" class="button button--meet" onclick="location.href = './views/login.html'">
           <span class="button--meet-image"></span>
           새로워진 티빙을 만나보세요!
         </button>
       </div>
     </section>
 
+    <!-- 온보딩 두번째 섹션 - 티빙 오리지널 컨텐츠 -->
     <section class="scroll__section_1">
       <div class="intro__section intro__section_1">
         <p class="intro__title">티빙에만 있는 재미</p>
@@ -58,14 +61,23 @@
 
       <div class="image__section_1">
         <div class="slide__container_1">
-          <div class="slide__image1"><div class="slide__image__img1"></div></div>
-          <div class="slide__image1"><div class="slide__image__img2"></div></div>
-          <div class="slide__image1"><div class="slide__image__img3"></div></div>
-          <div class="slide__image1"><div class="slide__image__img4"></div></div>
+          <div class="slide__image1">
+            <div class="slide__image__img1" aria-label="러브캐처"></div>
+          </div>
+          <div class="slide__image1">
+            <div class="slide__image__img2" aria-label="보물찾기"></div>
+          </div>
+          <div class="slide__image1">
+            <div class="slide__image__img3" aria-label="푸드크로니클, 술꾼도시여자들"></div>
+          </div>
+          <div class="slide__image1">
+            <div class="slide__image__img4" aria-label="몸값, 아일랜드"></div>
+          </div>
         </div>
       </div>
     </section>
 
+    <!-- 온보딩 세번째 섹션 - 티빙 보고싶은 컨텐츠 -->
     <section class="scroll__section_2">
       <div class="intro__section intro__section_2">
         <p class="intro__title">내가 찾던 재미</p>
@@ -75,29 +87,50 @@
 
       <div class="image__section_2">
         <div class="slide__container_2">
-          <div class="slide__image2"><div class="slide__image__img6"></div></div>
-          <div class="slide__image2"><div class="slide__image__img5"></div></div>
-          <div class="slide__image2"><div class="slide__image__img9"></div></div>
-          <div class="slide__image2"><div class="slide__image__img8"></div></div>
-          <div class="slide__image2"><div class="slide__image__img7"></div></div>
+          <div class="slide__image2">
+            <div class="slide__image__img5" aria-label="슈룹"></div>
+          </div>
+          <div class="slide__image2">
+            <div class="slide__image__img6" aria-label="렛미인"></div>
+          </div>
+          <div class="slide__image2">
+            <div class="slide__image__img7" aria-label="연예인"></div>
+          </div>
+          <div class="slide__image2">
+            <div class="slide__image__img8" aria-label="푸드크로니클"></div>
+          </div>
+          <div class="slide__image2">
+            <div class="slide__image__img9" aria-label="유퀴즈"></div>
+          </div>
         </div>
       </div>
       <div class="image__section_3">
         <div class="slide__container_3">
-          <div class="slide__image2"><div class="slide__image__img9"></div></div>
-          <div class="slide__image2"><div class="slide__image__img6"></div></div>
-          <div class="slide__image2"><div class="slide__image__img8"></div></div>
-          <div class="slide__image2"><div class="slide__image__img7"></div></div>
-          <div class="slide__image2"><div class="slide__image__img5"></div></div>
+          <div class="slide__image2">
+            <div class="slide__image__img5" aria-label="슈룹"></div>
+          </div>
+          <div class="slide__image2">
+            <div class="slide__image__img6" aria-label="렛미인"></div>
+          </div>
+          <div class="slide__image2">
+            <div class="slide__image__img7" aria-label="연예인"></div>
+          </div>
+          <div class="slide__image2">
+            <div class="slide__image__img8" aria-label="푸드크로니클"></div>
+          </div>
+          <div class="slide__image2">
+            <div class="slide__image__img9" aria-label="유퀴즈"></div>
+          </div>
         </div>
       </div>
     </section>
 
+    <!-- 온보딩 네번째 섹션 - 마지막 -->
     <section class="scroll__section_3">
       <div class="intro__section intro__section_3">
         <h2 class="onboading__logo"></h2>
         <p class="onboading__title">지금 시작해보세요</p>
-        <button type="button" class="button button--meet">
+        <button type="button" class="button button--meet" onclick="location.href = './views/login.html'">
           <span class="button--meet-image"></span>
           새로워진 티빙을 만나보세요!
         </button>
