@@ -1,0 +1,47 @@
+@use "./../utils" as *;
+
+// 아이콘 + 텍스트로 구성된 메뉴
+.menu__live::before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-55%);
+
+  @include desktop {
+    width: rem(34px);
+    height: rem(34px);
+    background: url(./../../assets/icon/desktop/d_live.svg) no-repeat;
+  }
+
+  @include tablet {
+    width: rem(20px);
+    height: rem(20px);
+    background: url(./../../assets/icon/tablet/t_live.svg) no-repeat;
+  }
+}
+
+// menu nav hover event
+.menu__live:hover::before {
+  @include desktop {
+    width: rem(34px);
+    height: rem(34px);
+    background: url(./../../assets/icon/desktop/d_live_hover.svg) no-repeat;
+  }
+
+  @include tablet {
+    width: rem(20px);
+    height: rem(20px);
+    background: url(./../../assets/icon/tablet/t_live_hover.svg) no-repeat;
+  }
+}
+
+.menu__text {
+  @include desktop {
+    margin-left: rem(44px);
+  }
+
+  @include tablet {
+    margin-left: rem(30px);
+  }
+}
