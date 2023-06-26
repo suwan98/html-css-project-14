@@ -1,24 +1,24 @@
-@use '../base' as *;
 @use '../utils' as *;
 
-  .regist__container {
-  background: $black;
-  width: 100%;
-  height: 100%;
-
+.regist__container {
+  padding-top: rem(70px);
   @include flexbox(column,$justify:center, $items:center);
-  padding: 70px 0;
   color: $gray500;
-  font-size: 1.167rem;
-
-  @include  mobile{
-    font-size: 0.75rem;
+  
+  @include desktop {
+    @include containerMax(1920px);
+    font-size: rem(21px);
   }
 
   @include tablet {
-    font-size: 0.75rem;
+    @include containerMax(1280px);
+    font-size: rem(12px);
   }
 
+  @include  mobile{
+    @include containerMax(768px);
+    font-size: rem(12px);
+  }
 
 }
 
@@ -28,7 +28,7 @@
   min-width: 288px;
   }
   @include tablet {
-    max-width: 416px;
+    max-width: rem(416px);
   }
   
   @include desktop {
@@ -39,35 +39,36 @@
 .join__title {
   text-align: center;
   color: $white;
+  font-weight: 700;
   
-  @include mobile{
-    font-size: 1rem;
-    margin-bottom: 1rem;
+  @include desktop{
+    font-size: 2.5rem;
+    margin-bottom: rem(28px);
   }
   
   @include tablet {
     font-size: 28px;
-    margin-bottom: 8px;
+    margin-bottom: rem(8px);
+  }
+  @include mobile{
+    font-size: rem(16px);
+    margin-bottom: rem(16px);
   }
   
-  @include desktop{
-    font-size: 2.5rem;
-    margin-bottom: 28px;
-  }
+  
 }
 
 .join__subtitle {
 color: #898989;
   text-align: center;
   font-weight: 600;
-  font-size: 1.677rem;
+  font-size: rem(28px);
 
   @include mobile{
-    font-size: 0.75rem;
     text-align: start;
   }
   @include tablet{
-    font-size: 1rem;
+    font-size: rem(16px);
   }
 }
 
@@ -83,7 +84,10 @@ color: #898989;
 }
 
 .join__item {
-  // width: 100%;
+  &_text {
+    margin-top: rem(4px);
+  }
+
   &_input {
     width: 100%;
     height: 96px;
@@ -105,24 +109,13 @@ color: #898989;
 
 }
 
-// 이용약관 체크박스
-.join__checkList{
-  margin-bottom: 24px;
-
-  &_all{
-      padding: 16px 0;
-
-    @include desktop {
-      padding: 24px 0;
-    }
-  }
-}
 
 .join__checkItem,
 .join__checkItem_2{
   margin-top: 8px;
   @include flexbox;
   gap: 12px;
+  appearance: none;
 }
 
 .join__submit {
@@ -142,7 +135,50 @@ color: #898989;
   }
 }
 
-// 체크리스트
+
+
+// 이용약관 체크박스
+.join__check{
+  margin-bottom: 24px;
+
+  &__checkItem {
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    position: relative;
+  }
+
+
+//체크박스 커스텀
+  &box {
+  width: rem(26px);
+  height: rem(26px);
+  appearance: none;
+  @include posCenterY;
+
+  :checked + label{
+    background: url(/src/assets/icon/desktop/d_check.svg) no-repeat left;
+    background-size: contain;
+  }
+} 
+
+  &_label {
+    background: url(./../../assets/icon/desktop/d_check2.svg) no-repeat;
+    padding-left: rem(25px);
+    background-size: contain;
+    color: $gray500;
+
+    &_all {
+      background: url(./../../assets/icon/desktop/d_check.svg) no-repeat left;
+      background-size: contain;
+      padding-left: rem(25px);
+      
+      margin: rem(24px) 0;
+    }
+  }
+  
+}
+// 선택 체크리스트
 .join__checkList_2 {
-    padding-left: 36px;
+  padding-left: 36px;
 }

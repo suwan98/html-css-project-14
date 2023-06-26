@@ -17,30 +17,61 @@
             <fieldset>
               <legend class="a11yHidden">회원가입</legend>
               <ul class="join__list">
-                <li class="join__item"><input type="text" placeholder="아이디" class="join__item_input"/><span class="join__minitext">영문 또는 영문, 숫자 조합 6~12자리</span></li>
-                <li class="join__item"><input type="password" placeholder="비밀번호" class="join__item_input"/><span class="join__minitext">영문, 숫자, 특수문자(~!@#$%^&*) 조합 8~15자리</span></li>
-                <li class="join__item"><input type="password" placeholder="비밀번호 확인" class="join__item_input"/></li>
-                <li class="join__item"><input type="email" placeholder="이메일" class="join__item_input"/></li>
+                <li class="join__item">
+                  <input type="text" placeholder="아이디" class="join__item_input"/><span class="join__item_text">영문 또는 영문, 숫자 조합 6~12자리</span>
+                </li>
+                <li class="join__item">
+                  <input type="password" placeholder="비밀번호" class="join__item_input"/><span class="join__item_text">영문, 숫자, 특수문자(~!@#$%^&*) 조합 8~15자리</span>
+                
+                </li>
+                <li class="join__item">
+                  <input type="password" placeholder="비밀번호 확인" class="join__item_input"/>
+                </li>
+                <li class="join__item">
+                  <input type="email" placeholder="이메일" class="join__item_input"/>
+                </li>
               </ul>
-              <ul class="join__checkList">
-                <li class="join__checkList_all"><label class="join__checkItem"><input type="checkbox" name="checkAll" id="checkAll" />모두 동의합니다.</label></li>
-                <li ><label for="essential__age" class="join__checkItem"><input type="checkbox" name="essential__age" id="essential__age" />만 14세 이상입니다.</label></li>
-                <li><label class="join__checkItem"><input type="checkbox" name="essential__service" id="essential__service" />[필수] 서비스 이용약관 동의</label></li>
-                <li><label class="join__checkItem"><input type="checkbox" name="essential__privacy_info" id="essential__privacy_info" />[필수] 개인정보 수집 및 서비스 활용 동의</label></li>
-                <li><label class="join__checkItem"><input type="checkbox" name="essential__pageprivacy" id="essential__pageprivacy" />[필수] 채널 홈페이지 개인정보 제 3자 제공동의</label></li>
-                <li><label class="join__checkItem"><input type="checkbox" name="choice_privacy" id="choice_privacy" />[선택] 개인정보 제 3자 제공동의</label></li>
-                <li><label class="join__checkItem"><input type="checkbox" name="choice_service" id="choice_service" />[선택] 개인정보 수집 및 서비스 활용 동의</label>
+              <ul class="join__check">
+                <li class="join__check_all">
+                  <input type="checkbox" name="checkAll" id="checkAll"  class="join__checkbox"/>
+                  <label class="join__check_label_all join__checkItem">모두 동의합니다.</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="essential__age" id="essential__age"  class="join__checkbox"/>
+                  <label for="essential__age" class="join__checkItem join__check_label">만 14세 이상입니다.</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="essential__service" id="essential__service" class="join__checkbox"/>
+                  <label class="join__checkItem join__check_label">[필수] 개인정보 수집 및 서비스 활용 동의</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="essential__pageprivacy" id="essential__pageprivacy" class="join__checkbox"/>
+                  <label class="join__checkItem join__check_label">[필수] 채널 홈페이지 개인정보 제 3자 제공동의</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="choice_privacy" id="choice_privacy" class="join__checkbox"/>
+                  <label class="join__checkItem join__check_label">[선택] 개인정보 제 3자 제공동의</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="choice_service" id="choice_service" class="join__checkbox"/>
+                  <label class="join__checkItem join__check_label">[선택] 개인정보 수집 및 서비스 활용 동의</label>
                 </li>
                 <li>
                   <ul class="join__checkList_2">
-                    <li><label class="join__checkItem_2"><input type="checkbox" name="choice_sms" id="choice_sms" />[선택] 마케팅 정보 SMS 수신동의</label></li>
-                    <li><label class="join__checkItem_2"><input type="checkbox" name="choice_dlapdilf" id="choice_dlapdilf" />[선택] 마케팅 정보 dlapdlf수신동의</label></li>
+                    <li>
+                      <input type="checkbox" name="choice_sms" id="choice_sms" class="join__checkbox"/>
+                      <label class="join__checkItem_2 join__check_label">[선택] 마케팅 정보 SMS 수신동의</label>
+                    </li>
+                    <li>
+                      <input type="checkbox" name="choice_dlapdilf" id="choice_dlapdilf" class="join__checkbox"/>
+                      <label class="join__checkItem_2 join__check_label">[선택] 마케팅 정보 dlapdlf수신동의</label>
+                    </li>
                   </ul>
                 </li>
               </ul>
             </fieldset>
           </form>
-          <button class="join__submit">가입하기</button>
+          <button class="button join__submit">가입하기</button>
       </div>
     </section>
   </main>
