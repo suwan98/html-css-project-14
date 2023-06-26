@@ -377,6 +377,120 @@ legend {
   background: #FFFFFF;
 }
 
+.sns {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  column-gap: 0.5rem;
+}
+
+.youtube {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: url(./../../assets/icon/desktop/d_youtube.svg) no-repeat;
+}
+@media (min-width: 1280px) {
+  .youtube {
+    width: 55px;
+    height: 55px;
+    background-position: -19px -113px;
+  }
+}
+@media (max-width: 1279px) {
+  .youtube {
+    background-position: -20px -64px;
+  }
+}
+@media (max-width: 767px) {
+  .youtube {
+    background-position: -17px -18px;
+  }
+}
+
+.insta {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: url(./../../assets/icon/desktop/d_insta.svg) no-repeat;
+}
+@media (min-width: 1280px) {
+  .insta {
+    width: 55px;
+    height: 55px;
+    background-position: -19px -113px;
+  }
+}
+@media (max-width: 1279px) {
+  .insta {
+    background-position: -20px -64px;
+  }
+}
+@media (max-width: 767px) {
+  .insta {
+    background-position: -17px -18px;
+  }
+}
+
+.twitter {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: url(./../../assets/icon/desktop/d_twitter.svg) no-repeat;
+}
+@media (min-width: 1280px) {
+  .twitter {
+    width: 55px;
+    height: 55px;
+    background-position: -19px -113px;
+  }
+}
+@media (max-width: 1279px) {
+  .twitter {
+    background-position: -20px -64px;
+  }
+}
+@media (max-width: 767px) {
+  .twitter {
+    background-position: -17px -18px;
+  }
+}
+
+.facebook {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: url(./../../assets/icon/desktop/d_facebook.svg) no-repeat;
+}
+@media (min-width: 1280px) {
+  .facebook {
+    width: 55px;
+    height: 55px;
+    background-position: -19px -113px;
+  }
+}
+@media (max-width: 1279px) {
+  .facebook {
+    background-position: -20px -64px;
+  }
+}
+@media (max-width: 767px) {
+  .facebook {
+    background-position: -17px -18px;
+  }
+}
+
+.arrowRight::after {
+  content: "";
+  display: inline-block;
+  width: rem(70px);
+  height: rem(70px);
+  transform: rotate(45deg);
+  border-top: 0.1rem solid #333;
+  border-right: 0.1rem solid #333;
+}
+
 .appHeader {
   display: flex;
   flex-flow: row nowrap;
@@ -677,7 +791,6 @@ legend {
 
 .appMain .mainThumbnail {
   color: #FFFFFF;
-  position: relative;
 }
 .appMain .mainThumbnail__btn {
   color: #FFFFFF;
@@ -688,21 +801,23 @@ legend {
 }
 @media (min-width: 1280px) {
   .appMain .mainThumbnail {
+    position: relative;
     max-width: 120rem;
     margin: 0 auto;
+    padding-left: 4.375rem;
+    padding-right: 4.375rem;
     height: 53.4375rem;
     background: url(./../../assets/images/figma-desktop/d_banner-img.png);
   }
   .appMain .mainThumbnail .thumbnailWrapper {
     position: absolute;
+    bottom: 25%;
+    width: calc(100% - 140px);
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-start;
     align-items: stretch;
-    padding-left: 4.375rem;
-    padding-right: 4.375rem;
-    bottom: 23%;
-    width: 100%;
+    justify-content: flex-end;
   }
   .appMain .mainThumbnail__description {
     flex-grow: 1;
@@ -710,6 +825,65 @@ legend {
   .appMain .mainThumbnail__btn {
     width: 13.8125rem;
     flex-shrink: 0;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    cursor: pointer;
+  }
+  .appMain .mainThumbnail__btn:hover {
+    background: #898989;
+    transition: all 0.3s ease-in-out;
+    font-weight: 700;
+    border: 0;
+    border-radius: 4px;
+  }
+  .appMain .mainThumbnail__icon {
+    padding-top: 1.25rem;
+  }
+  .appMain .mainThumbnail__icon .pause {
+    padding-right: 1.25rem;
+  }
+  .appMain .mainThumbnail__icon .bullet {
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+  }
+}
+@media (max-width: 1279px) {
+  .appMain .mainThumbnail {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    position: relative;
+    width: 100%;
+    height: 21.375rem;
+    background: url(./../../assets/images/figma-tablet/t_banner-img.png);
+  }
+  .appMain .mainThumbnail .thumbnailWrapper {
+    position: absolute;
+    bottom: 12%;
+    width: calc(100% - 140px);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    justify-content: flex-end;
+  }
+  .appMain .mainThumbnail__description {
+    flex-grow: 1;
+  }
+  .appMain .mainThumbnail__btn {
+    width: 13.8125rem;
+    flex-shrink: 0;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    cursor: pointer;
+  }
+  .appMain .mainThumbnail__btn:hover {
+    background: #898989;
+    transition: all 0.3s ease-in-out;
+    font-weight: 700;
+    border: 0;
+    border-radius: 4px;
   }
   .appMain .mainThumbnail__icon {
     padding-top: 1.25rem;
@@ -770,6 +944,11 @@ legend {
     gap: 1rem;
   }
   .appMain .section1__image {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 22px;
     width: 15rem;
     height: 24.0625rem;
   }
@@ -823,14 +1002,93 @@ legend {
     margin-top: 0.5rem;
   }
 }
+@media (max-width: 1279px) {
+  .appMain .section1 {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+  .appMain .section1__title {
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+  }
+  .appMain .section1__imageList {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 1rem;
+  }
+  .appMain .section1__image {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 22px;
+    width: 8.125rem;
+    height: 13.25rem;
+  }
+  .appMain .section1__image1 {
+    background: url(./../../assets/images/figma-desktop/보물찾기1.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+  .appMain .section1__image2 {
+    background: url(./../../assets/images/figma-desktop/러브캐쳐\ \(2\).png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+  .appMain .section1__image3 {
+    background: url(./../../assets/images/figma-desktop/술꾼도시여자들1.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+  .appMain .section1__image4 {
+    background: url(./../../assets/images/figma-desktop/털사킹.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+  .appMain .section1__image5 {
+    background: url(./../../assets/images/figma-desktop/아무것도하고싶지않아.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+  .appMain .section1__image6 {
+    background: url(./../../assets/images/figma-desktop/블랙독\ 1.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+  .appMain .section1__image7 {
+    background: url(./../../assets/images/figma-desktop/우리들의블루스.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+  .appMain .section1__imageTitle {
+    display: inline-block;
+    color: #C4C4C4;
+    font-weight: 600;
+    font-size: 0.75rem;
+    margin-top: 0.5rem;
+  }
+}
+.appMain .section2 {
+  color: #FFFFFF;
+  background: #000000;
+}
 @media (min-width: 1280px) {
   .appMain .section2 {
     max-width: 120rem;
     margin: 0 auto;
     padding-left: 4.375rem;
     padding-right: 4.375rem;
-    color: #FFFFFF;
-    background: #000000;
   }
   .appMain .section2__imageList {
     display: flex;
@@ -869,8 +1127,14 @@ legend {
     height: 1.875rem;
     background: #c73e4e;
     text-align: center;
+    margin-top: 0.3125rem;
+    margin-left: 0.3125rem;
     padding-left: 0.5625rem;
     padding-right: 0.5625rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
     border-radius: 4px;
   }
   .appMain .section2__imageSubject {
@@ -889,18 +1153,99 @@ legend {
     color: #A6A6A6;
   }
 }
+@media (max-width: 1279px) {
+  .appMain .section2 {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+  .appMain .section2__imageList {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+  .appMain .section2__title {
+    font-weight: 700;
+  }
+  .appMain .section2__image {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    width: 14rem;
+    height: 7.875rem;
+  }
+  .appMain .section2__image1 {
+    background-image: url(./../../assets/images/figma-desktop/section2/d_jtbc-newsroom.png);
+  }
+  .appMain .section2__image2 {
+    background-image: url(./../../assets/images/figma-desktop/section2/d_section2-image2.png);
+  }
+  .appMain .section2__image3 {
+    background-image: url(./../../assets/images/figma-desktop/section2/d_section2-image3.png);
+  }
+  .appMain .section2__image4 {
+    background-image: url(./../../assets/images/figma-desktop/section2/d_section2-image4.png);
+  }
+  .appMain .section2__image5 {
+    background-image: url(./../../assets/images/figma-desktop/section2/d_section2-image5.png);
+  }
+  .appMain .section2__quickVODWrapper {
+    width: 3.5rem;
+    height: 1rem;
+    background: #c73e4e;
+    text-align: center;
+    font-size: 0.5625rem;
+    white-space: nowrap;
+    margin-top: 0.3125rem;
+    margin-left: 0.3125rem;
+    padding-left: 0.5625rem;
+    padding-right: 0.5625rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+  }
+  .appMain .section2__imageSubject {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 4px;
+  }
+  .appMain .section2__imageTitle {
+    margin-top: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+  .appMain .section2__imageSub {
+    color: #A6A6A6;
+  }
+}
+@media (max-width: 767px) {
+  .appMain .section2 {
+    max-width: 48rem;
+    margin: 0 auto;
+  }
+}
 .appMain .section3 {
   color: #FFFFFF;
   background: #000000;
-  padding-bottom: 2.25rem;
-  max-width: 120rem;
-  margin: 0 auto;
-  padding-left: 4.375rem;
-  padding-right: 4.375rem;
 }
 @media (min-width: 1280px) {
-  .appMain .section3__title {
+  .appMain .section3 {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding-left: 4.375rem;
+    padding-right: 4.375rem;
     padding-top: 2.25rem;
+    padding-bottom: 2.25rem;
+  }
+  .appMain .section3__title {
     padding-bottom: 0.75rem;
     font-size: 1.776875rem;
     font-weight: 700;
@@ -912,15 +1257,44 @@ legend {
     align-items: stretch;
     gap: 1rem;
   }
-  .appMain .section3__imageItem {
-    counter-reset: number 0;
+  .appMain .section3__imageList .rating {
+    display: inline-block;
+    font-style: italic;
+    padding-right: 0.625rem;
+    font-family: Noto Sans KR;
+    font-weight: 700;
+    color: #FFFFFF;
+    float: left;
+    padding-right: 1.5rem;
   }
+}
+@media (min-width: 1280px) and (max-width: 120rem) {
+  .appMain .section3__imageList .rating {
+    font-size: 4.375rem;
+  }
+}
+@media (min-width: 1280px) and (max-width: 80rem) {
+  .appMain .section3__imageList .rating {
+    font-size: 2.875rem;
+  }
+}
+@media (min-width: 1280px) and (max-width: 48rem) {
+  .appMain .section3__imageList .rating {
+    font-size: 12px;
+  }
+}
+@media (min-width: 1280px) {
   .appMain .section3__image {
     width: 15rem;
     height: 21.5625rem;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 1.5rem;
   }
   .appMain .section3__image1 {
     background-image: url(./../../assets/images/figma-desktop/재벌집\ 막내아들.png);
@@ -944,15 +1318,107 @@ legend {
     background-image: url(./../../assets/images/figma-desktop/러브캐쳐\ \(1\).png);
   }
   .appMain .section3__imageTitle {
-    display: inline-block;
+    display: block;
     margin-top: 1.125rem;
     font-size: 1.333rem;
     font-weight: 600;
     color: #C4C4C4;
+    text-transform: uppercase;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
-  .appMain .section3__imageTitle::before {
-    counter-increment: number 1;
-    content: counter(number);
+}
+@media (max-width: 1279px) {
+  .appMain .section3 {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    padding-top: 2.25rem;
+    padding-bottom: 1.75rem;
+  }
+  .appMain .section3__title {
+    padding-bottom: 0.5rem;
+    font-weight: 700;
+  }
+  .appMain .section3__imageList {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 1rem;
+  }
+  .appMain .section3__imageList .rating {
+    display: inline-block;
+    font-style: italic;
+    padding-right: 0.625rem;
+    font-family: Noto Sans KR;
+    font-weight: 700;
+    color: #FFFFFF;
+    float: left;
+    padding-right: 1.5rem;
+  }
+}
+@media (max-width: 1279px) and (max-width: 120rem) {
+  .appMain .section3__imageList .rating {
+    font-size: 4.375rem;
+  }
+}
+@media (max-width: 1279px) and (max-width: 80rem) {
+  .appMain .section3__imageList .rating {
+    font-size: 2.875rem;
+  }
+}
+@media (max-width: 1279px) and (max-width: 48rem) {
+  .appMain .section3__imageList .rating {
+    font-size: 12px;
+  }
+}
+@media (max-width: 1279px) {
+  .appMain .section3__image {
+    width: 8.125rem;
+    height: 11.8125rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 1.5rem;
+  }
+  .appMain .section3__image1 {
+    background-image: url(./../../assets/images/figma-desktop/재벌집\ 막내아들.png);
+  }
+  .appMain .section3__image2 {
+    background-image: url(./../../assets/images/figma-desktop/술꾼도시여자들1.png);
+  }
+  .appMain .section3__image3 {
+    background-image: url(./../../assets/images/figma-desktop/환혼.png);
+  }
+  .appMain .section3__image4 {
+    background-image: url(./../../assets/images/figma-desktop/캐나다체크인.png);
+  }
+  .appMain .section3__image5 {
+    background-image: url(./../../assets/images/figma-desktop/놀라운\ 토요일.png);
+  }
+  .appMain .section3__image6 {
+    background-image: url(./../../assets/images/figma-desktop/쇼미더머니.png);
+  }
+  .appMain .section3__image7 {
+    background-image: url(./../../assets/images/figma-desktop/러브캐쳐\ \(1\).png);
+  }
+  .appMain .section3__imageTitle {
+    display: block;
+    margin-top: 1.125rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #C4C4C4;
+    text-transform: uppercase;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
 }
 .appMain .section4 {
@@ -965,6 +1431,7 @@ legend {
     margin: 0 auto;
     padding-left: 4.375rem;
     padding-right: 4.375rem;
+    padding-bottom: 2rem;
   }
   .appMain .section4__title {
     font-size: 1.776875rem;
@@ -1001,23 +1468,142 @@ legend {
   .appMain .section4__image5 {
     background-image: url(./../../assets/images/figma-desktop/section4/d_section4-image5.png);
   }
-  .appMain .section4__summaryWrapper {
+  .appMain .section4__summaryWrapper .rating {
+    display: inline-block;
+    font-style: italic;
+    padding-right: 0.625rem;
+    font-family: Noto Sans KR;
+    font-weight: 700;
+    color: #FFFFFF;
+    float: left;
+  }
+}
+@media (min-width: 1280px) and (max-width: 120rem) {
+  .appMain .section4__summaryWrapper .rating {
+    font-size: 4.375rem;
+  }
+}
+@media (min-width: 1280px) and (max-width: 80rem) {
+  .appMain .section4__summaryWrapper .rating {
+    font-size: 2.875rem;
+  }
+}
+@media (min-width: 1280px) and (max-width: 48rem) {
+  .appMain .section4__summaryWrapper .rating {
+    font-size: 12px;
+  }
+}
+@media (min-width: 1280px) {
+  .appMain .section4__summary {
+    padding-top: 0.5rem;
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: stretch;
     gap: 0.5rem;
-    margin-bottom: 2rem;
   }
-  .appMain .section4__summaryWrapper .imageTitle {
+  .appMain .section4__summary .imageTitle {
     text-transform: uppercase;
   }
-  .appMain .section4__summaryWrapper .sub {
+  .appMain .section4__summary .sub {
     color: #A6A6A6;
   }
-  .appMain .section4__summaryWrapper .rating {
+  .appMain .section4__summary--rating {
     color: #6B6B6B;
   }
+}
+@media (max-width: 1279px) {
+  .appMain .section4 {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    padding-bottom: 1.75rem;
+  }
+  .appMain .section4__title {
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+  }
+  .appMain .section4__imageList {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 1rem;
+  }
+  .appMain .section4 .image {
+    width: 14.0625rem;
+    height: 12rem;
+    margin-bottom: 0.5rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+  .appMain .section4__image1 {
+    background-image: url(./../../assets/images/figma-desktop/JTBC.png);
+  }
+  .appMain .section4__image2 {
+    background-image: url(./../../assets/images/figma-desktop/section4/d_section4-image2.png);
+  }
+  .appMain .section4__image3 {
+    background-image: url(./../../assets/images/figma-desktop/section4/d_section4-image3.png);
+  }
+  .appMain .section4__image4 {
+    background-image: url(./../../assets/images/figma-desktop/section4/d_section4-image4.png);
+  }
+  .appMain .section4__image5 {
+    background-image: url(./../../assets/images/figma-desktop/section4/d_section4-image5.png);
+  }
+  .appMain .section4__summaryWrapper .rating {
+    display: inline-block;
+    font-style: italic;
+    padding-right: 0.625rem;
+    font-family: Noto Sans KR;
+    font-weight: 700;
+    color: #FFFFFF;
+    float: left;
+  }
+}
+@media (max-width: 1279px) and (max-width: 120rem) {
+  .appMain .section4__summaryWrapper .rating {
+    font-size: 4.375rem;
+  }
+}
+@media (max-width: 1279px) and (max-width: 80rem) {
+  .appMain .section4__summaryWrapper .rating {
+    font-size: 2.875rem;
+  }
+}
+@media (max-width: 1279px) and (max-width: 48rem) {
+  .appMain .section4__summaryWrapper .rating {
+    font-size: 12px;
+  }
+}
+@media (max-width: 1279px) {
+  .appMain .section4__summary {
+    padding-top: 0.25rem;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 0.25rem;
+  }
+  .appMain .section4__summary .imageTitle {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+  }
+  .appMain .section4__summary .sub {
+    color: #A6A6A6;
+    font-size: 0.75rem;
+  }
+  .appMain .section4__summary--rating {
+    color: #6B6B6B;
+    font-size: 0.75rem;
+  }
+}
+.appMain .section5 {
+  background: #000000;
+  color: #FFFFFF;
 }
 @media (min-width: 1280px) {
   .appMain .section5 {
@@ -1026,8 +1612,6 @@ legend {
     padding-left: 4.375rem;
     padding-right: 4.375rem;
     padding-bottom: 2.25rem;
-    background: #000000;
-    color: #FFFFFF;
   }
   .appMain .section5__title {
     font-size: 1.776875rem;
@@ -1071,6 +1655,58 @@ legend {
     background-image: url(./../../assets/images/figma-desktop/푸드크로니클.png);
   }
 }
+@media (max-width: 1279px) {
+  .appMain .section5 {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    padding-bottom: 1.75rem;
+  }
+  .appMain .section5__title {
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+  }
+  .appMain .section5__imageList {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 0.5rem;
+    overflow: hidden;
+  }
+  .appMain .section5 .image {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 10.5rem;
+    height: 21rem;
+  }
+  .appMain .section5__image1 {
+    background-image: url(./../../assets/images/figma-desktop/전체관람가.png);
+  }
+  .appMain .section5__image2 {
+    background-image: url(./../../assets/images/figma-desktop/러브캐쳐-1.png);
+  }
+  .appMain .section5__image3 {
+    background-image: url(./../../assets/images/figma-desktop/환승연애2.png);
+  }
+  .appMain .section5__image4 {
+    background-image: url(./../../assets/images/figma-desktop/몸값.png);
+  }
+  .appMain .section5__image5 {
+    background-image: url(./../../assets/images/figma-desktop/술꾼도시여자들.png);
+  }
+  .appMain .section5__image6 {
+    background-image: url(./../../assets/images/figma-desktop/괴이.png);
+  }
+  .appMain .section5__image7 {
+    background-image: url(./../../assets/images/figma-desktop/푸드크로니클.png);
+  }
+}
+.appMain .section6 {
+  background: #000000;
+}
 @media (min-width: 1280px) {
   .appMain .section6 {
     max-width: 120rem;
@@ -1078,7 +1714,6 @@ legend {
     padding-left: 4.375rem;
     padding-right: 4.375rem;
     padding-bottom: 2.25rem;
-    background: #000000;
   }
   .appMain .section6__image {
     width: 100%;
@@ -1090,6 +1725,30 @@ legend {
     background-image: url(./../../assets/images/figma-desktop/section6/d_section6-banner.png);
   }
 }
+@media (max-width: 1279px) {
+  .appMain .section6 {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    padding-bottom: 1.75rem;
+  }
+  .appMain .section6__image {
+    width: 100%;
+    padding-top: 1.75rem;
+    padding-bottom: 1.75rem;
+    padding-left: 2.4375rem;
+    padding-right: 2.4375rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-image: url(./../../assets/images/figma-desktop/section6/d_section6-banner.png);
+  }
+}
+.appMain .section7 {
+  background: #000000;
+  color: #FFFFFF;
+}
 @media (min-width: 1280px) {
   .appMain .section7 {
     max-width: 120rem;
@@ -1097,8 +1756,6 @@ legend {
     padding-left: 4.375rem;
     padding-right: 4.375rem;
     padding-bottom: 2.25rem;
-    background: #000000;
-    color: #FFFFFF;
   }
   .appMain .section7__title {
     font-size: 1.776875rem;
@@ -1139,6 +1796,14 @@ legend {
   }
   .appMain .section7__image6 {
     background-image: url("./../../assets/images/figma-desktop/이벤트6.png");
+  }
+}
+@media (max-width: 1279px) {
+  .appMain .section7 {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
   }
 }
 

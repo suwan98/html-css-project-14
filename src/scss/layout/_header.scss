@@ -8,7 +8,6 @@
   width: calc(100vw - $scrollbar-width);
   color: $gray200;
   transition: all 0.3s;
-
   @include desktop {
     @include containerMax(1920px);
     @include paddingX(70px);
@@ -19,7 +18,7 @@
   @include tablet {
     @include containerMax(1280px);
     @include paddingX(40px);
-    height: rem(56px);
+    height: rem(56px); 
     column-gap: rem(28px);
 
   }

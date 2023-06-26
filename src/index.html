@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style/index.css" />
+    <link rel="shortcut icon" href="./assets/icon/favicon/tiving.ico" type="image/x-icon" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -57,8 +58,8 @@
           </div>
           <button class="mainThumbnail__btn">자세히 보기</button>
         </div>
-        <div class="mainThumbnail__arrowRight"></div>
-        <div class="mainThumbnail__left"></div>
+        <div class="arrowLeft"></div>
+        <div class="arrowRight"></div>
       </section>
 
       <!--티빙에서 꼭 봐야하는 콘텐츠 (1번째 섹션)-->
@@ -66,15 +67,30 @@
         <h2 class="section1__title">티빙에서 꼭 봐야하는 콘텐츠</h2>
         <ul class="section1__imageList">
           <li class="section1__imageItem1">
-            <div class="section1__image1 section1__image"></div>
+            <div class="section1__image1 section1__image" aria-label="보물찾기">
+              <img
+                src="./assets/icon/desktop/d_thumnail-icon-original.png"
+                alt="Tving 오리지널"
+                class="tvingOriginalIcon" />
+            </div>
             <span class="section1__imageTitle">보물찾기</span>
           </li>
           <li class="section1__imageItem2">
-            <div class="section1__image2 section1__image"></div>
+            <div class="section1__image2 section1__image" aria-label="러브캐쳐 인 발리">
+              <img
+                src="./assets/icon/desktop/d_thumnail-icon-original.png"
+                alt="Tving 오리지널"
+                class="tvingOriginalIcon" />
+            </div>
             <span class="section1__imageTitle">러브캐쳐 인 발리</span>
           </li>
           <li class="section1__imageItem3">
-            <div class="section1__image3 section1__image"></div>
+            <div class="section1__image3 section1__image">
+              <img
+                src="./assets/icon/desktop/d_thumnail-icon-original.png"
+                alt="Tving 오리지널"
+                class="tvingOriginalIcon" />
+            </div>
             <span class="section1__imageTitle">술꾼도시여자들2</span>
           </li>
           <li class="section1__imageItem4">
@@ -102,7 +118,9 @@
         <ul class="section2__imageList">
           <li class="section2__imageItem">
             <div class="section2__image1 section2__image">
-              <span class="section2__quickVOD">Quick VOD</span>
+              <div class="section2__quickVODWrapper">
+                <span class="section2__quickVOD">Quick VOD</span>
+              </div>
             </div>
             <div class="section2__imageSubject">
               <span class="section2__imageTitle">JTBC 뉴스룸</span>
@@ -162,30 +180,47 @@
         <ul class="section3__imageList">
           <li class="section3__imageItem">
             <div class="section3__image1 section3__image"></div>
+            <span class="rating">1</span>
             <span class="section3__imageTitle ico-dot">재벌집 막내아들</span>
           </li>
           <li class="section3__imageItem">
-            <div class="section3__image2 section3__image"></div>
+            <div class="section3__image2 section3__image">
+              <img
+                src="./assets/icon/desktop/d_thumnail-icon-original.png"
+                alt="Tving 오리지널"
+                class="tvingOriginalIcon" />
+            </div>
+            <span class="rating">2</span>
             <span class="section3__imageTitle">술꾼도시여자들2</span>
           </li>
           <li class="section3__imageItem">
             <div class="section3__image3 section3__image"></div>
+            <span class="rating">3</span>
             <span class="section3__imageTitle ico-dot">황혼:빛과그림자</span>
           </li>
           <li class="section3__imageItem">
             <div class="section3__image4 section3__image"></div>
+            <span class="rating">4</span>
             <span class="section3__imageTitle ico-dot">캐나다 체크인</span>
           </li>
           <li class="section3__imageItem">
             <div class="section3__image5 section3__image"></div>
+            <span class="rating">5</span>
             <span class="section3__imageTitle ico-dot">놀라운 토요일</span>
           </li>
           <li class="section3__imageItem">
             <div class="section3__image6 section3__image"></div>
+            <span class="rating">6</span>
             <span class="section3__imageTitle ico-dot">show me the money</span>
           </li>
           <li class="section3__imageItem">
-            <div class="section3__image7 section3__image"></div>
+            <div class="section3__image7 section3__image">
+              <img
+                src="./assets/icon/desktop/d_thumnail-icon-original.png"
+                alt="Tving 오리지널"
+                class="tvingOriginalIcon" />
+            </div>
+            <span class="rating">7</span>
             <span class="section3__imageTitle">러브캐쳐 인 발리</span>
           </li>
         </ul>
@@ -198,41 +233,59 @@
           <li class="section3__imageItem">
             <div class="section4__image1 image"></div>
             <p class="section4__summaryWrapper">
-              <span class="imageTitle">jtbc</span>
-              <span class="sub">jtbc 뉴스룸</span>
-              <span class="rating">27.9%</span>
+              <span class="rating">1</span>
+              <div class="section4__summary">
+                <span class="imageTitle">jtbc</span>
+                <span class="sub">jtbc 뉴스룸</span>
+                <span class="section4__summary--rating">27.9%</span>
+              </div>
             </p>
           </li>
           <li class="section4__imageItem">
             <div class="section4__image2 image"></div>
             <p class="section4__summaryWrapper">
-              <span class="imageTitle">tvn</span>
-              <span class="sub">줄 서는 식당 43회</span>
-              <span class="rating">27.9%</span>
+              <span class="rating">2</span>
+              <div class="section4__summary">
+                <span class="imageTitle">tvn</span>
+                <span class="sub">줄 서는 식당 43회</span>
+                <span class="section4__summary--rating">27.9%</span>
+              </div>
             </p>
           </li>
           <li class="section4__imageItem">
             <div class="section4__image3 image"></div>
             <p class="section4__summaryWrapper">
-              <span class="imageTitle">ytn</span>
-              <span class="sub">뉴스가 있는 저녁</span>
-              <span class="rating">9%</span>
+              <span class="rating">3</span>
+
+              <div class="section4__summary">
+                <span class="imageTitle">ytn</span>
+                <span class="sub">뉴스가 있는 저녁</span>
+                <span class="section4__summary--rating">9%</span>
+              </div>
             </p>
           </li>
           <li class="section4__imageItem">
             <div class="section4__image4 image"></div>
             <p class="section4__summaryWrapper">
-              <span class="imageTitle">jtbc2</span>
-              <span class="sub">재벌집 막내아들 5화</span>
-              <span class="rating">6.2%</span>
+              <span class="rating">4</span>
+
+              <div class="section4__summary">
+                <span class="imageTitle">jtbc2</span>
+                <span class="sub">재벌집 막내아들 5화</span>
+                <span class="section4__summary--rating">6.2%</span>
+              </div>
             </p>
           </li>
           <li class="section4__imageItem">
             <div class="section4__image5 image"></div>
             <p class="section4__summaryWrapper">
-              <span class="imageTitle">연합뉴스 tv</span>
-              <span class="sub">뉴스프라임</span>
-              <span class="rating">4.6%</span>
+              <span class="rating">5</span>
+
+              <div class="section4__summary">
+                <span class="imageTitle">연합뉴스 tv</span>
+                <span class="sub">뉴스프라임</span>
+                <span class="section4__summary--rating">4.6%</span>
+              </div>
             </p>
           </li>
         </ul>

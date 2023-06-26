@@ -1,4 +1,5 @@
 @use "./../utils/unit" as *;
+@use './../utils/color' as *;
 
 // 포지션 관련 믹스인
 @mixin pos {
@@ -40,6 +41,12 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+
+// 태블릿 컨테이너 믹스인
+@mixin tabletCon {
+  @include containerMax(1280px);
+  @include paddingX(40px);
 }
 
 // 컨테이너 max width
@@ -134,4 +141,5 @@
   font-size: rem(28.43px);
   font-weight: 700;
 }
- 
+
+
