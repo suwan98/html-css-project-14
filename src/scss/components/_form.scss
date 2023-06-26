@@ -14,6 +14,11 @@
     color: $white;
   }
 
+  // icon-hide를 위한 위치 설정
+  &__pwd {
+    position: relative;
+  }
+
   &__input::placeholder {
     color: $gray600;
   }
@@ -62,17 +67,30 @@
 // }
 
 .icon-hide {
-  position: absolute;
-  min-width: 3rem;
-  height: 2rem;
   border-radius: 100%;
-  background-image: url(./../../assets/icon/desktop/d_eyes.svg);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: 100% auto;
+
+  @include desktop {
+    min-width: rem(36px);
+    height: rem(36px);
+    background-image: url(./../../assets/icon/desktop/d_eyes.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  @include tablet {
+    min-width: rem(20px);
+    height: rem(20px);
+    background-image: url(./../../assets/icon/tablet/t_eyes.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
 }
 
-// icon-hide.layout-lastright {
-//   margin-left: auto;
-//   margin-right: 2rem;
-// }
+.layout-lastright {
+  position: absolute;
+  right: rem(15px);
+  top: 50%;
+  transform: translateY(-50%);
+}
