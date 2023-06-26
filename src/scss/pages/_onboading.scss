@@ -195,8 +195,8 @@
   &__text {
     &_1 {
       margin-top: rem(10px);
-      line-height: 160%;
-      transition-delay: 0.2s;
+      font-weight: 600;
+      line-height: 150%;
       color: $gray200;
 
       @include desktop {
@@ -213,7 +213,8 @@
     }
 
     &_2 {
-      line-height: 160%;
+      font-weight: 600;
+      line-height: 150%;
       color: $gray200;
 
       @include desktop {
@@ -247,7 +248,7 @@
   }
 }
 
-// 스크롤 섹션 1 - 슬라이더 {
+// 스크롤 섹션 1 - 슬라이더
 .image {
 
   &__section_1,
@@ -314,6 +315,7 @@
     animation-play-state: paused;
   }
 
+  // 각 img들을 감싸는 컨테이너
   &__image1 {
     margin: rem(10px);
     transition: transform 0.1s ease;
@@ -350,6 +352,7 @@
     transform: scale(1.1);
   }
 
+  // 슬라이드의 각 이미지들
   &__image__img1 {
     @include desktop {
       width: rem(906px);

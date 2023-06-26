@@ -1006,8 +1006,8 @@ legend {
 }
 .intro__text_1 {
   margin-top: 0.625rem;
-  line-height: 160%;
-  transition-delay: 0.2s;
+  font-weight: 600;
+  line-height: 150%;
   color: #C4C4C4;
 }
 @media (min-width: 1280px) {
@@ -1026,7 +1026,8 @@ legend {
   }
 }
 .intro__text_2 {
-  line-height: 160%;
+  font-weight: 600;
+  line-height: 150%;
   color: #C4C4C4;
 }
 @media (min-width: 1280px) {
