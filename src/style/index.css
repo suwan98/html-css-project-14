@@ -1044,6 +1044,9 @@ legend {
   position: relative;
   width: 100%;
   display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
   overflow: hidden;
   margin-top: 2.5rem;
 }
@@ -1051,6 +1054,9 @@ legend {
   position: relative;
   width: 100%;
   display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
   overflow: hidden;
 }
 
@@ -1134,144 +1140,144 @@ legend {
 }
 @media (min-width: 1280px) {
   .slide__image__img1 {
-    width: 906px;
-    height: 510px;
+    width: 56.625rem;
+    height: 31.875rem;
     background: url(./../../assets/images/figma-desktop/d_러브캐처.png) no-repeat;
     background-size: cover;
   }
 }
 @media (max-width: 1279px) {
   .slide__image__img1 {
-    width: 277px;
-    height: 400px;
+    width: 17.3125rem;
+    height: 25rem;
     background: url(./../../assets/images/tablet/t_러브캐처.png) no-repeat;
     background-size: cover;
   }
 }
 @media (min-width: 1280px) {
   .slide__image__img2 {
-    width: 906px;
-    height: 510px;
+    width: 56.625rem;
+    height: 31.875rem;
     background: url(./../../assets/images/figma-desktop/d_보물찾기.png) no-repeat;
     background-size: cover;
   }
 }
 @media (max-width: 1279px) {
   .slide__image__img2 {
-    width: 277px;
-    height: 400px;
+    width: 17.3125rem;
+    height: 25rem;
     background: url(./../../assets/images/tablet/t_보물찾기.png) no-repeat;
     background-size: cover;
   }
 }
 @media (min-width: 1280px) {
   .slide__image__img3 {
-    width: 906px;
-    height: 510px;
+    width: 56.625rem;
+    height: 31.875rem;
     background: url(./../../assets/images/figma-desktop/d_푸드크로니클.png) no-repeat;
     background-size: cover;
   }
 }
 @media (max-width: 1279px) {
   .slide__image__img3 {
-    width: 277px;
-    height: 400px;
+    width: 17.3125rem;
+    height: 25rem;
     background: url(./../../assets/images/tablet/t_술꾼도시여자들.png) no-repeat;
     background-size: cover;
   }
 }
 @media (min-width: 1280px) {
   .slide__image__img4 {
-    width: 906px;
-    height: 510px;
+    width: 56.625rem;
+    height: 31.875rem;
     background: url(./../../assets/images/figma-desktop/d_몸값.png) no-repeat;
     background-size: cover;
   }
 }
 @media (max-width: 1279px) {
   .slide__image__img4 {
-    width: 277px;
-    height: 400px;
+    width: 17.3125rem;
+    height: 25rem;
     background: url(./../../assets/images/tablet/t_아일랜드.png) no-repeat;
     background-size: cover;
   }
 }
 @media (min-width: 1280px) {
   .slide__image__img5 {
-    width: 470px;
-    height: 264.375px;
+    width: 29.375rem;
+    height: 16.5rem;
     background: url(./../../assets/images/figma-desktop/d_슈룹.png) no-repeat;
     background-size: cover;
   }
 }
 @media (max-width: 1279px) {
   .slide__image__img5 {
-    width: 181.333px;
-    height: 102px;
+    width: 11.3125rem;
+    height: 6.375rem;
     background: url(./../../assets/images/tablet/t_슈룹.png) no-repeat;
     background-size: cover;
   }
 }
 @media (min-width: 1280px) {
   .slide__image__img6 {
-    width: 470px;
-    height: 264.375px;
+    width: 29.375rem;
+    height: 16.5rem;
     background: url(./../../assets/images/figma-desktop/d_렛미인.png) no-repeat;
     background-size: cover;
   }
 }
 @media (max-width: 1279px) {
   .slide__image__img6 {
-    width: 181.333px;
-    height: 102px;
+    width: 11.3125rem;
+    height: 6.375rem;
     background: url(./../../assets/images/tablet/t_렛미인.png) no-repeat;
     background-size: cover;
   }
 }
 @media (min-width: 1280px) {
   .slide__image__img7 {
-    width: 470px;
-    height: 264px;
+    width: 29.375rem;
+    height: 16.5rem;
     background: url(./../../assets/images/figma-desktop/d_연예인.png) no-repeat;
     background-size: cover;
   }
 }
 @media (max-width: 1279px) {
   .slide__image__img7 {
-    width: 181px;
-    height: 102px;
+    width: 11.3125rem;
+    height: 6.375rem;
     background: url(./../../assets/images/tablet/t_연예인.png) no-repeat;
     background-size: cover;
   }
 }
 @media (min-width: 1280px) {
   .slide__image__img8 {
-    width: 470px;
-    height: 264px;
+    width: 29.375rem;
+    height: 16.5rem;
     background: url(./../../assets/images/figma-desktop/d_푸드크로니클2.png) no-repeat;
     background-size: cover;
   }
 }
 @media (max-width: 1279px) {
   .slide__image__img8 {
-    width: 181px;
-    height: 102px;
+    width: 11.3125rem;
+    height: 6.375rem;
     background: url(./../../assets/images/tablet/t_푸드크로니클2.png) no-repeat;
     background-size: cover;
   }
 }
 @media (min-width: 1280px) {
   .slide__image__img9 {
-    width: 470px;
-    height: 264px;
+    width: 29.375rem;
+    height: 16.5rem;
     background: url(./../../assets/images/figma-desktop/d_유퀴즈.png) no-repeat;
     background-size: cover;
   }
 }
 @media (max-width: 1279px) {
   .slide__image__img9 {
-    width: 181px;
-    height: 102px;
+    width: 11.3125rem;
+    height: 6.375rem;
     background: url(./../../assets/images/tablet/t_유퀴즈.png) no-repeat;
     background-size: cover;
   }
