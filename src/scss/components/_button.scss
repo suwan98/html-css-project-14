@@ -1,0 +1,113 @@
+@use "./../utils" as *;
+
+// 버튼 공통 스타일
+.button {
+  border: 0;
+  outline: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  background: transparent;
+
+  // 로그인 버튼
+  &--login {
+    height: rem(50px);
+    border-radius: 4px;
+    background: $red;
+    color: $white;
+  }
+
+  // 로그인 버튼 호버
+  &--login:hover {
+    background: $dark-red;
+  }
+
+  // 상태 버튼
+  &--ok {
+    height: rem(50px);
+    border-radius: 4px;
+    background: $gray700;
+    color: $gray400;
+  }
+
+  // 상태 버튼 액티브
+  &--ok:active {
+    background: $gray100;
+    color: $black
+  }
+
+  // 상태 버튼 호버
+  &--ok:hover {
+    background: $white;
+    color: $black;
+  }
+
+  // 테두리 없는 버튼
+  &--no-border {
+    background: transparent;
+    color: $gray300;
+    height: rem(34px);
+    line-height: 160%;
+  }
+
+  // 테두리 없는 버튼 호버
+  &--no-border:hover {
+    color: $white;
+  }
+
+  // 데스크탑
+  @include desktop {
+    // 로그인
+    &--login {
+      width: rem(732px);
+    }
+
+    // 확인
+    &--ok {
+      width: rem(732px);
+    }
+
+    // 선 없음
+    // &--no-border {
+    //   width: rem(110px);
+    // }
+  }
+
+  // 태블릿
+  @include tablet {
+    // 로그인
+    &--login {
+      width: rem(416px);
+    }
+
+    // 확인
+    &--ok {
+      width: rem(416px);
+    }
+
+    // 선 없음
+    // &--no-border {
+    //   width: rem(82px);
+    // }
+  }
+
+  // 모바일
+  @include mobile {
+    // 로그인
+    &--login {
+      width: rem(288px);
+    }
+
+    // 확인
+    &--ok {
+      width: rem(288px);
+    }
+
+    // 선 없음
+    // &--no-border {
+    //   @include paddingX(12px);
+    //   width: rem(48px);
+    // }
+  }
+}
