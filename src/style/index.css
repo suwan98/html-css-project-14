@@ -499,6 +499,9 @@ legend {
   padding-right: 1rem;
   color: #FFFFFF;
 }
+.form-input__pwd {
+  position: relative;
+}
 .form-input__input::placeholder {
   color: #565656;
 }
@@ -525,14 +528,34 @@ legend {
 }
 
 .icon-hide {
-  position: absolute;
-  min-width: 3rem;
-  height: 2rem;
   border-radius: 100%;
-  background-image: url(./../../assets/icon/desktop/d_eyes.svg);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: 100% auto;
+}
+@media (min-width: 1280px) {
+  .icon-hide {
+    min-width: 2.25rem;
+    height: 2.25rem;
+    background-image: url(./../../assets/icon/desktop/d_eyes.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+@media (max-width: 1279px) {
+  .icon-hide {
+    min-width: 1.25rem;
+    height: 1.25rem;
+    background-image: url(./../../assets/icon/tablet/t_eyes.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+.layout-lastright {
+  position: absolute;
+  right: 0.9375rem;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .sns {
@@ -983,8 +1006,8 @@ legend {
 }
 .intro__text_1 {
   margin-top: 0.625rem;
-  line-height: 160%;
-  transition-delay: 0.2s;
+  font-weight: 600;
+  line-height: 150%;
   color: #C4C4C4;
 }
 @media (min-width: 1280px) {
@@ -1003,8 +1026,8 @@ legend {
   }
 }
 .intro__text_2 {
-  line-height: 160%;
-  transition-delay: 0.2s;
+  font-weight: 600;
+  line-height: 150%;
   color: #C4C4C4;
 }
 @media (min-width: 1280px) {
@@ -1045,6 +1068,9 @@ legend {
   position: relative;
   width: 100%;
   display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
   overflow: hidden;
   margin-top: 2.5rem;
 }
@@ -1052,14 +1078,25 @@ legend {
   position: relative;
   width: 100%;
   display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
   overflow: hidden;
 }
 
-.slide__container_1, .slide__container_2, .slide__container_3 {
+.slide__container_1, .slide__container_3 {
   display: flex;
+  flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
   animation: loop 25s linear infinite;
+}
+.slide__container_2 {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  animation: loop2 25s linear infinite;
 }
 @keyframes loop {
   100% {
@@ -1069,6 +1106,16 @@ legend {
 @-webkit-keyframes loop {
   100% {
     transform: translateX(-100%);
+  }
+}
+@keyframes loop2 {
+  100% {
+    transform: translateX(100%);
+  }
+}
+@-webkit-keyframes loop2 {
+  100% {
+    transform: translateX(100%);
   }
 }
 .image__section_1:hover > .slide__container_1 {
@@ -1117,144 +1164,144 @@ legend {
 }
 @media (min-width: 1280px) {
   .slide__image__img1 {
-    width: 906px;
-    height: 510px;
+    width: 56.625rem;
+    height: 31.875rem;
     background: url(./../../assets/images/figma-desktop/d_러브캐처.png) no-repeat;
     background-size: cover;
   }
 }
 @media (max-width: 1279px) {
   .slide__image__img1 {
-    width: 277px;
-    height: 400px;
+    width: 17.3125rem;
+    height: 25rem;
     background: url(./../../assets/images/tablet/t_러브캐처.png) no-repeat;
     background-size: cover;
   }
 }
 @media (min-width: 1280px) {
   .slide__image__img2 {
-    width: 906px;
-    height: 510px;
+    width: 56.625rem;
+    height: 31.875rem;
     background: url(./../../assets/images/figma-desktop/d_보물찾기.png) no-repeat;
     background-size: cover;
   }
 }
 @media (max-width: 1279px) {
   .slide__image__img2 {
-    width: 277px;
-    height: 400px;
+    width: 17.3125rem;
+    height: 25rem;
     background: url(./../../assets/images/tablet/t_보물찾기.png) no-repeat;
     background-size: cover;
   }
 }
 @media (min-width: 1280px) {
   .slide__image__img3 {
-    width: 906px;
-    height: 510px;
+    width: 56.625rem;
+    height: 31.875rem;
     background: url(./../../assets/images/figma-desktop/d_푸드크로니클.png) no-repeat;
     background-size: cover;
   }
 }
 @media (max-width: 1279px) {
   .slide__image__img3 {
-    width: 277px;
-    height: 400px;
+    width: 17.3125rem;
+    height: 25rem;
     background: url(./../../assets/images/tablet/t_술꾼도시여자들.png) no-repeat;
     background-size: cover;
   }
 }
 @media (min-width: 1280px) {
   .slide__image__img4 {
-    width: 906px;
-    height: 510px;
+    width: 56.625rem;
+    height: 31.875rem;
     background: url(./../../assets/images/figma-desktop/d_몸값.png) no-repeat;
     background-size: cover;
   }
 }
 @media (max-width: 1279px) {
   .slide__image__img4 {
-    width: 277px;
-    height: 400px;
+    width: 17.3125rem;
+    height: 25rem;
     background: url(./../../assets/images/tablet/t_아일랜드.png) no-repeat;
     background-size: cover;
   }
 }
 @media (min-width: 1280px) {
   .slide__image__img5 {
-    width: 470px;
-    height: 264.375px;
+    width: 29.375rem;
+    height: 16.5rem;
     background: url(./../../assets/images/figma-desktop/d_슈룹.png) no-repeat;
     background-size: cover;
   }
 }
 @media (max-width: 1279px) {
   .slide__image__img5 {
-    width: 181.333px;
-    height: 102px;
+    width: 11.3125rem;
+    height: 6.375rem;
     background: url(./../../assets/images/tablet/t_슈룹.png) no-repeat;
     background-size: cover;
   }
 }
 @media (min-width: 1280px) {
   .slide__image__img6 {
-    width: 470px;
-    height: 264.375px;
+    width: 29.375rem;
+    height: 16.5rem;
     background: url(./../../assets/images/figma-desktop/d_렛미인.png) no-repeat;
     background-size: cover;
   }
 }
 @media (max-width: 1279px) {
   .slide__image__img6 {
-    width: 181.333px;
-    height: 102px;
+    width: 11.3125rem;
+    height: 6.375rem;
     background: url(./../../assets/images/tablet/t_렛미인.png) no-repeat;
     background-size: cover;
   }
 }
 @media (min-width: 1280px) {
   .slide__image__img7 {
-    width: 470px;
-    height: 264px;
+    width: 29.375rem;
+    height: 16.5rem;
     background: url(./../../assets/images/figma-desktop/d_연예인.png) no-repeat;
     background-size: cover;
   }
 }
 @media (max-width: 1279px) {
   .slide__image__img7 {
-    width: 181px;
-    height: 102px;
+    width: 11.3125rem;
+    height: 6.375rem;
     background: url(./../../assets/images/tablet/t_연예인.png) no-repeat;
     background-size: cover;
   }
 }
 @media (min-width: 1280px) {
   .slide__image__img8 {
-    width: 470px;
-    height: 264px;
+    width: 29.375rem;
+    height: 16.5rem;
     background: url(./../../assets/images/figma-desktop/d_푸드크로니클2.png) no-repeat;
     background-size: cover;
   }
 }
 @media (max-width: 1279px) {
   .slide__image__img8 {
-    width: 181px;
-    height: 102px;
+    width: 11.3125rem;
+    height: 6.375rem;
     background: url(./../../assets/images/tablet/t_푸드크로니클2.png) no-repeat;
     background-size: cover;
   }
 }
 @media (min-width: 1280px) {
   .slide__image__img9 {
-    width: 470px;
-    height: 264px;
+    width: 29.375rem;
+    height: 16.5rem;
     background: url(./../../assets/images/figma-desktop/d_유퀴즈.png) no-repeat;
     background-size: cover;
   }
 }
 @media (max-width: 1279px) {
   .slide__image__img9 {
-    width: 181px;
-    height: 102px;
+    width: 11.3125rem;
+    height: 6.375rem;
     background: url(./../../assets/images/tablet/t_유퀴즈.png) no-repeat;
     background-size: cover;
   }

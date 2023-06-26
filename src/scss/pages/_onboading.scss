@@ -195,8 +195,8 @@
   &__text {
     &_1 {
       margin-top: rem(10px);
-      line-height: 160%;
-      transition-delay: 0.2s;
+      font-weight: 600;
+      line-height: 150%;
       color: $gray200;
 
       @include desktop {
@@ -213,8 +213,8 @@
     }
 
     &_2 {
-      line-height: 160%;
-      transition-delay: 0.2s;
+      font-weight: 600;
+      line-height: 150%;
       color: $gray200;
 
       @include desktop {
@@ -248,14 +248,14 @@
   }
 }
 
-// 스크롤 섹션 1 - 슬라이더 {
+// 스크롤 섹션 1 - 슬라이더
 .image {
 
   &__section_1,
   &__section_2 {
     position: relative;
     width: 100%;
-    display: flex;
+    @include flexbox;
     overflow: hidden;
     margin-top: rem(40px);
   }
@@ -263,7 +263,7 @@
   &__section_3 {
     position: relative;
     width: 100%;
-    display: flex;
+    @include flexbox;
     overflow: hidden;
   }
 }
@@ -271,12 +271,13 @@
 .slide {
 
   &__container_1,
-  &__container_2,
   &__container_3 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexbox($justify: center, $items: center);
     animation: loop 25s linear infinite;
+  }
+  &__container_2 {
+    @include flexbox($justify: center, $items: center);
+    animation: loop2 25s linear infinite;
   }
 
   // img slide animation
@@ -285,10 +286,20 @@
       transform: translateX(-100%);
     }
   }
-
   @-webkit-keyframes loop {
     100% {
       transform: translateX(-100%);
+    }
+  }
+
+  @keyframes loop2 {
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  @-webkit-keyframes loop2 {
+    100% {
+      transform: translateX(100%);
     }
   }
 
@@ -304,6 +315,7 @@
     animation-play-state: paused;
   }
 
+  // 각 img들을 감싸는 컨테이너
   &__image1 {
     margin: rem(10px);
     transition: transform 0.1s ease;
@@ -340,17 +352,18 @@
     transform: scale(1.1);
   }
 
+  // 슬라이드의 각 이미지들
   &__image__img1 {
     @include desktop {
-      width: 906px;
-      height: 510px;
+      width: rem(906px);
+      height: rem(510px);
       background: url(./../../assets/images/figma-desktop/d_러브캐처.png) no-repeat;
       background-size: cover;
     }
 
     @include tablet {
-      width: 277px;
-      height: 400px;
+      width: rem(277px);
+      height: rem(400px);
       background: url(./../../assets/images/tablet/t_러브캐처.png) no-repeat;
       background-size: cover;
     }
@@ -358,15 +371,15 @@
 
   &__image__img2 {
     @include desktop {
-      width: 906px;
-      height: 510px;
+      width: rem(906px);
+      height: rem(510px);
       background: url(./../../assets/images/figma-desktop/d_보물찾기.png) no-repeat;
       background-size: cover;
     }
 
     @include tablet {
-      width: 277px;
-      height: 400px;
+      width: rem(277px);
+      height: rem(400px);
       background: url(./../../assets/images/tablet/t_보물찾기.png) no-repeat;
       background-size: cover;
     }
@@ -374,15 +387,15 @@
 
   &__image__img3 {
     @include desktop {
-      width: 906px;
-      height: 510px;
+      width: rem(906px);
+      height: rem(510px);
       background: url(./../../assets/images/figma-desktop/d_푸드크로니클.png) no-repeat;
       background-size: cover;
     }
 
     @include tablet {
-      width: 277px;
-      height: 400px;
+      width: rem(277px);
+      height: rem(400px);
       background: url(./../../assets/images/tablet/t_술꾼도시여자들.png) no-repeat;
       background-size: cover;
     }
@@ -390,15 +403,15 @@
 
   &__image__img4 {
     @include desktop {
-      width: 906px;
-      height: 510px;
+      width: rem(906px);
+      height: rem(510px);
       background: url(./../../assets/images/figma-desktop/d_몸값.png) no-repeat;
       background-size: cover;
     }
 
     @include tablet {
-      width: 277px;
-      height: 400px;
+      width: rem(277px);
+      height: rem(400px);
       background: url(./../../assets/images/tablet/t_아일랜드.png) no-repeat;
       background-size: cover;
     }
@@ -406,15 +419,15 @@
 
   &__image__img5 {
     @include desktop {
-      width: 470px;
-      height: 264.375px;
+      width: rem(470px);
+      height: rem(264px);
       background: url(./../../assets/images/figma-desktop/d_슈룹.png) no-repeat;
       background-size: cover;
     }
 
     @include tablet {
-      width: 181.333px;
-      height: 102px;
+      width: rem(181px);
+      height: rem(102px);
       background: url(./../../assets/images/tablet/t_슈룹.png) no-repeat;
       background-size: cover;
     }
@@ -422,15 +435,15 @@
 
   &__image__img6 {
     @include desktop {
-      width: 470px;
-      height: 264.375px;
+      width: rem(470px);
+      height: rem(264px);
       background: url(./../../assets/images/figma-desktop/d_렛미인.png) no-repeat;
       background-size: cover;
     }
 
     @include tablet {
-      width: 181.333px;
-      height: 102px;
+      width: rem(181px);
+      height: rem(102px);
       background: url(./../../assets/images/tablet/t_렛미인.png) no-repeat;
       background-size: cover;
     }
@@ -438,15 +451,15 @@
 
   &__image__img7 {
     @include desktop {
-      width: 470px;
-      height: 264px;
+      width: rem(470px);
+      height: rem(264px);
       background: url(./../../assets/images/figma-desktop/d_연예인.png) no-repeat;
       background-size: cover;
     }
 
     @include tablet {
-      width: 181px;
-      height: 102px;
+      width: rem(181px);
+      height: rem(102px);
       background: url(./../../assets/images/tablet/t_연예인.png) no-repeat;
       background-size: cover;
     }
@@ -454,15 +467,15 @@
 
   &__image__img8 {
     @include desktop {
-      width: 470px;
-      height: 264px;
+      width: rem(470px);
+      height: rem(264px);
       background: url(./../../assets/images/figma-desktop/d_푸드크로니클2.png) no-repeat;
       background-size: cover;
     }
 
     @include tablet {
-      width: 181px;
-      height: 102px;
+      width: rem(181px);
+      height: rem(102px);
       background: url(./../../assets/images/tablet/t_푸드크로니클2.png) no-repeat;
       background-size: cover;
     }
@@ -470,15 +483,15 @@
 
   &__image__img9 {
     @include desktop {
-      width: 470px;
-      height: 264px;
+      width: rem(470px);
+      height: rem(264px);
       background: url(./../../assets/images/figma-desktop/d_유퀴즈.png) no-repeat;
       background-size: cover;
     }
 
     @include tablet {
-      width: 181px;
-      height: 102px;
+      width: rem(181px);
+      height: rem(102px);
       background: url(./../../assets/images/tablet/t_유퀴즈.png) no-repeat;
       background-size: cover;
     }
