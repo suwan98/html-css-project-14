@@ -214,7 +214,6 @@
 
     &_2 {
       line-height: 160%;
-      transition-delay: 0.2s;
       color: $gray200;
 
       @include desktop {
@@ -271,12 +270,13 @@
 .slide {
 
   &__container_1,
-  &__container_2,
   &__container_3 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexbox($justify: center, $items: center);
     animation: loop 25s linear infinite;
+  }
+  &__container_2 {
+    @include flexbox($justify: center, $items: center);
+    animation: loop2 25s linear infinite;
   }
 
   // img slide animation
@@ -285,10 +285,20 @@
       transform: translateX(-100%);
     }
   }
-
   @-webkit-keyframes loop {
     100% {
       transform: translateX(-100%);
+    }
+  }
+
+  @keyframes loop2 {
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  @-webkit-keyframes loop2 {
+    100% {
+      transform: translateX(100%);
     }
   }
 

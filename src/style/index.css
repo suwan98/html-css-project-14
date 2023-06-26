@@ -1004,7 +1004,6 @@ legend {
 }
 .intro__text_2 {
   line-height: 160%;
-  transition-delay: 0.2s;
   color: #C4C4C4;
 }
 @media (min-width: 1280px) {
@@ -1055,11 +1054,19 @@ legend {
   overflow: hidden;
 }
 
-.slide__container_1, .slide__container_2, .slide__container_3 {
+.slide__container_1, .slide__container_3 {
   display: flex;
+  flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
   animation: loop 25s linear infinite;
+}
+.slide__container_2 {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  animation: loop2 25s linear infinite;
 }
 @keyframes loop {
   100% {
@@ -1069,6 +1076,16 @@ legend {
 @-webkit-keyframes loop {
   100% {
     transform: translateX(-100%);
+  }
+}
+@keyframes loop2 {
+  100% {
+    transform: translateX(100%);
+  }
+}
+@-webkit-keyframes loop2 {
+  100% {
+    transform: translateX(100%);
   }
 }
 .image__section_1:hover > .slide__container_1 {
