@@ -1,84 +1,107 @@
 @use '../utils' as *;
-@use '../base' as *;
 
 .profile__container {
-  background: $black;
-  height: 100vh;
-  font-size: 28px;
   color: $gray300;
+  height: 100vh;
   @include flexbox(column,$justify:center, $items:center);
-  // padding: 70px 0;
 
-  @include mobile{
-    font-size: 12px;
+  
+  @include desktop {
+    @include containerMax(1920px);
+    font-size: rem(21px);
   }
 
-  @include  tablet {
-    @include flexbox(column)
+  @include tablet {
+    @include containerMax(1280px);
+    font-size: rem(12px);
   }
+
+  @include  mobile{
+    @include containerMax(768px);
+    font-size: rem(12px);
+  }
+  
 }
 
 .profile {
   text-align: center;
 
+  // 타이틀 , 서브타이틀 글자 스타일링
   &__title {
     color: $white;
+    font-weight: 700;
   }
-
-  @include mobile{
-
-  }
-
-  @include tablet {
-
+  &__subtitle {
+    font-weight: 600;
   }
 
   @include desktop {
     height: 620px;
+    padding: rem(130px) 0;
   
     &__title {
-      font-size: 80px;
-      margin-bottom: 20px;
+      font-size: rem(50px);
+      margin-bottom: rem(20px);
     }
     &__subtitle {
-      font-size: 28px;
-      font-weight: 600;
+      font-size: rem(28px);
     }
   }
+
+  @include tablet {
+    &__title {
+      font-size: rem(28px);
+      margin-bottom: rem(20px);
+    }
+    &__subtitle {
+      font-size: rem(16px);
+    }
+  }
+
+  @include mobile{
+    width: rem(252px);
+  }
+
 }
 
 
 // 프로필 이미지 
 .profile__list {
   position: relative;
-  margin-top: 44px;
-  margin: 0 auto;
+  margin: 44px auto 0;
+
+  @include desktop {
+  }
+  
+  @include tablet {
+    padding: 28px 0 44px;
+    max-width: 624px;
+  }
 
   @include mobile{
+    padding: 0;
     width: 252px;
   }
 
-  @include tablet {
-    max-width: 624px;
-  }
 }
 
 .profile__items {
   list-style-type: none;
   @include  flexbox;
 
+  @include desktop{
+    gap: 52px;
+    }
+    
+  @include tablet {
+    gap: 32px;
+  }
+
   @include mobile{
     gap: 24px;
     @include flexbox($wrap:wrap);
   }
 
-  @include tablet {
-    gap: 32px;
-  }
-
-  @include desktop{
-    gap: 52px;
-    }
   
   &__img {
     @include flexbox(column);
@@ -97,8 +120,17 @@
     position: absolute;
     top: 0;
     
+    @include desktop{
+
+    }
+
+    @include tablet {
+    padding: 28px 0 44px;
+    }
+
     @include  mobile{
-      gap: 56px 24px;
+      padding: 0;
+      gap: 52px 24px;
     }
   } 
 
@@ -120,11 +152,10 @@
     &_lock{
       background: rgba(0, 0, 0, 0.50);
       @include flexbox(column);
-
-      @include mobile {
-        width: 114px;
-        height: 114px;
-
+      
+      @include desktop{
+        width: 234px;
+        height: 234px;
       }
 
       @include tablet{
@@ -132,10 +163,13 @@
         height: 132px;
       }
 
-      @include desktop{
-        width: 234px;
-        height: 234px;
+      @include mobile {
+        width: 114px;
+        height: 114px;
+
       }
+
+      
     }
 
     
@@ -157,4 +191,79 @@
     margin-top: 66px;
     
   }
+
+  @include  tablet{
+    width: rem(156px);
+    height: rem(50px);
+  }
+
+  @include mobile {
+    margin-top: rem(32px);
+    width: rem(135px);
+    padding: 12px 0;
+  }
 }
+
+
+
+//  프로필 편집 페이지 ----------------------------/
+
+
+// 수정이미지
+
+.profile__items_edit{
+    position: absolute;
+    top: 0;
+    
+    @include desktop{
+
+    }
+
+    @include tablet {
+    padding: 28px 0 44px;
+    }
+
+    @include  mobile{
+      padding: 0;
+      gap: 52px 24px;
+    }
+  
+
+  &_item::after{
+    content: '';
+      background: url(../../assets/icon/mobile/profile-edit.svg) no-repeat 50% 50%;
+      width: 100%;
+      height: 100%;
+
+
+
+    @include desktop{
+      background: url(../../assets/icon/desktop/profile-edit.svg) no-repeat 50% 50%;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+    &_item{
+      background: rgba(0, 0, 0, 0.50);
+      @include flexbox(column);
+      
+      @include desktop{
+        width: 234px;
+        height: 234px;
+      }
+
+      @include tablet{
+        width: 132px;
+        height: 132px;
+      }
+
+      @include mobile {
+        width: 114px;
+        height: 114px;
+
+      }
+
+      
+    }
+  }
