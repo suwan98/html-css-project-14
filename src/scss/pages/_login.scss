@@ -1,0 +1,106 @@
+@use "./../utils" as *;
+@use "./../components" as *;
+
+.login {
+  padding-top: rem(170px);
+  @include autoMargin;
+  @include flexbox($justify: center, $direction: column, $items: center);
+  transition: all 0.3s;
+
+  &-title {
+    font-size: rem(37px);
+    font-weight: 700;
+    line-height: 140%;
+    color: $white;
+  }
+
+  @include desktop {
+    @include containerMax(1920px);
+    width: 732px;
+    font-size: rem(16px);
+
+    &-title {
+      font-size: rem(38px);
+    }
+  }
+
+  @include tablet {
+    @include containerMax(1280px);
+    width: 416px;
+    font-size: rem(14px);
+
+    &-title {
+      font-size: rem(28px);
+    }
+  }
+
+  @include mobile {
+    @include containerMax(768px);
+    width: 319px;
+    font-size: rem(13px);
+
+    &-title {
+      font-size: rem(16px);
+    }
+  }
+}
+
+// 아이디, 비밀번호 입력
+.input {
+  &__id {
+    margin-top: rem(24px);
+  }
+
+  &__pwd {
+    margin-top: rem(12px);
+  }
+}
+
+// 자동 로그인
+.autoLogin {
+  margin: rem(16px) 0 rem(32px) 0;
+  position: relative;
+
+  &__input {
+    width: rem(12px);
+    height: rem(12px);
+    appearance: none;
+    @include posCenterY;
+  }
+
+  &__input:checked+label {
+    background: url(./../../assets/icon/desktop/d_check_red.svg) no-repeat;
+    padding-left: rem(24px);
+    background-size: contain;
+    color: $white;
+  }
+
+  &__label {
+    background: url(./../../assets/icon/desktop/d_check.svg) no-repeat;
+    padding-left: rem(24px);
+    background-position: left;
+    background-size: contain;
+    color: $gray500;
+  }
+}
+
+// 아이디/비밀번호 찾기
+.findInfo {
+  @include flexbox($justify: center);
+  column-gap: rem(36px);
+  color: $gray300;
+  text-align: center;
+  padding-top: rem(16px); // 48px
+}
+
+// 회원가입
+.signup {
+  @include flexbox($justify: center, $items: center);
+  text-align: center;
+  padding-top: rem(8px); //44px
+  column-gap: rem(9.5px);
+
+  &__text {
+    color: $gray500;
+  }
+}
