@@ -1,0 +1,90 @@
+@use "./../utils" as *;
+
+.sns {
+  @include flexbox;
+  column-gap: rem(8px);
+}
+
+.youtube {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: url(./../../assets/icon/desktop/d_youtube.svg) no-repeat;
+
+    @include desktop {
+      width: 55px;
+      height: 55px;
+      background-position: -19px -113px;
+    }
+
+    @include tablet {
+      background-position: -20px -64px;
+    }
+
+    @include mobile {
+      background-position: -17px -18px;
+    }
+}
+
+.insta {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: url(./../../assets/icon/desktop/d_insta.svg) no-repeat;
+
+  @include desktop {
+    width: 55px;
+    height: 55px;
+    background-position: -19px -113px;
+  }
+
+  @include tablet {
+    background-position: -20px -64px;
+  }
+
+  @include mobile {
+    background-position: -17px -18px;
+  }
+}
+
+.twitter {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: url(./../../assets/icon/desktop/d_twitter.svg) no-repeat;
+
+  @include desktop {
+    width: 55px;
+    height: 55px;
+    background-position: -19px -113px;
+  }
+
+  @include tablet {
+    background-position: -20px -64px;
+  }
+
+  @include mobile {
+    background-position: -17px -18px;
+  }
+}
+
+.facebook {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: url(./../../assets/icon/desktop/d_facebook.svg) no-repeat;
+
+  @include desktop {
+    width: 55px;
+    height: 55px;
+    background-position: -19px -113px;
+  }
+
+  @include tablet {
+    background-position: -20px -64px;
+  }
+
+  @include mobile {
+    background-position: -17px -18px;
+  }
+}

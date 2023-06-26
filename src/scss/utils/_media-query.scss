@@ -70,7 +70,7 @@ $break2: 768px;
 }
 // 1280px ~ 768px
 @mixin tablet {
-  @media (min-width:#{$break2}) and (max-width: #{$break1 - 1}) {
+  @media (max-width: #{$break1 - 1}) {
     @content;
   }
 }
