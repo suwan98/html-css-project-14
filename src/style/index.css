@@ -811,6 +811,7 @@ legend {
     background-image: url(./../../assets/images/figma-desktop/gradation-img.png), url(./../../assets/images/figma-desktop/background-img.png);
     background-repeat: no-repeat, no-repeat;
     background-position: bottom, bottom;
+    background-size: cover;
   }
 }
 @media (max-width: 1279px) {
@@ -883,6 +884,12 @@ legend {
   }
 }
 
+.intro__section {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
 .intro__section_0 {
   display: flex;
   flex-flow: column nowrap;
@@ -1015,12 +1022,6 @@ legend {
     font-size: 0.75rem;
   }
 }
-.intro__section {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: flex-start;
-  align-items: center;
-}
 .intro__section_3 {
   justify-content: center;
 }
@@ -1040,14 +1041,7 @@ legend {
   }
 }
 
-.image__section_1 {
-  position: relative;
-  width: 100%;
-  display: flex;
-  overflow: hidden;
-  margin-top: 2.5rem;
-}
-.image__section_2 {
+.image__section_1, .image__section_2 {
   position: relative;
   width: 100%;
   display: flex;
@@ -1061,23 +1055,11 @@ legend {
   overflow: hidden;
 }
 
-.slide__container_1 {
+.slide__container_1, .slide__container_2, .slide__container_3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: loop 15s linear infinite;
-}
-.slide__container_2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  animation: loop 15s linear infinite;
-}
-.slide__container_3 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  animation: loop 15s linear infinite;
+  animation: loop 25s linear infinite;
 }
 @keyframes loop {
   100% {
