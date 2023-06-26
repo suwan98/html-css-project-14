@@ -1,3 +1,437 @@
 @use './../utils' as *;
 @use './../components' as *;
 
+
+
+//메인 콘텐츠 영역
+.appMain{
+    //메인페이지 최상단 썸네일 공통 영역
+.mainThumbnail{
+    color : $white;
+    position: relative;
+
+    &__btn {
+        color: $white;
+        border: 1px solid $gray300; 
+        background: transparent;
+        border-radius: 4px;
+        padding: rem(20px) 0;
+    }
+    
+
+    // 메인페이지 데스크탑 영역
+    @include desktop {
+        @include containerMax(1920px);
+        height: rem(855px);
+        background: url(./../../assets/images/figma-desktop/d_banner-img.png);
+
+        .thumbnailWrapper{
+            position: absolute;
+            @include flexbox;
+            @include paddingX(70px);
+            bottom: 23%;
+            width: 100%;
+        }
+        &__description {
+            flex-grow: 1;
+        }
+        &__btn { 
+            width: rem(221px);
+            flex-shrink: 0
+        }
+
+        &__icon {
+            padding-top: rem(20px);
+
+            .pause {
+                padding-right: rem(20px);
+            }
+
+            .bullet {
+                @include marginX(4px);
+            }
+        }
+    } 
+    // 메인페이지 최상단 썸네일 모바일
+    @include mobile {
+        @include containerMax(768px);
+        width: rem(320px);
+        height: rem(142.445px);   
+        background: url(./../../assets/images/figma-mobile/m_banner-img.png);
+
+        .thumbnailWrapper {
+            @include flexbox($justify:space-between);
+            @include paddingX(12px);
+        }
+        
+        .mainThumbnail {
+            .mainThumbnail__description {
+                font-size: rem(12px);
+            }
+            &__btn {
+                width: rem(64px);
+            }
+        }
+    }
+}
+
+//티빙에서 꼭 봐야하는 컨텐츠 영역
+.section1 {
+    color: $white;
+    background: $black;
+    @include desktop {
+        @include containerMax(1920px);
+        @include paddingX(70px);
+        padding-bottom: rem(36px);
+
+        &__title {
+            @include title;
+            margin-bottom: rem(12px);
+        }
+
+        &__imageList {
+            @include flexbox;
+            gap: rem(16px);
+        }
+        &__image {
+            width: rem(240px);
+            height: rem(385px);
+        }
+        &__image1 {
+            background: url(./../../assets/images/figma-desktop/보물찾기1.png);
+            @include imageCover;
+        }
+        &__image2 {
+            background: url(./../../assets/images/figma-desktop/러브캐쳐\ \(2\).png);
+
+            @include imageCover;
+        }
+        &__image3 {
+            background: url(./../../assets/images/figma-desktop/술꾼도시여자들1.png);
+            @include imageCover;
+        }
+        &__image4 {
+            background: url(./../../assets/images/figma-desktop/털사킹.png);
+            @include imageCover;
+        }
+        &__image5 {
+            background: url(./../../assets/images/figma-desktop/아무것도하고싶지않아.png);
+            @include imageCover;
+        }
+        &__image6 {
+            background: url(./../../assets/images/figma-desktop/블랙독\ 1.png);
+            @include imageCover;
+        }
+        &__image7 {
+            background: url(./../../assets/images/figma-desktop/우리들의블루스.png);
+            @include imageCover;
+        }
+        &__imageTitle {
+            display: inline-block;
+            color : $gray200;
+            font-weight: 600;
+            font-size: rem(21.328px);
+            margin-top: rem(8px);
+        }
+    }
+}
+
+// Quick VOD 영역
+    .section2{
+
+        @include desktop {
+            @include containerMax(1920px);
+            @include paddingX(70px);
+            color : $white;
+            background: $black;
+            &__imageList {
+                @include flexbox;
+                gap:rem(16px);
+            }
+
+            &__title {
+                @include title;
+                margin-bottom: 12px;
+            }
+
+            &__image {
+                position: relative;
+                width: 345px;
+                height: 194px;
+            }
+            &__image1 {
+                background-image: url(./../../assets/images/figma-desktop/section2/d_jtbc-newsroom.png);
+            }
+            &__image2 {
+                background-image: url(./../../assets/images/figma-desktop/section2/d_section2-image2.png);
+            }
+            &__image3 {  
+                background-image: url(./../../assets/images/figma-desktop/section2/d_section2-image3.png);
+            }
+            &__image4 {
+                background-image: url(./../../assets/images/figma-desktop/section2/d_section2-image4.png);
+            }
+            &__image5 {
+                background-image: url(./../../assets/images/figma-desktop/section2/d_section2-image5.png);
+            }
+            &__quickVODWrapper {
+                width: rem(96px);
+                height: rem(30px); 
+                background: $vod-red;
+                text-align: center;
+                @include paddingX(9px);
+                border-radius: 4px;
+            }
+            &__imageSubject {
+                @include flexbox(column);
+                gap:8px;
+            }
+            &__imageTitle {
+                margin-top: rem(8px);
+                font-size: rem(21.328px);
+                font-weight: 600;
+            }
+            &__imageSub {
+                color : $gray300;
+            }
+        }
+    }
+
+    //실시간 인기프로그램 영역
+    .section3{
+        color : $white;
+        background: $black;
+        padding-bottom: rem(36px);
+        @include containerMax(1920px);
+        @include paddingX(70px);
+        @include desktop {
+            &__title {
+                padding-top: rem(36px);
+                padding-bottom: rem(12px);
+                @include title;
+            }
+            &__imageList{
+                @include flexbox;
+                gap:rem(16px);
+            }
+            &__imageItem{
+                counter-reset: number 0;
+            }
+            &__image{
+                width : rem(240px);
+                height: rem(345px);
+                @include imageCover;
+            }
+            &__image1{
+                background-image: url(./../../assets/images/figma-desktop/재벌집\ 막내아들.png);
+            }
+            &__image2{
+                background-image: url(./../../assets/images/figma-desktop/술꾼도시여자들1.png);    
+            }
+            &__image3{
+                background-image: url(./../../assets/images/figma-desktop/환혼.png);    
+            }
+            &__image4{
+                background-image: url(./../../assets/images/figma-desktop/캐나다체크인.png);        
+            }
+            &__image5{
+                background-image: url(./../../assets/images/figma-desktop/놀라운\ 토요일.png);
+            }
+            &__image6{
+                background-image: url(./../../assets/images/figma-desktop/쇼미더머니.png);
+            }
+            &__image7{
+                background-image: url(./../../assets/images/figma-desktop/러브캐쳐\ \(1\).png);
+            }
+            &__imageTitle {
+                display: inline-block;
+                margin-top: rem(18px);
+                font-size: rem(21.328px);
+                font-weight: 600;
+                color : $gray200;
+            }
+            &__imageTitle::before{
+                counter-increment: number 1;
+                content: counter(number);
+            }
+        }
+    }
+
+    // 인기라이브 채널 영역 (섹션4)
+    .section4 {
+        background: $black;
+        color : $white;
+        @include desktop {
+            @include containerMax(1920px);
+            @include paddingX(70px);
+
+            &__title {
+                @include title;
+                margin-bottom: rem(12px);
+            }
+
+            &__imageList {
+                @include flexbox();
+                gap:rem(16px);
+            }
+            .image {
+                width: rem(345px);
+                height: rem(194px);
+                margin-bottom: rem(8px);
+                @include imageCover;
+            }
+
+            &__image1{
+                background-image: url(./../../assets/images/figma-desktop/JTBC.png);
+            }
+            &__image2{
+                background-image: url(./../../assets/images/figma-desktop/section4/d_section4-image2.png);
+            }
+            &__image3{
+                background-image: url(./../../assets/images/figma-desktop/section4/d_section4-image3.png);
+            }
+            &__image4{
+                background-image: url(./../../assets/images/figma-desktop/section4/d_section4-image4.png);
+            }
+            &__image5{
+                background-image: url(./../../assets/images/figma-desktop/section4/d_section4-image5.png);
+            }
+
+            &__summaryWrapper {
+                @include flexbox(column);
+                gap: rem(8px);
+                margin-bottom: rem(32px);
+
+                .imageTitle {
+                    text-transform: uppercase;
+                }
+                .sub {
+                    color : $gray300;
+                }
+                .rating {
+                    color : $gray500;
+                }
+            }
+        }
+    }
+
+    //오직 티빙에만 있어요 (5번째 섹션)
+    .section5 {
+
+        @include desktop {
+            @include containerMax(1920px);
+            @include paddingX(70px);
+            padding-bottom: rem(36px);
+            background: $black;
+            color : $white;
+
+            &__title {
+                @include title;
+                margin-bottom: rem(12px);
+            }
+
+            &__imageList {
+                @include flexbox;
+                gap:rem(16px);
+                overflow: hidden;
+            }
+
+            .image {
+                @include imageCover;
+                width: rem(285px);
+                height: rem(570px);
+            }
+            &__image1 {
+                background-image: url(./../../assets/images/figma-desktop/전체관람가.png);
+            }
+            &__image2 {
+                background-image: url(./../../assets/images/figma-desktop/러브캐쳐-1.png);
+            }
+            &__image3 {
+                background-image: url(./../../assets/images/figma-desktop/환승연애2.png);
+            }
+            &__image4 {
+                background-image: url(./../../assets/images/figma-desktop/몸값.png);
+            }
+            &__image5 {
+                background-image: url(./../../assets/images/figma-desktop/술꾼도시여자들.png);
+            } 
+            &__image6 {
+                background-image: url(./../../assets/images/figma-desktop/괴이.png);
+            }  
+             &__image7 {
+                background-image: url(./../../assets/images/figma-desktop/푸드크로니클.png);
+            } 
+        }
+    }
+
+    //TVING sportes 경기 생중계 영역 (6번째 섹션)
+    .section6{
+        @include desktop {
+            @include containerMax(1920px);
+            @include paddingX(70px);
+            padding-bottom: rem(36px);
+            background: $black;
+
+            &__image {
+                width: 100%;
+                @include paddingY(79.1px);
+                @include imageCover;
+                background-image: url(./../../assets/images/figma-desktop/section6/d_section6-banner.png);
+            }
+        }
+    }
+
+    //이벤트 영역 (7번째 섹션)
+    .section7 {
+
+        @include desktop {
+            @include containerMax(1920px);
+            @include paddingX(70px);
+            padding-bottom: rem(36px);
+            background: $black;
+            color : $white;
+
+            &__title {
+                @include title;
+                padding-bottom: rem(12px);
+            }
+
+            &__imageList {
+                @include flexbox;
+                gap: rem(14px);
+                background: wheat;
+            }
+
+            &.section2__imageItem {
+                width: 100%;
+            }
+
+            .image {
+                @include imageCover;
+                height: 120px;
+            }
+
+            &__image1 {
+                background-image: url('./../../assets/images/figma-desktop/이벤트1.png');
+            }
+            &__image2 {
+                background-image: url('./../../assets/images/figma-desktop/이벤트2.png');
+            }
+            &__image3 {
+                background-image: url('./../../assets/images/figma-desktop/이벤트3.png');
+            }
+            &__image4 {
+                background-image: url('./../../assets/images/figma-desktop/이벤트4.png');
+            }
+            &__image5 {
+                background-image: url('./../../assets/images/figma-desktop/이벤트5.png');
+            }
+            &__image6 {
+                background-image: url('./../../assets/images/figma-desktop/이벤트6.png');
+            }
+        }
+    }
+}
+
+

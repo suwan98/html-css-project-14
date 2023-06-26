@@ -44,80 +44,110 @@
     <main class="appMain">
       <section class="mainThumbnail">
         <div class="thumbnailWrapper">
-          <div class="thumnail__description">
+          <div class="mainThumbnail__description">
             <span>인생 2회차를 사는 판타지 드라마</span>
             <!--슬라이드 아이콘 영역-->
-            <span><i class="fa-thin fa-pause"></i></span>
+            <div class="mainThumbnail__icon">
+              <span class="pause"><i class="fa fa-pause"></i></span>
+              <span class="bullet"></span>
+              <span class="bullet bullet--white"></span>
+              <span class="bullet"></span>
+              <span class="bullet"></span>
+            </div>
           </div>
-          <button class="thunmail__btn">자세히 보기</button>
+          <button class="mainThumbnail__btn">자세히 보기</button>
         </div>
+        <div class="mainThumbnail__arrowRight"></div>
+        <div class="mainThumbnail__left"></div>
       </section>
 
       <!--티빙에서 꼭 봐야하는 콘텐츠 (1번째 섹션)-->
-      <section class="tvingSection1">
+      <section class="section1">
         <h2 class="section1__title">티빙에서 꼭 봐야하는 콘텐츠</h2>
         <ul class="section1__imageList">
           <li class="section1__imageItem1">
-            <div class="section1__image1"></div>
-            <span>보물찾기</span>
+            <div class="section1__image1 section1__image"></div>
+            <span class="section1__imageTitle">보물찾기</span>
           </li>
           <li class="section1__imageItem2">
-            <div class="section1__image2"></div>
-            <span>러브캐쳐 인 발리</span>
+            <div class="section1__image2 section1__image"></div>
+            <span class="section1__imageTitle">러브캐쳐 인 발리</span>
           </li>
           <li class="section1__imageItem3">
-            <div class="section1__image3"></div>
-            <span>털사 킹</span>
+            <div class="section1__image3 section1__image"></div>
+            <span class="section1__imageTitle">술꾼도시여자들2</span>
           </li>
           <li class="section1__imageItem4">
-            <div class="section1__image4"></div>
-            <span>아무것도 하고 싶지 않아</span>
+            <div class="section1__image4 section1__image"></div>
+            <span class="section1__imageTitle">털사 킹</span>
           </li>
           <li class="section1__imageItem5">
-            <div class="section1__image5"></div>
-            <span>블랙독</span>
+            <div class="section1__image5 section1__image"></div>
+            <span class="section1__imageTitle">아무것도 하고 싶지 않아</span>
           </li>
           <li class="section1__imageItem6">
-            <div class="section1__image6"></div>
-            <span>우리들의 블루스</span>
+            <div class="section1__image6 section1__image"></div>
+            <span class="section1__imageTitle">블랙독</span>
+          </li>
+          <li class="section1__imageItem7">
+            <div class="section1__image7 section1__image"></div>
+            <span class="section1__imageTitle">우리들의 블루스</span>
           </li>
         </ul>
       </section>
 
       <!--Quick VOD (2번째 섹션)-->
-      <section class="tvingSection2">
+      <section class="section2">
         <h2 class="section2__title">Quick VOD</h2>
         <ul class="section2__imageList">
           <li class="section2__imageItem">
-            <div class="section2__image1"></div>
+            <div class="section2__image1 section2__image">
+              <span class="section2__quickVOD">Quick VOD</span>
+            </div>
             <div class="section2__imageSubject">
               <span class="section2__imageTitle">JTBC 뉴스룸</span>
               <span class="section2__imageSub">0화</span>
             </div>
           </li>
           <li class="section2__imageItem">
-            <div class="section2__image2"></div>
+            <div class="section2__image2 section2__image">
+              <div class="section2__quickVODWrapper">
+                <span class="section2__quickVOD">Quick VOD</span>
+              </div>
+            </div>
             <div class="section2__imageSubject">
               <span class="section2__imageTitle">휴면다큐 &lt;나는살기로 했다&gt;</span>
               <span class="section2__imageSub">10화</span>
             </div>
           </li>
           <li class="section2__imageItem">
-            <div class="section2__image3"></div>
+            <div class="section2__image3 section2__image">
+              <div class="section2__quickVODWrapper">
+                <span class="section2__quickVOD">Quick VOD</span>
+              </div>
+            </div>
             <div class="section2__imageSubject">
               <span class="section2__imageTitle">건강면세점</span>
               <span class="section2__imageSub">130화</span>
             </div>
           </li>
           <li class="section2__imageItem">
-            <div class="section2__image4"></div>
+            <div class="section2__image4 section2__image">
+              <div class="section2__quickVODWrapper">
+                <span class="section2__quickVOD">Quick VOD</span>
+              </div>
+            </div>
             <div class="section2__imageSubject">
               <span class="section2__imageTitle">차이나는 클라스</span>
               <span class="section2__imageSub">254화</span>
             </div>
           </li>
           <li class="section2__imageItem">
-            <div class="section2__image5"></div>
+            <div class="section2__image5 section2__image">
+              <div class="section2__quickVODWrapper">
+                <span class="section2__quickVOD">Quick VOD</span>
+              </div>
+            </div>
             <div class="section2__imageSubject">
               <span class="section2__imageTitle">알맹이</span>
               <span class="section2__imageSub">209화</span>
@@ -127,138 +157,172 @@
       </section>
 
       <!--실시간 인기 프로그램 (3번째 섹션)-->
-      <section class="tvingSection3">
+      <section class="section3">
         <h2 class="section3__title">실시간 인기프로그램</h2>
         <ul class="section3__imageList">
           <li class="section3__imageItem">
-            <div class="section3__image1"></div>
-            <span class="section3__title ico-dot">재벌집 막내아들</span>
+            <div class="section3__image1 section3__image"></div>
+            <span class="section3__imageTitle ico-dot">재벌집 막내아들</span>
           </li>
           <li class="section3__imageItem">
-            <div class="section3__image2"></div>
-            <span class="section3__title">술꾼도시여자들2</span>
+            <div class="section3__image2 section3__image"></div>
+            <span class="section3__imageTitle">술꾼도시여자들2</span>
           </li>
           <li class="section3__imageItem">
-            <div class="section3__image3"></div>
-            <span class="section3__title ico-dot">황혼:빛과그림자</span>
+            <div class="section3__image3 section3__image"></div>
+            <span class="section3__imageTitle ico-dot">황혼:빛과그림자</span>
           </li>
           <li class="section3__imageItem">
-            <div class="section3__image4"></div>
-            <span class="section3__title ico-dot">캐나다 체크인</span>
+            <div class="section3__image4 section3__image"></div>
+            <span class="section3__imageTitle ico-dot">캐나다 체크인</span>
           </li>
           <li class="section3__imageItem">
-            <div class="section3__image5"></div>
-            <span class="section3__title ico-dot">놀라운 토요일</span>
+            <div class="section3__image5 section3__image"></div>
+            <span class="section3__imageTitle ico-dot">놀라운 토요일</span>
           </li>
           <li class="section3__imageItem">
-            <div class="section3__image6"></div>
-            <span class="section3__title ico-dot">show me the money</span>
+            <div class="section3__image6 section3__image"></div>
+            <span class="section3__imageTitle ico-dot">show me the money</span>
           </li>
           <li class="section3__imageItem">
-            <div class="section3__image7"></div>
-            <span class="section3__title">러브캐쳐 인 발리</span>
+            <div class="section3__image7 section3__image"></div>
+            <span class="section3__imageTitle">러브캐쳐 인 발리</span>
           </li>
         </ul>
       </section>
 
       <!--인기 LIVE 채널 (4번째 섹션)-->
-      <section class="tvingSection4">
+      <section class="section4">
         <h2 class="section4__title">인기 LIVE 채널</h2>
         <ul class="section4__imageList">
           <li class="section3__imageItem">
-            <div class="section4__image1"></div>
+            <div class="section4__image1 image"></div>
             <p class="section4__summaryWrapper">
-              <span class="section4__title">jtbc</span>
-              <span class="section4__sub">jtbc 뉴스룸</span>
-              <span class="section4__rating">27.9%</span>
+              <span class="imageTitle">jtbc</span>
+              <span class="sub">jtbc 뉴스룸</span>
+              <span class="rating">27.9%</span>
             </p>
           </li>
           <li class="section4__imageItem">
-            <div class="section4__image2"></div>
+            <div class="section4__image2 image"></div>
             <p class="section4__summaryWrapper">
-              <span class="section4__title">jtbc</span>
-              <span class="section4__sub">jtbc 뉴스룸</span>
-              <span class="section4__rating">27.9%</span>
+              <span class="imageTitle">tvn</span>
+              <span class="sub">줄 서는 식당 43회</span>
+              <span class="rating">27.9%</span>
             </p>
           </li>
           <li class="section4__imageItem">
-            <div class="section4__image3"></div>
+            <div class="section4__image3 image"></div>
             <p class="section4__summaryWrapper">
-              <span class="section4__title">tvn</span>
-              <span class="section4__sub">줄 서는 식당 43회</span>
-              <span class="section4__rating">27.9%</span>
+              <span class="imageTitle">ytn</span>
+              <span class="sub">뉴스가 있는 저녁</span>
+              <span class="rating">9%</span>
             </p>
           </li>
           <li class="section4__imageItem">
-            <div class="section4__image4"></div>
+            <div class="section4__image4 image"></div>
             <p class="section4__summaryWrapper">
-              <span class="section4__title">ytn</span>
-              <span class="section4__sub">뉴스가 있는 저녁</span>
-              <span class="section4__rating">9%</span>
+              <span class="imageTitle">jtbc2</span>
+              <span class="sub">재벌집 막내아들 5화</span>
+              <span class="rating">6.2%</span>
             </p>
           </li>
           <li class="section4__imageItem">
-            <div class="section4__image5"></div>
+            <div class="section4__image5 image"></div>
             <p class="section4__summaryWrapper">
-              <span class="section4__title">jtbc2</span>
-              <span class="section4__sub">재벌집 막내아들 5화</span>
-              <span class="section4__rating">6.2%</span>
-            </p>
-          </li>
-          <li class="section4__imageItem">
-            <div class="section4__image6"></div>
-            <p class="section4__summaryWrapper">
-              <span class="section4__title">연합뉴스 tv</span>
-              <span class="section4__sub">뉴스프라임</span>
-              <span class="section4__rating">4.6%</span>
+              <span class="imageTitle">연합뉴스 tv</span>
+              <span class="sub">뉴스프라임</span>
+              <span class="rating">4.6%</span>
             </p>
           </li>
         </ul>
       </section>
 
       <!--오직 티빙에만 있어요 (5번째 섹션)-->
-      <section class="tvingSection5">
+      <section class="section5">
+        <h2 class="section5__title">오직 티빙에만 있어요</h2>
         <ul class="section5__imageList">
           <li class="section5__imageItem">
-            <div class="section5__image1"></div>
+            <div class="section5__image1 image"></div>
           </li>
           <li class="section5__imageItem">
-            <div class="section5__image2"></div>
+            <div class="section5__image2 image"></div>
           </li>
           <li class="section5__imageItem">
-            <div class="section5__image3"></div>
+            <div class="section5__image3 image"></div>
           </li>
           <li class="section5__imageItem">
-            <div class="section5__image4"></div>
+            <div class="section5__image4 image"></div>
           </li>
           <li class="section5__imageItem">
-            <div class="section5__image5"></div>
+            <div class="section5__image5 image"></div>
           </li>
           <li class="section5__imageItem">
-            <div class="section5__image6"></div>
+            <div class="section5__image6 image"></div>
+          </li>
+          <li class="section5__imageItem">
+            <div class="section5__image7 image"></div>
           </li>
         </ul>
       </section>
 
       <!--TVING sportes 경기 생중계 영역 (6번째 섹션)-->
-      <section class="tvingSection6">
+      <section class="section6">
         <div class="section6__image"></div>
       </section>
 
       <!--이벤트 (7번째 섹션)-->
-      <section class="tvingSection6">
+      <section class="section7">
+        <h2 class="section7__title">이벤트</h2>
         <ul class="section7__imageList">
-          <li class="section7__imageItem"><div class="section7__image1"></div></li>
-          <li class="section7__imageItem"><div class="section7__image2"></div></li>
-          <li class="section7__imageItem"><div class="section7__image3"></div></li>
-          <li class="section7__imageItem"><div class="section7__image4"></div></li>
-          <li class="section7__imageItem"><div class="section7__image5"></div></li>
-          <li class="section7__imageItem"><div class="section7__image6"></div></li>
+          <li class="section7__imageItem"><div class="section7__image1 image"></div></li>
+          <li class="section7__imageItem"><div class="section7__image2 image"></div></li>
+          <li class="section7__imageItem"><div class="section7__image3 image"></div></li>
+          <li class="section7__imageItem"><div class="section7__image4 image"></div></li>
+          <li class="section7__imageItem"><div class="section7__image5 image"></div></li>
+          <li class="section7__imageItem"><div class="section7__image6 image"></div></li>
         </ul>
       </section>
     </main>
 
     <!--하단 푸터 영역-->
-    <footer class="appFooter"></footer>
+    <footer class="appFooter">
+      <section class="footer-section">
+        <nav class="footer-nav">
+          <a class="nav__item" href="/">고객센터</a>
+          <a class="nav__item" href="/">이용약관</a>
+          <a class="nav__item" href="/">개인정보처리방침</a>
+          <a class="nav__item" href="/">청소년 보호정책</a>
+          <a class="nav__item" href="/">법적고지</a>
+          <a class="nav__item" href="/">이벤트</a>
+          <a class="nav__item" href="/">인재채용</a>
+        </nav>
+        <div class="buisness-wrap">
+          <p>
+            <span>대표이사 : YANG JIEUL</span><span><a class="link__buisiness" href="/">사업자정보확인</a></span
+            ><span>사업자등록번호 : 188-88-01893</span><span>통신판매신고번호 : 2020-서울마포-3641호</span>
+          </p>
+          <p>
+            <span>사업장 : 서울특별시 마포구 상암산로 34, DMC디지털큐브 15층(상암동)</span
+            ><span>호스팅사업자 : 씨제이올리브네트웍스(주)</span>
+          </p>
+          <p>
+            <span><a class="link__inquiry" href="/">고객문의 바로가기</a></span
+            ><span>대표메일 : tving@cj.net</span><span>고객센터 : 1670-1525(평일 09시~18시)</span>
+          </p>
+          <p>
+            <span>ENM 시청자 상담실 (편성 문의 및 시청자 의견) : 080-080-0780</span
+            ><span>Mnet 고객센터(방송편성문의) : 1855-1631</span>
+          </p>
+        </div>
+        <div class="sns">
+          <a class="youtube" href="/" aria-label="유튜브"></a>
+          <a class="insta" href="/" aria-label="인스타그램"></a>
+          <a class="twitter" href="/" aria-label="트위터"></a>
+          <a class="facebook" href="/" aria-label="페이스북"></a>
+        </div>
+        <p class="copyright">Copyright © 주식회사 티빙 All right reserved.</p>
+      </section>
+    </footer>
   </body>
 </html>

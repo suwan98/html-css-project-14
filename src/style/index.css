@@ -335,7 +335,6 @@ a {
 
 body {
   font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-  font: inherit;
   background-color: #fff;
 }
 
@@ -365,6 +364,782 @@ legend {
   width: 1px;
   height: 1px;
   margin: -1px;
+}
+
+.bullet {
+  display: inline-block;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background: #898989;
+}
+.bullet--white {
+  background: #FFFFFF;
+}
+
+.appHeader {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  position: fixed;
+  z-index: 200;
+  width: calc(100vw - 17px);
+  color: #C4C4C4;
+  transition: all 0.3s;
+}
+@media (min-width: 1280px) {
+  .appHeader {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding-left: 4.375rem;
+    padding-right: 4.375rem;
+    height: 6.25rem;
+    column-gap: 3.25rem;
+  }
+}
+@media (max-width: 1279px) {
+  .appHeader {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    height: 3.5rem;
+    column-gap: 1.75rem;
+  }
+}
+@media (max-width: 767px) {
+  .appHeader {
+    max-width: 48rem;
+    margin: 0 auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    height: 2.375rem;
+  }
+}
+
+.appHeader::before {
+  position: absolute;
+  content: "";
+  z-index: -1;
+  top: -1px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  backdrop-filter: blur(0px);
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+  transition: backdrop-filter 0.3s linear, background-color 0.3s linear;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.logo {
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+@media (min-width: 1280px) {
+  .logo {
+    width: 8.25rem;
+    height: 2.625rem;
+  }
+  .logo__link {
+    display: block;
+    height: 100%;
+    background: url(./../../assets/icon/desktop/d_tving.svg) no-repeat;
+  }
+}
+@media (max-width: 1279px) {
+  .logo {
+    width: 4.8125rem;
+    height: 1.5rem;
+  }
+  .logo__link {
+    display: block;
+    height: 100%;
+    background: url(./../../assets/icon/tablet/t_tving.svg) no-repeat;
+  }
+}
+@media (max-width: 767px) {
+  .logo {
+    width: 2.875rem;
+    height: 0.9375rem;
+  }
+  .logo__link {
+    display: block;
+    height: 100%;
+    background: url(./../../assets/icon/mobile/m_tving.svg) no-repeat;
+  }
+}
+.menu {
+  flex-grow: 1;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 3.25rem;
+}
+@media (min-width: 1280px) {
+  .menu__paramount {
+    width: 7rem;
+    height: 2.125rem;
+    background: url(./../../assets/icon/desktop/d_para.svg) no-repeat;
+  }
+}
+@media (max-width: 1279px) {
+  .menu__paramount {
+    width: 4.0625rem;
+    height: 1.25rem;
+    background: url(./../../assets/icon/tablet/t_para.svg) no-repeat;
+  }
+}
+@media (max-width: 767px) {
+  .menu {
+    visibility: hidden;
+  }
+}
+.menu :hover {
+  color: #FFFFFF;
+}
+
+@media (min-width: 1280px) {
+  .menu__paramount:hover {
+    width: 7rem;
+    height: 2.125rem;
+    background: url(./../../assets/icon/desktop/d_para_hover.svg) no-repeat;
+  }
+}
+@media (max-width: 1279px) {
+  .menu__paramount:hover {
+    width: 4.0625rem;
+    height: 1.25rem;
+    background: url(./../../assets/icon/tablet/t_para_hover.svg) no-repeat;
+  }
+}
+
+.menu__mypage {
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+@media (min-width: 1280px) {
+  .button--search {
+    width: 2.5rem;
+    height: 2.5rem;
+    background: url(./../../assets/icon/desktop/d_search.svg) no-repeat;
+    margin-right: 2.5rem;
+  }
+}
+@media (max-width: 1279px) {
+  .button--search {
+    width: 1.5rem;
+    height: 1.5rem;
+    background: url(./../../assets/icon/tablet/t_search.svg) no-repeat;
+    margin-right: 1.5rem;
+  }
+}
+@media (max-width: 767px) {
+  .button--search {
+    width: 1.125rem;
+    height: 1.125rem;
+    background: url(./../../assets/icon/mobile/m_search.svg) no-repeat;
+    margin-right: 0.75rem;
+  }
+}
+@media (min-width: 1280px) {
+  .button--search:hover {
+    width: 2.5rem;
+    height: 2.5rem;
+    background: url(./../../assets/icon/desktop/d_search_hover.svg) no-repeat;
+    margin-right: 2.5rem;
+  }
+}
+@media (max-width: 1279px) {
+  .button--search:hover {
+    width: 1.5rem;
+    height: 1.5rem;
+    background: url(./../../assets/icon/tablet/t_search_hover.svg) no-repeat;
+    margin-right: 1.5rem;
+  }
+}
+@media (max-width: 767px) {
+  .button--search:hover {
+    width: 1.125rem;
+    height: 1.125rem;
+    background: url(./../../assets/icon/mobile/m_search_hover.svg) no-repeat;
+    margin-right: 0.75rem;
+  }
+}
+@media (min-width: 1280px) {
+  .button--profile {
+    width: 2.5rem;
+    height: 2.5rem;
+    background: url(./../../assets/icon/desktop/d_profile.svg) no-repeat;
+  }
+}
+@media (max-width: 1279px) {
+  .button--profile {
+    width: 1.5rem;
+    height: 1.5rem;
+    background: url(./../../assets/icon/tablet/t_profile.svg) no-repeat;
+  }
+}
+@media (max-width: 767px) {
+  .button--profile {
+    width: 1.125rem;
+    height: 1.125rem;
+    background: url(./../../assets/icon/mobile/m_profile.svg) no-repeat;
+  }
+}
+
+.appFooter {
+  color: #6B6B6B;
+  transition: all 0.3s;
+  background: #000000;
+}
+@media (min-width: 1280px) {
+  .appFooter {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 100px 68px 140px 68px;
+    font-size: 1rem;
+  }
+}
+@media (max-width: 1279px) {
+  .appFooter {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 70px 40px 100px 40px;
+    font-size: 0.875rem;
+  }
+}
+@media (max-width: 767px) {
+  .appFooter {
+    max-width: 48rem;
+    margin: 0 auto;
+    padding: 52px 16px 82px 16px;
+    font-size: 0.8125rem;
+  }
+}
+
+.footer-section {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  row-gap: 1.6875rem;
+}
+
+.footer-nav {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  column-gap: 2.25rem;
+  color: #C4C4C4;
+  margin-top: 1.6875rem;
+}
+@media (max-width: 767px) {
+  .footer-nav {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 1rem;
+  }
+}
+
+.nav__item {
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.buisness-wrap {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  gap: 8px;
+}
+@media (max-width: 767px) {
+  .buisness-wrap {
+    display: none;
+  }
+}
+
+.buisness-wrap > p > span {
+  padding-right: 0.75rem;
+}
+
+.link__inquiry, .link__buisiness {
+  text-decoration: underline;
+}
+
+.appMain .mainThumbnail {
+  color: #FFFFFF;
+  position: relative;
+}
+.appMain .mainThumbnail__btn {
+  color: #FFFFFF;
+  border: 1px solid #A6A6A6;
+  background: transparent;
+  border-radius: 4px;
+  padding: 1.25rem 0;
+}
+@media (min-width: 1280px) {
+  .appMain .mainThumbnail {
+    max-width: 120rem;
+    margin: 0 auto;
+    height: 53.4375rem;
+    background: url(./../../assets/images/figma-desktop/d_banner-img.png);
+  }
+  .appMain .mainThumbnail .thumbnailWrapper {
+    position: absolute;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    padding-left: 4.375rem;
+    padding-right: 4.375rem;
+    bottom: 23%;
+    width: 100%;
+  }
+  .appMain .mainThumbnail__description {
+    flex-grow: 1;
+  }
+  .appMain .mainThumbnail__btn {
+    width: 13.8125rem;
+    flex-shrink: 0;
+  }
+  .appMain .mainThumbnail__icon {
+    padding-top: 1.25rem;
+  }
+  .appMain .mainThumbnail__icon .pause {
+    padding-right: 1.25rem;
+  }
+  .appMain .mainThumbnail__icon .bullet {
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+  }
+}
+@media (max-width: 767px) {
+  .appMain .mainThumbnail {
+    max-width: 48rem;
+    margin: 0 auto;
+    width: 20rem;
+    height: 8.9028125rem;
+    background: url(./../../assets/images/figma-mobile/m_banner-img.png);
+  }
+  .appMain .mainThumbnail .thumbnailWrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: stretch;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+  .appMain .mainThumbnail .mainThumbnail .mainThumbnail__description {
+    font-size: 0.75rem;
+  }
+  .appMain .mainThumbnail .mainThumbnail__btn {
+    width: 4rem;
+  }
+}
+.appMain .section1 {
+  color: #FFFFFF;
+  background: #000000;
+}
+@media (min-width: 1280px) {
+  .appMain .section1 {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding-left: 4.375rem;
+    padding-right: 4.375rem;
+    padding-bottom: 2.25rem;
+  }
+  .appMain .section1__title {
+    font-size: 1.776875rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+  }
+  .appMain .section1__imageList {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 1rem;
+  }
+  .appMain .section1__image {
+    width: 15rem;
+    height: 24.0625rem;
+  }
+  .appMain .section1__image1 {
+    background: url(./../../assets/images/figma-desktop/보물찾기1.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+  .appMain .section1__image2 {
+    background: url(./../../assets/images/figma-desktop/러브캐쳐\ \(2\).png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+  .appMain .section1__image3 {
+    background: url(./../../assets/images/figma-desktop/술꾼도시여자들1.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+  .appMain .section1__image4 {
+    background: url(./../../assets/images/figma-desktop/털사킹.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+  .appMain .section1__image5 {
+    background: url(./../../assets/images/figma-desktop/아무것도하고싶지않아.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+  .appMain .section1__image6 {
+    background: url(./../../assets/images/figma-desktop/블랙독\ 1.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+  .appMain .section1__image7 {
+    background: url(./../../assets/images/figma-desktop/우리들의블루스.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+  .appMain .section1__imageTitle {
+    display: inline-block;
+    color: #C4C4C4;
+    font-weight: 600;
+    font-size: 1.333rem;
+    margin-top: 0.5rem;
+  }
+}
+@media (min-width: 1280px) {
+  .appMain .section2 {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding-left: 4.375rem;
+    padding-right: 4.375rem;
+    color: #FFFFFF;
+    background: #000000;
+  }
+  .appMain .section2__imageList {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 1rem;
+  }
+  .appMain .section2__title {
+    font-size: 1.776875rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  .appMain .section2__image {
+    position: relative;
+    width: 345px;
+    height: 194px;
+  }
+  .appMain .section2__image1 {
+    background-image: url(./../../assets/images/figma-desktop/section2/d_jtbc-newsroom.png);
+  }
+  .appMain .section2__image2 {
+    background-image: url(./../../assets/images/figma-desktop/section2/d_section2-image2.png);
+  }
+  .appMain .section2__image3 {
+    background-image: url(./../../assets/images/figma-desktop/section2/d_section2-image3.png);
+  }
+  .appMain .section2__image4 {
+    background-image: url(./../../assets/images/figma-desktop/section2/d_section2-image4.png);
+  }
+  .appMain .section2__image5 {
+    background-image: url(./../../assets/images/figma-desktop/section2/d_section2-image5.png);
+  }
+  .appMain .section2__quickVODWrapper {
+    width: 6rem;
+    height: 1.875rem;
+    background: #c73e4e;
+    text-align: center;
+    padding-left: 0.5625rem;
+    padding-right: 0.5625rem;
+    border-radius: 4px;
+  }
+  .appMain .section2__imageSubject {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 8px;
+  }
+  .appMain .section2__imageTitle {
+    margin-top: 0.5rem;
+    font-size: 1.333rem;
+    font-weight: 600;
+  }
+  .appMain .section2__imageSub {
+    color: #A6A6A6;
+  }
+}
+.appMain .section3 {
+  color: #FFFFFF;
+  background: #000000;
+  padding-bottom: 2.25rem;
+  max-width: 120rem;
+  margin: 0 auto;
+  padding-left: 4.375rem;
+  padding-right: 4.375rem;
+}
+@media (min-width: 1280px) {
+  .appMain .section3__title {
+    padding-top: 2.25rem;
+    padding-bottom: 0.75rem;
+    font-size: 1.776875rem;
+    font-weight: 700;
+  }
+  .appMain .section3__imageList {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 1rem;
+  }
+  .appMain .section3__imageItem {
+    counter-reset: number 0;
+  }
+  .appMain .section3__image {
+    width: 15rem;
+    height: 21.5625rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+  .appMain .section3__image1 {
+    background-image: url(./../../assets/images/figma-desktop/재벌집\ 막내아들.png);
+  }
+  .appMain .section3__image2 {
+    background-image: url(./../../assets/images/figma-desktop/술꾼도시여자들1.png);
+  }
+  .appMain .section3__image3 {
+    background-image: url(./../../assets/images/figma-desktop/환혼.png);
+  }
+  .appMain .section3__image4 {
+    background-image: url(./../../assets/images/figma-desktop/캐나다체크인.png);
+  }
+  .appMain .section3__image5 {
+    background-image: url(./../../assets/images/figma-desktop/놀라운\ 토요일.png);
+  }
+  .appMain .section3__image6 {
+    background-image: url(./../../assets/images/figma-desktop/쇼미더머니.png);
+  }
+  .appMain .section3__image7 {
+    background-image: url(./../../assets/images/figma-desktop/러브캐쳐\ \(1\).png);
+  }
+  .appMain .section3__imageTitle {
+    display: inline-block;
+    margin-top: 1.125rem;
+    font-size: 1.333rem;
+    font-weight: 600;
+    color: #C4C4C4;
+  }
+  .appMain .section3__imageTitle::before {
+    counter-increment: number 1;
+    content: counter(number);
+  }
+}
+.appMain .section4 {
+  background: #000000;
+  color: #FFFFFF;
+}
+@media (min-width: 1280px) {
+  .appMain .section4 {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding-left: 4.375rem;
+    padding-right: 4.375rem;
+  }
+  .appMain .section4__title {
+    font-size: 1.776875rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+  }
+  .appMain .section4__imageList {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 1rem;
+  }
+  .appMain .section4 .image {
+    width: 21.5625rem;
+    height: 12.125rem;
+    margin-bottom: 0.5rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+  .appMain .section4__image1 {
+    background-image: url(./../../assets/images/figma-desktop/JTBC.png);
+  }
+  .appMain .section4__image2 {
+    background-image: url(./../../assets/images/figma-desktop/section4/d_section4-image2.png);
+  }
+  .appMain .section4__image3 {
+    background-image: url(./../../assets/images/figma-desktop/section4/d_section4-image3.png);
+  }
+  .appMain .section4__image4 {
+    background-image: url(./../../assets/images/figma-desktop/section4/d_section4-image4.png);
+  }
+  .appMain .section4__image5 {
+    background-image: url(./../../assets/images/figma-desktop/section4/d_section4-image5.png);
+  }
+  .appMain .section4__summaryWrapper {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+  }
+  .appMain .section4__summaryWrapper .imageTitle {
+    text-transform: uppercase;
+  }
+  .appMain .section4__summaryWrapper .sub {
+    color: #A6A6A6;
+  }
+  .appMain .section4__summaryWrapper .rating {
+    color: #6B6B6B;
+  }
+}
+@media (min-width: 1280px) {
+  .appMain .section5 {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding-left: 4.375rem;
+    padding-right: 4.375rem;
+    padding-bottom: 2.25rem;
+    background: #000000;
+    color: #FFFFFF;
+  }
+  .appMain .section5__title {
+    font-size: 1.776875rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+  }
+  .appMain .section5__imageList {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 1rem;
+    overflow: hidden;
+  }
+  .appMain .section5 .image {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 17.8125rem;
+    height: 35.625rem;
+  }
+  .appMain .section5__image1 {
+    background-image: url(./../../assets/images/figma-desktop/전체관람가.png);
+  }
+  .appMain .section5__image2 {
+    background-image: url(./../../assets/images/figma-desktop/러브캐쳐-1.png);
+  }
+  .appMain .section5__image3 {
+    background-image: url(./../../assets/images/figma-desktop/환승연애2.png);
+  }
+  .appMain .section5__image4 {
+    background-image: url(./../../assets/images/figma-desktop/몸값.png);
+  }
+  .appMain .section5__image5 {
+    background-image: url(./../../assets/images/figma-desktop/술꾼도시여자들.png);
+  }
+  .appMain .section5__image6 {
+    background-image: url(./../../assets/images/figma-desktop/괴이.png);
+  }
+  .appMain .section5__image7 {
+    background-image: url(./../../assets/images/figma-desktop/푸드크로니클.png);
+  }
+}
+@media (min-width: 1280px) {
+  .appMain .section6 {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding-left: 4.375rem;
+    padding-right: 4.375rem;
+    padding-bottom: 2.25rem;
+    background: #000000;
+  }
+  .appMain .section6__image {
+    width: 100%;
+    padding-top: 4.94375rem;
+    padding-bottom: 4.94375rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-image: url(./../../assets/images/figma-desktop/section6/d_section6-banner.png);
+  }
+}
+@media (min-width: 1280px) {
+  .appMain .section7 {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding-left: 4.375rem;
+    padding-right: 4.375rem;
+    padding-bottom: 2.25rem;
+    background: #000000;
+    color: #FFFFFF;
+  }
+  .appMain .section7__title {
+    font-size: 1.776875rem;
+    font-weight: 700;
+    padding-bottom: 0.75rem;
+  }
+  .appMain .section7__imageList {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 0.875rem;
+    background: wheat;
+  }
+  .appMain .section7.section2__imageItem {
+    width: 100%;
+  }
+  .appMain .section7 .image {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 120px;
+  }
+  .appMain .section7__image1 {
+    background-image: url("./../../assets/images/figma-desktop/이벤트1.png");
+  }
+  .appMain .section7__image2 {
+    background-image: url("./../../assets/images/figma-desktop/이벤트2.png");
+  }
+  .appMain .section7__image3 {
+    background-image: url("./../../assets/images/figma-desktop/이벤트3.png");
+  }
+  .appMain .section7__image4 {
+    background-image: url("./../../assets/images/figma-desktop/이벤트4.png");
+  }
+  .appMain .section7__image5 {
+    background-image: url("./../../assets/images/figma-desktop/이벤트5.png");
+  }
+  .appMain .section7__image6 {
+    background-image: url("./../../assets/images/figma-desktop/이벤트6.png");
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

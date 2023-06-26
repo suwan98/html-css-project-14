@@ -110,9 +110,28 @@
   height: $height;
 }
 
+@mixin fit($fit : cover, $posX: 0, $posY : 0) {
+  object-fit: $fit;
+  object-position: $posX $posY;
+}
+
 // 말줄임표
 @mixin textOver {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
+
+//div 이미지 크기 커버관련
+@mixin imageCover {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+// 제목 타이틀 믹스인 
+@mixin title {
+  font-size: rem(28.43px);
+  font-weight: 700;
+}
+ 

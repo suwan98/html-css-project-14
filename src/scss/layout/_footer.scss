@@ -4,6 +4,7 @@
 .appFooter {
   color: $gray500;
   transition: all 0.3s;
+  background: $black;
 
   @include desktop {
     @include containerMax(1920px);
