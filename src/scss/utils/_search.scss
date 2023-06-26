@@ -1,0 +1,23 @@
+// 검색 페이지
+@use "color" as var;
+@use "flexbox" as *;
+
+body{
+  background: var.$gray100;
+}
+
+.searchForm__group {
+  display: flex;
+  width: 1480px;
+  height: 90px;
+  padding: 16px 0px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.searchForm__group .formInput{
+  color: var(--gray-700, #404040);
+  font-size: 37.897px;
+  font-weight: 600;
+  line-height: 150%;
+}
