@@ -1,11 +1,12 @@
-@use '../utils' as *;
+@use "./../utils" as *;
+@use "./../components" as *;
 
-.regist__container {
+.regist--container {
   padding-top: rem(70px);
   @include flexbox(column,$justify:center, $items:center);
   color: $gray500;
   transition: all 0.3s;
-  
+
   @include desktop {
     @include containerMax(1920px);
     font-size: rem(20px);
@@ -23,7 +24,7 @@
 
 }
 
-.regist__wrapper{
+.regist--wrapper{
 
   @include desktop {
     width: rem(732px);
@@ -34,24 +35,24 @@
     width: rem(416px);
     margin-top: 44px;
   }
-  
+
   @include  mobile {
     width: rem(288px);
     margin-top: rem(28px);
   }
-  
+
 }
 
-.join__title {
+.join--title {
   text-align: center;
   color: $white;
   font-weight: 700;
-  
+
   @include desktop{
     font-size:rem(38px);
     margin-bottom: rem(28px);
   }
-  
+
   @include tablet {
     font-size: rem(28px);
     margin-bottom: rem(8px);
@@ -60,11 +61,11 @@
     font-size: rem(16px);
     margin-bottom: rem(16px);
   }
-  
-  
+
+
 }
 
-.join__subtitle {
+.join--subtitle {
 color: #898989;
   text-align: center;
   font-weight: 600;
@@ -78,7 +79,7 @@ color: #898989;
 //회원가입 폼
 
 
-.join__item {
+.join--item {
   &_text {
     display: inline-block;
     margin-top: rem(4px);
@@ -93,7 +94,7 @@ color: #898989;
     border: 0;
     margin-top: rem(30px);
     border-radius: rem(4px);
-    
+
     @include tablet {
       height: rem(54px);
       margin-top: rem(18px);
@@ -103,14 +104,14 @@ color: #898989;
       height: rem(46px);
       margin-top: rem(16px);
     }
-    
+
   }
 
 }
 
 
-.join__checkItem,
-.join__checkItem_2{
+.join--checkItem,
+.join--checkItem_2{
   margin-top: rem(8px);
   @include flexbox;
   appearance: none;
@@ -119,7 +120,7 @@ color: #898989;
   }
 }
 
-.join__submit {
+.join--submit {
   width: 100%;
   height: 96px;
   border: 0;
@@ -140,7 +141,7 @@ color: #898989;
 
 
 // 이용약관 체크박스
-.join__check{
+.join--check{
   margin-bottom: 24px;
 
 //체크박스 커스텀
@@ -149,7 +150,7 @@ color: #898989;
     height: rem(26px);
     appearance: none;
     @include pos;
-  
+
 }
 // 약관 동의 체크 전 후
   &box:checked + label{
@@ -178,6 +179,6 @@ color: #898989;
 }
 
 // 선택 체크리스트
-.join__check_2 {
+.join--check_2 {
   padding-left: 36px;
 }

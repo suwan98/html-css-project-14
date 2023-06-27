@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>프로필 수정</title>
-  <link rel="shortcut icon" href="../../assets/favicon.ico" type="image/x-icon" />
+  <title>TAING</title>
+  <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="../../style/index.css" />
 </head>
 <body>
@@ -13,62 +13,62 @@
       <a href="/" class="logo__link" aria-label="TVING"></a>
     </h1>
 
-    <nav class="menu a11yHidden">
+    <nav class="menu visibleHidden">
       <a class="menu__link menu__live" href="/"><span class="menu__text">실시간</span></a>
       <a class="menu__link" href="/">TV프로그램</a>
       <a class="menu__link" href="/">영화</a>
       <a class="menu__link menu__paramount" href="/" aria-label="paramount"></a>
     </nav>
 
-    <aside class="menu__mypage a11yHidden">
+    <aside class="menu__mypage visibleHidden">
       <button type="button" class="button button--search"></button>
       <button type="button" class="button button--profile"></button>
     </aside>
   </header>
 
-  <main class="profile__container">
+  <main class="profile-container">
     <div class="profile">
-      <h1 class="profile__title">프로필 편집</h1>
-      <p class="profile__subtitle">편집할 프로필을 선택해주세요.</p>
-      <div class="profile__list">
+      <h1 class="profile-title">프로필 편집</h1>
+      <p class="profile-subtitle">편집할 프로필을 선택해주세요.</p>
+      <div class="profile-list">
         <!-- 사용자 리스트 -->
-        <ul class="profile__items" aria-label="사용자 프로필 리스트">
-          <li class="profile__items__img">
+        <ul class="profile-items" aria-label="사용자 프로필 리스트">
+          <li class="profile-items__img">
             <button type="button" class="button">
-              <img src="../../assets/images/figma-desktop/profile-1.png" alt="프로필이미지1" />
+              <img src="../../assets/images/figma-desktop/profile-1.png" aria-label="사용자이미지1" />
             </button>
             <span>슬비님</span>
           </li>
-          <li class="profile__items__img">
+          <li class="profile-items__img">
             <button type="button" class="button">
-              <img src="../../assets/images/figma-desktop/profile-3.png" alt="프로필이미지2" />
+              <img src="../../assets/images/figma-desktop/profile-3.png" aria-label="사용자이미지2" />
             </button>
             <span>야무</span>
           </li>
-          <li class="profile__items__img">
+          <li class="profile-items__img">
             <button type="button" class="button">
-              <img src="../../assets/images/figma-desktop/profile-2.png" alt="프로필이미지3" />
+              <img src="../../assets/images/figma-desktop/profile-2.png" aria-label="사용자이미지3" />
             </button>
             <span>범쌤</span>
           </li>
-          <li class="profile__items__img">
+          <li class="profile-items__img">
             <button type="button" class="button">
-              <img src="../../assets/images/figma-desktop/profile-4.png" alt="프로필이미지4" />
+              <img src="../../assets/images/figma-desktop/profile-4.png" aria-label="사용자이미지4" />
             </button>
             <span>이듬</span>
           </li>
         </ul>
         <!-- 사용자 리스트 끝 -->
-        <ul class="profile__items profile__items_edit" aria-hidden="true">
-          <li class="profile__items_edit_item"></li>
-          <li class="profile__items_edit_item"></li>
-          <li class="profile__items_edit_item"></li>
+        <ul class="profile-items profile-edit" aria-hidden="true">
+          <li class="profile-edit__item"></li>
+          <li class="profile-edit__item"></li>
+          <li class="profile-edit__item"></li>
         </ul>
       </div>
-      <button type="button" class="profile__btn button--ok" >완료</button>
+      <button type="button" class="profile-btn button--ok" >완료</button>
     </div>
   </main>
-  
+
   <footer class="appFooter">
     <section class="footer-section">
       <nav class="footer-nav">
