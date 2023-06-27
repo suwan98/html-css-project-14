@@ -13,8 +13,8 @@
     <title>FIND ID</title>
   </head>
   <body>
-    <header class="appHaeder">
-      <h1 class="tving">
+    <header class="appHeader">
+      <h1 class="logo">
         <a href="/" class="logo__link" aria-label="TVING"></a>
       </h1>
     </header>
@@ -27,12 +27,13 @@
             <span class="form-input__findEmail">이메일로 찾기</span>
             <span class="form-input__emailCheck">가입시 등록된 이메일을 입력해 주세요</span>
           </div>
-          <div class="form-input__userInput">
-            <label for="userEmail">이메일</label>
-            <input type="text" id="userEmail" />
+          <div class="form-input__userInputWrapper">
+            <label for="userEmail" class="a11yHidden">이메일</label>
+            <input type="text" id="userEmail" placeholder="이메일" class="form-input__input" required />
           </div>
-          <button class="form-input__userEmialConfirm">확인</button>
+          <button class="form-input__userEmailConfirm">확인</button>
         </form>
+        <p class="and">또는</p>
         <div class="findSelf">
           <span class="findSelf__sur">본인인증으로 찾기</span>
           <span class="findSelf__sub">이미 본인 인증이 완료된 계정에 한하여 아이디 찾기가 가능합니다</span>

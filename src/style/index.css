@@ -347,6 +347,7 @@ legend {
 
 body {
   font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  background: #000000;
 }
 
 /* 유연한 미디어 */
@@ -2085,6 +2086,116 @@ iframe {
   }
   .appMain .section7__image6 {
     background-image: url("./../../assets/images/figma-desktop/이벤트2.png");
+  }
+}
+
+@media (min-width: 1280px) {
+  .appHeader {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding-top: 4.375rem;
+  }
+}
+.appMain {
+  color: #FFFFFF;
+}
+@media (min-width: 1280px) {
+  .appMain {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding-top: 4.375rem;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .appMain .findIdTitle {
+    color: #FFFFFF;
+    text-align: center;
+    padding-bottom: 3.75rem;
+    font-size: 2.3125rem;
+    font-weight: 700;
+    line-height: 140%;
+  }
+  .appMain .form-input {
+    color: #FFFFFF;
+  }
+  .appMain .form-input__FormSummary {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    padding-bottom: 1.5rem;
+    font-size: 1.776875rem;
+    font-weight: 600;
+  }
+  .appMain .form-input__emailCheck {
+    padding-top: 0.75rem;
+    color: #898989;
+  }
+  .appMain .form-input__input {
+    border-radius: 4px;
+    background: #212121;
+    width: 100%;
+    padding: 0px 454px 0px 24px;
+    height: 5.375rem;
+    margin-bottom: 2.25rem;
+    border: 0;
+  }
+  .appMain .form-input__input::placeholder {
+    font-size: 1.776875rem;
+    color: #565656;
+  }
+  .appMain .form-input__userEmailConfirm {
+    border-radius: 4px;
+    width: 100%;
+    background: #404040;
+    height: 6rem;
+    font-size: 1.776875rem;
+    font-weight: 600;
+    color: #898989;
+  }
+  .appMain .and {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    padding-top: 3.75rem;
+    padding-bottom: 3.75rem;
+    color: #404040;
+  }
+  .appMain .and::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    display: inline-block;
+    width: 100%;
+    height: 1px;
+    background: #404040;
+  }
+  .appMain .findSelf {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    padding-bottom: 8.75rem;
+  }
+  .appMain .findSelf__sur {
+    font-size: 1.776875rem;
+    font-weight: 600;
+    padding-bottom: 0.75rem;
+  }
+  .appMain .findSelf__sub {
+    color: #898989;
+    font-size: 1.333rem;
+    padding-bottom: 2.25rem;
+  }
+  .appMain .findSelf__button {
+    height: 5.375rem;
+    font-size: 1.776875rem;
+    font-weight: 600;
+    border-radius: 4px;
   }
 }
 
