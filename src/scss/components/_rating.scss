@@ -1,9 +1,8 @@
 @use './../utils' as *;
 
 
-// rating 믹스인 선언
-@mixin rating {
-    display: inline-block;
+// 순위 컴포넌트
+.rating {
     font-style: italic;
     padding-right: rem(10px);
     font-family: Noto Sans KR;
@@ -11,13 +10,13 @@
     color: $white;
     float: left;
 
-    @media (max-width : rem(1920px)){
+    @include desktop {
         font-size: rem(70px);
     }
-    @media (max-width : rem(1280px)){
+    @include tablet {
         font-size: rem(46px);
     }
-    @media (max-width : rem(768px)){
+    @include mobile {
         font-size: rem(34px);
     }
   }
