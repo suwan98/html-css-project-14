@@ -115,6 +115,7 @@ color: #898989;
   margin-top: rem(8px);
   @include flexbox;
   appearance: none;
+  
   @include desktop {
     margin-top: rem(12px);
   }

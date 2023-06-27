@@ -136,12 +136,10 @@
 
   &__lock::after{
     content: '';
-      background: url(../../assets/images/figma-mobile/lock.svg) no-repeat 50% 50%;
-      width: 100%;
-      height: 100%;
-      cursor: pointer;
-
-
+    background: url(../../assets/images/figma-mobile/lock.svg) no-repeat 50% 50%;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
 
     @include desktop{
       background: url(../../assets/images/figma-desktop/lock.svg) no-repeat 50% 50%;
@@ -150,14 +148,14 @@
     }
   }
 
-    &__lock{
-      background: rgba(0, 0, 0, 0.50);
-      @include flexbox(column);
+  &__lock{
+    background: rgba(0, 0, 0, 0.50);
+    @include flexbox(column);
 
-      @include desktop{
-        width: 234px;
-        height: 234px;
-      }
+    @include desktop{
+      width: 234px;
+      height: 234px;
+    }
 
       @include tablet{
         width: 132px;
@@ -167,13 +165,9 @@
       @include mobile {
         width: 114px;
         height: 114px;
-
       }
 
-
     }
-
-
 
   }
 
@@ -213,20 +207,20 @@
 // 수정이미지
 
 .profile-edit{
-    position: absolute;
-    top: 0;
+  position: absolute;
+  top: 0;
 
-    @include  mobile{
-      padding: 0;
-      gap: 55px 24px;
-    }
+  @include  mobile{
+    padding: 0;
+    gap: 55px 24px;
+  }
 
 
   &__item::after{
     content: '';
-      background: url(../../assets/icon/mobile/profile-edit.svg) no-repeat 50% 50%;
-      width: 100%;
-      height: 100%;
+    background: url(../../assets/icon/mobile/profile-edit.svg) no-repeat 50% 50%;
+    width: 100%;
+    height: 100%;
 
 
 
@@ -238,25 +232,24 @@
     }
   }
 
-    &__item{
-      background: rgba(0, 0, 0, 0.50);
-      @include flexbox(column);
+  &__item{
+    background: rgba(0, 0, 0, 0.50);
+    @include flexbox(column);
 
-      @include desktop{
-        width: 234px;
-        height: 234px;
-      }
-
-      @include tablet{
-        width: 132px;
-        height: 132px;
-      }
-
-      @include mobile {
-        width: 114px;
-        height: 114px;
-      }
-
-
+    @include desktop{
+    width: 234px;
+    height: 234px;
     }
+
+    @include tablet{
+      width: 132px;
+      height: 132px;
+    }
+
+    @include mobile {
+      width: 114px;
+      height: 114px;
+    }
+
   }
+}
