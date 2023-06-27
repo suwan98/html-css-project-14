@@ -1,9 +1,11 @@
 @use './../utils' as *;
 
 //메인 컨텐츠 공통영역
+
 .appMain {
     color : $white;
     @include flexbox($items:center, $justify:center, $direction:column);
+    padding-top: rem(100px);
 
     .findIdTitle {
         font-weight: 700;

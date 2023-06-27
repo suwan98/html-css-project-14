@@ -2095,6 +2095,7 @@ iframe {
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+  padding-top: 6.25rem;
 }
 .appMain .findIdTitle {
   font-weight: 700;
