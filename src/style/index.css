@@ -435,6 +435,7 @@ iframe {
 }
 .button--meet-image {
   background-size: cover;
+  transition: all 0.3s;
 }
 @media (min-width: 1280px) {
   .button--meet-image {
@@ -458,6 +459,9 @@ iframe {
   }
 }
 @media (min-width: 1280px) {
+  .button {
+    transition: all 0.3s;
+  }
   .button--ok {
     width: 45.75rem;
   }
@@ -469,6 +473,9 @@ iframe {
   }
 }
 @media (max-width: 1279px) {
+  .button {
+    transition: all 0.3s;
+  }
   .button--ok {
     width: 26rem;
   }
@@ -480,6 +487,9 @@ iframe {
   }
 }
 @media (max-width: 767px) {
+  .button {
+    transition: all 0.3s;
+  }
   .button--ok {
     width: 18rem;
   }
@@ -862,6 +872,9 @@ fieldset {
   }
 }
 
+.onboading {
+  transition: all 0.3s;
+}
 @media (min-width: 1280px) {
   .onboading__section_1 {
     margin-top: 10rem;
@@ -952,6 +965,7 @@ fieldset {
 .intro__section_0 > p {
   font-weight: 700;
   line-height: 140%;
+  transition: all 0.3s;
 }
 @media (min-width: 1280px) {
   .intro__section_0 > p {
@@ -972,6 +986,7 @@ fieldset {
   color: #898989;
   font-weight: 600;
   line-height: 160%;
+  transition: all 0.3s;
 }
 @media (min-width: 1280px) {
   .intro__section_0 .text__signup {
@@ -995,6 +1010,7 @@ fieldset {
   font-weight: 700;
   line-height: 140%;
   color: #FFFFFF;
+  transition: all 0.3s;
 }
 @media (min-width: 1280px) {
   .intro__title {
@@ -1010,6 +1026,9 @@ fieldset {
   .intro__title {
     font-size: 1.3125rem;
   }
+}
+.intro__text {
+  transition: all 0.3s;
 }
 .intro__text_1 {
   margin-top: 0.5rem;
@@ -1317,6 +1336,9 @@ fieldset {
   }
 }
 
+.onboading {
+  transition: all 0.3s;
+}
 @media (min-width: 1280px) {
   .onboading__logo {
     width: 17.4375rem;
