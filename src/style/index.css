@@ -1384,7 +1384,7 @@ button:focus:not(:focus-visible) {
   .regist__container {
     max-width: 120rem;
     margin: 0 auto;
-    font-size: 1.3125rem;
+    font-size: 1.25rem;
   }
 }
 @media (max-width: 1279px) {
@@ -1404,17 +1404,20 @@ button:focus:not(:focus-visible) {
 
 @media (min-width: 1280px) {
   .regist__wrapper {
-    width: 41.667rem;
+    width: 45.75rem;
+    padding-top: 4.375rem;
   }
 }
 @media (max-width: 1279px) {
   .regist__wrapper {
     width: 26rem;
+    margin-top: 44px;
   }
 }
 @media (max-width: 767px) {
   .regist__wrapper {
     width: 18rem;
+    margin-top: 1.75rem;
   }
 }
 
@@ -1446,12 +1449,7 @@ button:focus:not(:focus-visible) {
   color: #898989;
   text-align: center;
   font-weight: 600;
-  font-size: 1.75rem;
-}
-@media (max-width: 767px) {
-  .join__subtitle {
-    text-align: start;
-  }
+  font-size: 1.25rem;
 }
 @media (max-width: 1279px) {
   .join__subtitle {
