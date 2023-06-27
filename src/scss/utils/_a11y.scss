@@ -15,3 +15,7 @@
 legend {
   @include a11yHidden();
 }
+
+.visibleHidden {
+  visibility: hidden;
+}
