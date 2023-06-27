@@ -7,8 +7,9 @@ $breakpoints: (
   sm: 576px,
   md: 768px,
   lg: 992px,
-  xl: 1200px,
-  xxl: 1400px,
+  xl: 1280px,
+  2xl: 1400px,
+  3x1: 1920px
 );
 
 @function errorMessage($breakpoint-name) {

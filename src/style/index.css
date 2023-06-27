@@ -370,10 +370,10 @@ legend {
 /* @forward "sprites"; */
 .button {
   border: 0;
-  outline: 0;
+  appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  appearance: none;
+  display: block;
   cursor: pointer;
   background: transparent;
 }
@@ -485,6 +485,14 @@ legend {
     padding: 0px 16px 0px 8px;
     font-size: 0.75rem;
   }
+}
+
+button:focus-visible {
+  outline: 1px solid #fff;
+}
+
+button:focus:not(:focus-visible) {
+  outline: none;
 }
 
 .form-input__input {
