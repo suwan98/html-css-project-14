@@ -11,10 +11,12 @@
 
   // 로그인 버튼
   &--login {
-    height: rem(50px);
+    width: 100%;
+    height: 3em;
     border-radius: 4px;
     background: $red;
     color: $white;
+    font-size: 1.1em;
   }
 
   // 로그인 버튼 호버
@@ -89,26 +91,15 @@
 
   // 데스크탑
   @include desktop {
-
-    // 로그인
-    &--login {
-      width: rem(732px);
-    }
-
     // 확인
     &--ok {
       width: rem(732px);
     }
 
-    // 선 없음
-    // &--no-border {
-    //   width: rem(110px);
-    // }
-
     // 새로운 티빙을 만나보세요!
     &--meet {
       width: rem(434px);
-      height: rem(68px);
+      height: rem(67px);
       padding: 8px 64px 8px 8px;
       font-size: rem(20px);
     }
@@ -117,20 +108,10 @@
   // 태블릿
   @include tablet {
 
-    // 로그인
-    &--login {
-      width: rem(416px);
-    }
-
     // 확인
     &--ok {
       width: rem(416px);
     }
-
-    // 선 없음
-    // &--no-border {
-    //   width: rem(82px);
-    // }
 
     // 새로운 티빙을 만나보세요!
     &--meet {
@@ -144,21 +125,10 @@
   // 모바일
   @include mobile {
 
-    // 로그인
-    &--login {
-      width: rem(288px);
-    }
-
     // 확인
     &--ok {
       width: rem(288px);
     }
-
-    // 선 없음
-    // &--no-border {
-    //   @include paddingX(12px);
-    //   width: rem(48px);
-    // }
 
     // 새로운 티빙을 만나보세요!
     &--meet {

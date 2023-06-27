@@ -1,11 +1,12 @@
-@use '../utils' as *;
+@use "./../utils" as *;
+@use "./../components" as *;
 
 .regist__container {
   padding-top: rem(70px);
   @include flexbox(column,$justify:center, $items:center);
   color: $gray500;
   transition: all 0.3s;
-  
+
   @include desktop {
     @include containerMax(1920px);
     font-size: rem(21px);
@@ -32,23 +33,23 @@
   @include tablet {
     width: rem(416px);
   }
-  
+
   @include  mobile {
     width: rem(288px);
   }
-  
+
 }
 
 .join__title {
   text-align: center;
   color: $white;
   font-weight: 700;
-  
+
   @include desktop{
     font-size:rem(38px);
     margin-bottom: rem(28px);
   }
-  
+
   @include tablet {
     font-size: rem(28px);
     margin-bottom: rem(8px);
@@ -57,8 +58,8 @@
     font-size: rem(16px);
     margin-bottom: rem(16px);
   }
-  
-  
+
+
 }
 
 .join__subtitle {
@@ -93,7 +94,7 @@ color: #898989;
     border: 0;
     margin-top: rem(30px);
     border-radius: rem(4px);
-    
+
     @include tablet {
       height: rem(54px);
       margin-top: rem(18px);
@@ -103,7 +104,7 @@ color: #898989;
       height: rem(46px);
       margin-top: rem(16px);
     }
-    
+
   }
 
 }
@@ -149,7 +150,7 @@ color: #898989;
     height: rem(26px);
     appearance: none;
     @include pos;
-  
+
 }
 // 약관 동의 체크 전 후
   &box:checked + label{

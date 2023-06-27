@@ -8,7 +8,6 @@
   width: calc(100vw - $scrollbar-width);
   color: $gray200;
   transition: all 0.3s;
-
   @include desktop {
     @include containerMax(1920px);
     @include paddingX(70px);

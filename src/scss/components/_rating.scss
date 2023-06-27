@@ -1,0 +1,24 @@
+@use './../utils' as *;
+
+
+// rating 믹스인 선언
+@mixin rating {
+    display: inline-block;
+    font-style: italic;
+    padding-right: rem(10px);
+    font-family: Noto Sans KR;
+    font-weight: 700;
+    color: $white;
+    float: left;
+
+    @media (max-width : rem(1920px)){
+        font-size: rem(70px);
+    }
+    @media (max-width : rem(1280px)){
+        font-size: rem(46px);
+    }
+    @media (max-width : rem(768px)){
+        font-size: rem(34px);
+    }
+  }
+  
