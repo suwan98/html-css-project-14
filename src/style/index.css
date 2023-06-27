@@ -2086,6 +2086,135 @@ body {
   }
 }
 
+.find-pw {
+  padding-top: 10.625rem;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s;
+}
+.find-pw-title {
+  font-size: 2.3125rem;
+  font-weight: 700;
+  line-height: 140%;
+  color: #FFFFFF;
+}
+.find-pw-text {
+  font-weight: 600;
+  line-height: 150%;
+  color: #898989;
+  margin-top: 50px;
+  font-size: 24px;
+}
+@media (min-width: 1280px) {
+  .find-pw {
+    max-width: 120rem;
+    margin: 0 auto;
+    width: 732px;
+    font-size: 1rem;
+  }
+  .find-pw-title {
+    font-size: 2.375rem;
+  }
+  .find-pw-text {
+    margin-top: 50px;
+    font-size: 24px;
+  }
+}
+@media (max-width: 1279px) {
+  .find-pw {
+    max-width: 80rem;
+    margin: 0 auto;
+    width: 416px;
+    font-size: 0.875rem;
+  }
+  .find-pw-title {
+    font-size: 1.75rem;
+  }
+  .find-pw-text {
+    margin-top: 24px;
+    font-size: 16px;
+  }
+}
+@media (max-width: 767px) {
+  .find-pw {
+    max-width: 48rem;
+    margin: 0 auto;
+    width: 288px;
+    font-size: 0.8125rem;
+  }
+  .find-pw-title {
+    font-size: 1rem;
+  }
+  .find-pw-text {
+    margin-top: 28px;
+    font-size: 12px;
+  }
+}
+
+.input__find-pw {
+  margin-top: 1.5rem;
+}
+
+.input__find-pw {
+  font-weight: 400;
+  background: #212121;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-bottom: none;
+}
+@media (min-width: 1280px) {
+  .input__find-pw {
+    height: 96px;
+    font-size: 28px;
+  }
+}
+@media (max-width: 1279px) {
+  .input__find-pw {
+    height: 54px;
+    font-size: 16px;
+  }
+}
+@media (max-width: 767px) {
+  .input__find-pw {
+    height: 46px;
+    font-size: 12px;
+  }
+}
+
+.button---pw {
+  background: #404040;
+  color: #898989;
+  font-weight: 600;
+}
+@media (min-width: 1280px) {
+  .button---pw {
+    height: 86px;
+    margin-top: 36px;
+    font-size: 28px;
+  }
+}
+@media (max-width: 1279px) {
+  .button---pw {
+    height: 50px;
+    margin-top: 24px;
+    font-size: 16px;
+  }
+}
+@media (max-width: 767px) {
+  .button---pw {
+    height: 42px;
+    margin-top: 20px;
+    font-size: 12px;
+  }
+}
+
+.button---pw:hover {
+  background: #565656;
+}
+
 .appHeader {
   display: flex;
   flex-flow: row nowrap;
