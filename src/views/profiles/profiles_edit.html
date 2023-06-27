@@ -1,77 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ko">
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>OttTaing</title>
-  <link rel="shortcut icon" type="image/x-icon" href="../assets/favicon.ico">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
-  <link rel="stylesheet" as="style" crossorigin
-    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.7/dist/web/static/pretendard.css" />
-  <link rel="stylesheet" href="./../style/index.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>프로필 수정</title>
+  <link rel="shortcut icon" href="../../assets/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="../../style/index.css" />
 </head>
-
 <body>
   <header class="appHeader">
     <h1 class="logo">
       <a href="/" class="logo__link" aria-label="TVING"></a>
     </h1>
 
-    <nav class="menu visibleHidden">
+    <nav class="menu a11yHidden">
       <a class="menu__link menu__live" href="/"><span class="menu__text">실시간</span></a>
       <a class="menu__link" href="/">TV프로그램</a>
       <a class="menu__link" href="/">영화</a>
       <a class="menu__link menu__paramount" href="/" aria-label="paramount"></a>
     </nav>
 
-    <aside class="menu__mypage">
+    <aside class="menu__mypage a11yHidden">
       <button type="button" class="button button--search"></button>
       <button type="button" class="button button--profile"></button>
     </aside>
   </header>
 
-
-  <section class="search">
-    <form class="search-form">
-      <fieldset>
-        <legend class="visibleHidden">검색</legend>
-        <div class="form-input">
-          <label for="search" class="visibleHidden form-input__label">검색어</label>
-          <input id="search" class="form-input__search" type="search" required=""
-            placeholder="TV프로그램, 영화 제목 및 출연진으로 검색해보세요" name="search">
-        </div>
-        <button type="submit" class="button button--primary button--fill">검색</button>
-      </fieldset>
-    </form>
-
-    <div class="search_container">
-      <div class="recent_container">
-        <h2>최근 검색어</h2>
-        <p>검색 내역이 없습니다.</p>
-      </div>
-      <div class="popula_container">
-        <h2>실시간 인기 검색어</h2>
-        <ul>
-          <li><a href="/">재벌집 막내아들</a></li>
-          <li><a href="/">미스터트롯2: 새로운 전설의 시작</a></li>
-          <li><a href="/">유 퀴즈 온 더 블럭</a></li>
-          <li><a href="/">대행사</a></li>
-          <li><a href="/">SHOW ME THE MONEY 11</a></li>
-          <li><a href="/">미씽: 그들이 있었다2</a></li>
-          <li><a href="/">술꾼도시여자들2</a></li>
-          <li><a href="/">캐나다 체크인</a></li>
-          <li><a href="/">미씽: 그들이 있었다 - 그들을 ‘다만나다</a></li>
-          <li><a href="/">술꾼도시여자들</a></li>
+  <main class="profile__container">
+    <div class="profile">
+      <h1 class="profile__title">프로필 편집</h1>
+      <p class="profile__subtitle">편집할 프로필을 선택해주세요.</p>
+      <div class="profile__list">
+        <!-- 사용자 리스트 -->
+        <ul class="profile__items" aria-label="사용자 프로필 리스트">
+          <li class="profile__items__img">
+            <button type="button" class="button">
+              <img src="../../assets/images/figma-desktop/profile-1.png" alt="프로필이미지1" />
+            </button>
+            <span>슬비님</span>
+          </li>
+          <li class="profile__items__img">
+            <button type="button" class="button">
+              <img src="../../assets/images/figma-desktop/profile-3.png" alt="프로필이미지2" />
+            </button>
+            <span>야무</span>
+          </li>
+          <li class="profile__items__img">
+            <button type="button" class="button">
+              <img src="../../assets/images/figma-desktop/profile-2.png" alt="프로필이미지3" />
+            </button>
+            <span>범쌤</span>
+          </li>
+          <li class="profile__items__img">
+            <button type="button" class="button">
+              <img src="../../assets/images/figma-desktop/profile-4.png" alt="프로필이미지4" />
+            </button>
+            <span>이듬</span>
+          </li>
         </ul>
-        <p><time datetime="2022-12-24T03:04:00">2022.12.24</time> 오전 03:04 기준</p>
+        <!-- 사용자 리스트 끝 -->
+        <ul class="profile__items profile__items_edit" aria-hidden="true">
+          <li class="profile__items_edit_item"></li>
+          <li class="profile__items_edit_item"></li>
+          <li class="profile__items_edit_item"></li>
+        </ul>
       </div>
+      <button type="button" class="profile__btn button--ok" >완료</button>
     </div>
-  </section>
-
-
+  </main>
+  
   <footer class="appFooter">
     <section class="footer-section">
       <nav class="footer-nav">
@@ -101,5 +98,4 @@
     </section>
   </footer>
 </body>
-
 </html>

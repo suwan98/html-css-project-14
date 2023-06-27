@@ -68,7 +68,7 @@ body {
   }
 }
 
-.form-input__search::before {
+.form-input::before {
   @include mobile {
     content: "검색";
     color: $gray700;
@@ -123,12 +123,12 @@ body {
   border-right: 1px solid #2B2B2B;
 
   @include desktop {
-    padding-right: 60px;
+    margin-right: 60px;
     height: 613px;
   }
 
   @include tablet {
-    padding-right: 35px;
+    margin-right: 35px;
     height: 351px;
   }
 
