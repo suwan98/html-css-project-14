@@ -3,10 +3,10 @@
 // 버튼 공통 스타일
 .button {
   border: 0;
-  outline: 0;
+  appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  appearance: none;
+  display: block;
   cursor: pointer;
   background: transparent;
 
@@ -169,4 +169,14 @@
       font-size: rem(12px);
     }
   }
+}
+
+// 키보드로 버튼에 포커스 시
+button:focus-visible {
+  outline: 1px solid #fff;
+}
+
+// 마우스, 터치로 버튼에 포커스 시
+button:focus:not(:focus-visible) {
+  outline: none;
 }
