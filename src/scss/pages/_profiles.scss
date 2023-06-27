@@ -187,9 +187,9 @@
   color: $gray300;
 
   @include desktop{
-    width: 272px;
-    height: 86px;
-    margin-top: 66px;
+    width: rem(272px);
+    height: rem(86px);
+    margin-top: rem(66px);
 
   }
 
@@ -201,7 +201,7 @@
   @include mobile {
     margin-top: rem(32px);
     width: rem(135px);
-    padding: 12px 0;
+    padding: rem(12px) 0;
   }
 }
 

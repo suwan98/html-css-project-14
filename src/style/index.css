@@ -1362,7 +1362,7 @@ fieldset {
   }
 }
 
-.regist--container {
+.regist-container {
   padding-top: 4.375rem;
   display: flex;
   flex-flow: column nowrap;
@@ -1372,21 +1372,21 @@ fieldset {
   transition: all 0.3s;
 }
 @media (min-width: 1280px) {
-  .regist--container {
+  .regist-container {
     max-width: 120rem;
     margin: 0 auto;
     font-size: 1.25rem;
   }
 }
 @media (max-width: 1279px) {
-  .regist--container {
+  .regist-container {
     max-width: 80rem;
     margin: 0 auto;
     font-size: 0.75rem;
   }
 }
 @media (max-width: 767px) {
-  .regist--container {
+  .regist-container {
     max-width: 48rem;
     margin: 0 auto;
     font-size: 0.75rem;
@@ -1394,66 +1394,66 @@ fieldset {
 }
 
 @media (min-width: 1280px) {
-  .regist--wrapper {
+  .regist-wrapper {
     width: 45.75rem;
     padding-top: 4.375rem;
   }
 }
 @media (max-width: 1279px) {
-  .regist--wrapper {
+  .regist-wrapper {
     width: 26rem;
     margin-top: 44px;
   }
 }
 @media (max-width: 767px) {
-  .regist--wrapper {
+  .regist-wrapper {
     width: 18rem;
     margin-top: 1.75rem;
   }
 }
 
-.join--title {
+.join-title {
   text-align: center;
   color: #FFFFFF;
   font-weight: 700;
 }
 @media (min-width: 1280px) {
-  .join--title {
+  .join-title {
     font-size: 2.375rem;
     margin-bottom: 1.75rem;
   }
 }
 @media (max-width: 1279px) {
-  .join--title {
+  .join-title {
     font-size: 1.75rem;
     margin-bottom: 0.5rem;
   }
 }
 @media (max-width: 767px) {
-  .join--title {
+  .join-title {
     font-size: 1rem;
     margin-bottom: 1rem;
   }
 }
 
-.join--subtitle {
+.join-subtitle {
   color: #898989;
   text-align: center;
   font-weight: 600;
   font-size: 1.25rem;
 }
 @media (max-width: 1279px) {
-  .join--subtitle {
+  .join-subtitle {
     font-size: 0.75rem;
   }
 }
 
-.join--item_text {
+.join-item_text {
   display: inline-block;
   margin-top: 0.25rem;
   line-height: 160%;
 }
-.join--item_input {
+.join-item_input {
   width: 100%;
   height: 6rem;
   padding-left: 1.5rem;
@@ -1466,20 +1466,20 @@ fieldset {
   border-radius: 0.25rem;
 }
 @media (max-width: 1279px) {
-  .join--item_input {
+  .join-item_input {
     height: 3.375rem;
     margin-top: 1.125rem;
   }
 }
 @media (max-width: 767px) {
-  .join--item_input {
+  .join-item_input {
     height: 2.875rem;
     margin-top: 1rem;
   }
 }
 
-.join--checkItem,
-.join--checkItem_2 {
+.join-checkItem,
+.join-checkItem_2 {
   margin-top: 0.5rem;
   display: flex;
   flex-flow: row nowrap;
@@ -1488,66 +1488,64 @@ fieldset {
   appearance: none;
 }
 @media (min-width: 1280px) {
-  .join--checkItem,
-  .join--checkItem_2 {
+  .join-checkItem,
+  .join-checkItem_2 {
     margin-top: 0.75rem;
   }
 }
 
-.join--submit {
+.join-submit {
   width: 100%;
   height: 96px;
-  border: 0;
-  appearance: none;
   background: #404040;
   color: #898989;
   border-radius: 4px;
 }
 @media (max-width: 767px) {
-  .join--submit {
+  .join-submit {
     height: 2.625rem;
   }
 }
 @media (max-width: 1279px) {
-  .join--submit {
+  .join-submit {
     height: 3.125rem;
   }
 }
 
-.join--check {
+.join-check {
   margin-bottom: 24px;
 }
-.join--checkbox {
+.join-checkbox {
   width: 1.625rem;
   height: 1.625rem;
   appearance: none;
   position: absolute;
 }
-.join--checkbox:checked + label {
+.join-checkbox:checked + label {
   background: url(../../assets/icon/desktop/d_check2_red.svg) no-repeat left;
   padding-left: 1.625rem;
   background-size: contain;
   color: #FFFFFF;
 }
-.join--check_label {
+.join-check_label {
   background: url(./../../assets/icon/desktop/d_check2.svg) no-repeat;
   padding-left: 1.625rem;
   background-size: contain;
 }
-.join--check_label_all {
+.join-check_label_all {
   background: url(./../../assets/icon/desktop/d_check.svg) no-repeat left;
   background-size: contain;
   padding-left: 1.625rem;
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
 }
-.join--check_all:checked + label {
+.join-check_all:checked + label {
   background: url(../../assets/icon/desktop/d_check_red.svg) no-repeat left;
   padding-left: 1.625rem;
   background-size: contain;
 }
 
-.join--check_2 {
+.join-check_2 {
   padding-left: 36px;
 }
 
@@ -1747,9 +1745,9 @@ fieldset {
 }
 @media (min-width: 1280px) {
   .profile-btn {
-    width: 272px;
-    height: 86px;
-    margin-top: 66px;
+    width: 17rem;
+    height: 5.375rem;
+    margin-top: 4.125rem;
   }
 }
 @media (max-width: 1279px) {
@@ -1762,7 +1760,7 @@ fieldset {
   .profile-btn {
     margin-top: 2rem;
     width: 8.4375rem;
-    padding: 12px 0;
+    padding: 0.75rem 0;
   }
 }
 
