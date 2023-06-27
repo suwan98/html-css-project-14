@@ -4,33 +4,101 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>프로필 선택</title>
-  <link rel="shortcut icon" href="../../tiving.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="../../assets/favicon.ico" type="image/x-icon" />
   <link rel="stylesheet" href="../../style/index.css" />
 </head>
 <body>
-  <header></header>
-  <main>
-    <section class="profile__container">
-      <div class="profile">
+  <header class="appHeader">
+    <h1 class="logo">
+      <a href="/" class="logo__link" aria-label="TVING"></a>
+    </h1>
+
+    <nav class="menu a11yHidden">
+      <a class="menu__link menu__live" href="/"><span class="menu__text">실시간</span></a>
+      <a class="menu__link" href="/">TV프로그램</a>
+      <a class="menu__link" href="/">영화</a>
+      <a class="menu__link menu__paramount" href="/" aria-label="paramount"></a>
+    </nav>
+
+    <aside class="menu__mypage a11yHidden">
+      <button type="button" class="button button--search"></button>
+      <button type="button" class="button button--profile"></button>
+    </aside>
+  </header>
+  
+  <main class="profile__container">
+    <div class="profile">
       <h1 class="profile__title">프로필 선택</h1>
       <p class="profile__subtitle">시청할 프로필을 선택해주세요.</p>
         <div class="profile__list">
-          <ul class="profile__items">
-            <li class="profile__items__img"><img src="../../assets/images/figma-desktop/profile-1.png" alt="" /><span>슬비님</span></li>
-            <li class="profile__items__img"><img src="../../assets/images/figma-desktop/profile-3.png" alt="" /><span>야무</span></li>
-            <li class="profile__items__img"><img src="../../assets/images/figma-desktop/profile-2.png" alt="" /><span>범쌤</span></li>
-            <li class="profile__items__img"><img src="../../assets/images/figma-desktop/profile-4.png" alt="" /><span>이듬</span></li>
+          <!-- 프로필 리스트 -->
+          <ul class="profile__items" aria-label="사용자 프로필 리스트">
+            <li class="profile__items__img">
+              <button type="button" class="button">
+                <img src="../../assets/images/figma-desktop/profile-1.png" alt="프로필이미지1" />
+              </button>
+              <span>슬비님</span>
+            </li>
+            <li class="profile__items__img">
+              <button type="button" class="button">
+                <img src="../../assets/images/figma-desktop/profile-3.png" alt="프로필이미지2" />
+              </button>
+              <span>야무</span>
+            </li>
+            <li class="profile__items__img">
+              <button type="button" class="button">
+                <img src="../../assets/images/figma-desktop/profile-2.png" alt="프로필이미지3" />
+              </button>
+              <span>범쌤</span>
+            </li>
+            <li class="profile__items__img">
+              <button type="button" class="button">
+                <img src="../../assets/images/figma-desktop/profile-4.png" alt="프로필이미지4" />
+              </button>
+              <span>이듬</span>
+            </li>
           </ul>
-          <ul class="profile__items profile__items_locklist">
+          <!-- 프로필 리스트 끝 -->
+          <!-- 프로필 잠금 이미지 -->
+          <ul class="profile__items profile__items_locklist" aria-hidden="true">
             <li class="profile__items_lock"></li>
             <li class="profile__items_lock"></li>
             <li class="profile__items_lock"></li>
           </ul>
+          <!-- 프로필 잠금 이미지 끝 -->
         </div>
         <button type="button" class="profile__btn">프로필 편집</button>
-      </div>
-    </section>
+    </div>
   </main>
-  <footer></footer>
+  <!-- footer -->
+  <footer class="appFooter">
+    <section class="footer-section">
+      <nav class="footer-nav">
+        <a class="nav__item" href="/">고객센터</a>
+        <a class="nav__item" href="/">이용약관</a>
+        <a class="nav__item" href="/">개인정보처리방침</a>
+        <a class="nav__item" href="/">청소년 보호정책</a>
+        <a class="nav__item" href="/">법적고지</a>
+        <a class="nav__item" href="/">이벤트</a>
+        <a class="nav__item" href="/">인재채용</a>
+      </nav>
+      <div class="buisness-wrap">
+        <p><span>대표이사 : YANG JIEUL</span><span><a class="link__buisiness" href="/">사업자정보확인</a></span><span>사업자등록번호 :
+            188-88-01893</span><span>통신판매신고번호 : 2020-서울마포-3641호</span></p>
+        <p><span>사업장 : 서울특별시 마포구 상암산로 34, DMC디지털큐브 15층(상암동)</span><span>호스팅사업자 : 씨제이올리브네트웍스(주)</span></p>
+        <p><span><a class="link__inquiry" href="/">고객문의 바로가기</a></span><span>대표메일 : tving@cj.net</span><span>고객센터 :
+            1670-1525(평일 09시~18시)</span></p>
+        <p><span>ENM 시청자 상담실 (편성 문의 및 시청자 의견) : 080-080-0780</span><span>Mnet 고객센터(방송편성문의) : 1855-1631</span></p>
+      </div>
+      <div class="sns">
+        <a class="youtube" href="/" aria-label="유튜브"></a>
+        <a class="insta" href="/" aria-label="인스타그램"></a>
+        <a class="twitter" href="/" aria-label="트위터"></a>
+        <a class="facebook" href="/" aria-label="페이스북"></a>
+      </div>
+      <p class="copyright">Copyright © 주식회사 티빙 All right reserved.</p>
+    </section>
+  </footer>
+  <!-- footer 끝 -->
 </body>
 </html>

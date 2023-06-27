@@ -4,6 +4,7 @@
   padding-top: rem(70px);
   @include flexbox(column,$justify:center, $items:center);
   color: $gray500;
+  line-height: 150%;
   transition: all 0.3s;
   
   @include desktop {
@@ -43,6 +44,7 @@
   text-align: center;
   color: $white;
   font-weight: 700;
+  line-height: 140%;
   
   @include desktop{
     font-size:rem(38px);
@@ -114,8 +116,9 @@ color: #898989;
   margin-top: 8px;
   @include flexbox;
   appearance: none;
+
   & > li {
-    margin-top: ren(18px);
+    margin-top: rem(18px);
   }
 }
 
