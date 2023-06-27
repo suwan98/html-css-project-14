@@ -16,7 +16,7 @@
 
   @include desktop {
     @include containerMax(1920px);
-    width: 732px;
+    max-width: 732px;
     font-size: rem(16px);
 
     &-title {
@@ -26,7 +26,7 @@
 
   @include tablet {
     @include containerMax(1280px);
-    width: 416px;
+    max-width: 416px;
     font-size: rem(14px);
 
     &-title {
@@ -36,7 +36,7 @@
 
   @include mobile {
     @include containerMax(768px);
-    width: 319px;
+    max-width: 319px;
     font-size: rem(13px);
 
     &-title {
