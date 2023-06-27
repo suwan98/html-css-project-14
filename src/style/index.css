@@ -1361,6 +1361,7 @@ legend {
   justify-content: center;
   align-items: center;
   color: #6B6B6B;
+  transition: all 0.3s;
 }
 @media (min-width: 1280px) {
   .regist__container {
@@ -1384,19 +1385,19 @@ legend {
   }
 }
 
-@media (max-width: 767px) {
+@media (min-width: 1280px) {
   .regist__wrapper {
-    min-width: 288px;
+    width: 41.667rem;
   }
 }
 @media (max-width: 1279px) {
   .regist__wrapper {
-    max-width: 26rem;
+    width: 26rem;
   }
 }
-@media (min-width: 1280px) {
+@media (max-width: 767px) {
   .regist__wrapper {
-    max-width: 41.667rem;
+    width: 18rem;
   }
 }
 
@@ -1407,13 +1408,13 @@ legend {
 }
 @media (min-width: 1280px) {
   .join__title {
-    font-size: 2.5rem;
+    font-size: 2.375rem;
     margin-bottom: 1.75rem;
   }
 }
 @media (max-width: 1279px) {
   .join__title {
-    font-size: 28px;
+    font-size: 1.75rem;
     margin-bottom: 0.5rem;
   }
 }
@@ -1437,128 +1438,128 @@ legend {
 }
 @media (max-width: 1279px) {
   .join__subtitle {
-    font-size: 1rem;
+    font-size: 0.75rem;
   }
-}
-
-.join__list {
-  list-style: none;
-}
-
-.join__item:first-child,
-.join__item:nth-child(2) {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: flex-start;
-  align-items: stretch;
 }
 
 .join__item_text {
+  display: inline-block;
   margin-top: 0.25rem;
+  line-height: 160%;
 }
 .join__item_input {
   width: 100%;
-  height: 96px;
-  padding: 24px;
+  height: 6rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
   background: #212121;
   border: 0;
-  margin-top: 30px;
-  border-radius: 4px;
-}
-@media (max-width: 767px) {
-  .join__item_input {
-    height: 46px;
-    margin-top: 16px;
-  }
+  margin-top: 1.875rem;
+  border-radius: 0.25rem;
 }
 @media (max-width: 1279px) {
   .join__item_input {
-    height: 54px;
-    margin-top: 18px;
+    height: 3.375rem;
+    margin-top: 1.125rem;
+  }
+}
+@media (max-width: 767px) {
+  .join__item_input {
+    height: 2.875rem;
+    margin-top: 1rem;
   }
 }
 
 .join__checkItem,
 .join__checkItem_2 {
-  margin-top: 8px;
+  margin-top: 0.5rem;
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
   align-items: stretch;
-  gap: 12px;
   appearance: none;
+}
+@media (min-width: 1280px) {
+  .join__checkItem,
+  .join__checkItem_2 {
+    margin-top: 0.75rem;
+  }
 }
 
 .join__submit {
   width: 100%;
   height: 96px;
   border: 0;
+  appearance: none;
   background: #404040;
   color: #898989;
   border-radius: 4px;
 }
 @media (max-width: 767px) {
   .join__submit {
-    height: 42px;
+    height: 2.625rem;
   }
 }
 @media (max-width: 1279px) {
   .join__submit {
-    height: 50px;
+    height: 3.125rem;
   }
 }
 
 .join__check {
   margin-bottom: 24px;
 }
-.join__check__checkItem {
-  display: inline-block;
-  width: 26px;
-  height: 26px;
-  position: relative;
-}
 .join__checkbox {
   width: 1.625rem;
   height: 1.625rem;
   appearance: none;
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
 }
-.join__checkbox :checked + label {
-  background: url(/src/assets/icon/desktop/d_check.svg) no-repeat left;
+.join__checkbox:checked + label {
+  background: url(../../assets/icon/desktop/d_check2_red.svg) no-repeat left;
+  padding-left: 1.625rem;
   background-size: contain;
+  color: #FFFFFF;
 }
 .join__check_label {
   background: url(./../../assets/icon/desktop/d_check2.svg) no-repeat;
-  padding-left: 1.5625rem;
+  padding-left: 1.625rem;
   background-size: contain;
-  color: #6B6B6B;
 }
 .join__check_label_all {
   background: url(./../../assets/icon/desktop/d_check.svg) no-repeat left;
   background-size: contain;
-  padding-left: 1.5625rem;
-  margin: 1.5rem 0;
+  padding-left: 1.625rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.join__check_all:checked + label {
+  background: url(../../assets/icon/desktop/d_check_red.svg) no-repeat left;
+  padding-left: 1.625rem;
+  background-size: contain;
 }
 
-.join__checkList_2 {
+.join__check_2 {
   padding-left: 36px;
 }
 
 .profile__container {
   color: #A6A6A6;
-  height: 100vh;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+  transition: all 0.3s;
 }
 @media (min-width: 1280px) {
   .profile__container {
     max-width: 120rem;
     margin: 0 auto;
     font-size: 1.3125rem;
+    padding-top: 8.125rem;
+    padding-bottom: 8.125rem;
   }
 }
 @media (max-width: 1279px) {
@@ -1566,6 +1567,7 @@ legend {
     max-width: 80rem;
     margin: 0 auto;
     font-size: 0.75rem;
+    padding-top: 4.625rem;
   }
 }
 @media (max-width: 767px) {
@@ -1573,6 +1575,7 @@ legend {
     max-width: 48rem;
     margin: 0 auto;
     font-size: 0.75rem;
+    padding-top: 2.75rem;
   }
 }
 
@@ -1584,6 +1587,7 @@ legend {
   font-weight: 700;
 }
 .profile__subtitle {
+  line-height: 150%;
   font-weight: 600;
 }
 @media (min-width: 1280px) {
@@ -1602,7 +1606,8 @@ legend {
 @media (max-width: 1279px) {
   .profile__title {
     font-size: 1.75rem;
-    margin-bottom: 1.25rem;
+    margin-bottom: 1rem;
+    padding-top: 1.75rem;
   }
   .profile__subtitle {
     font-size: 1rem;
@@ -1616,11 +1621,15 @@ legend {
 
 .profile__list {
   position: relative;
-  margin: 44px auto 0;
+}
+@media (min-width: 1280px) {
+  .profile__list {
+    margin: 44px auto 0;
+  }
 }
 @media (max-width: 1279px) {
   .profile__list {
-    padding: 28px 0 44px;
+    margin: 28px 0 44px;
     max-width: 624px;
   }
 }
@@ -1668,22 +1677,20 @@ legend {
 }
 @media (max-width: 767px) {
   .profile__items__img {
-    width: 114px;
+    width: 7.125rem;
   }
+}
+.profile__items__img > button {
+  padding: 0;
 }
 .profile__items_locklist {
   position: absolute;
   top: 0;
 }
-@media (max-width: 1279px) {
-  .profile__items_locklist {
-    padding: 28px 0 44px;
-  }
-}
 @media (max-width: 767px) {
   .profile__items_locklist {
     padding: 0;
-    gap: 52px 24px;
+    gap: 55px 24px;
   }
 }
 .profile__items_lock::after {
@@ -1691,6 +1698,7 @@ legend {
   background: url(../../assets/images/figma-mobile/lock.svg) no-repeat 50% 50%;
   width: 100%;
   height: 100%;
+  cursor: pointer;
 }
 @media (min-width: 1280px) {
   .profile__items_lock::after {
@@ -1756,15 +1764,10 @@ legend {
   position: absolute;
   top: 0;
 }
-@media (max-width: 1279px) {
-  .profile__items_edit {
-    padding: 28px 0 44px;
-  }
-}
 @media (max-width: 767px) {
   .profile__items_edit {
     padding: 0;
-    gap: 52px 24px;
+    gap: 55px 24px;
   }
 }
 .profile__items_edit_item::after {
