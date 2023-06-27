@@ -1,0 +1,14 @@
+@use './../utils' as *;
+
+.bullet {
+    display: inline-block;
+    width: rem(12px);
+    height: rem(12px);
+    border-radius: 50%;
+    background: $gray400;
+
+    &--white {
+        background: $white;
+    }
+}
+

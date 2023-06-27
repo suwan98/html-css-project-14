@@ -1,11 +1,24 @@
+@use './../utils' as *;
+
 body {
-  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto,
-    "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR",
-    "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
-    sans-serif;
-  /* font: inherit; */
-  background-color: #000000;
-}
+    font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto,
+      "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR",
+      "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+      sans-serif;
+      background: $black;
+  }
+
+  /* 유연한 미디어 */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  video
+   {
+    width: 100%;
+    height: auto;
+  }
 
 /* 유연한 미디어 */
 img {
