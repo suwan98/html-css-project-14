@@ -106,14 +106,14 @@ fieldset {
   column-gap: rem(36px);
   color: $gray300;
   text-align: center;
-  padding-top: rem(16px); // 48px
+  padding-top: rem(20px); // 48px
 }
 
 // 회원가입
 .signup {
   @include flexbox($justify: center, $items: center);
   text-align: center;
-  padding-top: rem(8px); //44px
+  padding-top: rem(20px); //44px
   column-gap: rem(9.5px);
 
   &__text {

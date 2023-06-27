@@ -810,7 +810,7 @@ fieldset {
   column-gap: 2.25rem;
   color: #A6A6A6;
   text-align: center;
-  padding-top: 1rem;
+  padding-top: 1.25rem;
 }
 
 .signup {
@@ -819,7 +819,7 @@ fieldset {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding-top: 0.5rem;
+  padding-top: 1.25rem;
   column-gap: 0.59375rem;
 }
 .signup__text {
