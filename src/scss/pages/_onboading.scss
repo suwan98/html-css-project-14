@@ -2,7 +2,7 @@
 @use "./../components" as *;
 
 // 스크롤 섹션 0
-.scroll__section_0 {
+.onboading__section_0 {
   padding-top: rem(160px);
   @include flexbox($direction: column);
   height: 95vh;
@@ -42,7 +42,7 @@
 }
 
 // 스크롤 섹션 1-3
-.scroll {
+.onboading {
   &__section_1 {
     @include desktop {
       margin-top: rem(160px);
