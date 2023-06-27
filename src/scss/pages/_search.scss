@@ -2,30 +2,30 @@
 @use "./../utils" as *;
 @use "./../components" as *;
 
-body{
+body {
   counter-reset: listNumber;
 }
 
-.search{
+.search {
   color: $white;
   @include flexbox($justify: center, $direction: column, $items: center);
   transition: all 0.3s;
 
   @include desktop {
     @include containerMax(1920px);
-    width: 1480px;
+    @include paddingX(220px);
     padding-top: 152px;
   }
 
   @include tablet {
     @include containerMax(1280px);
-    width: 522px;
+    @include paddingX(123px);
     padding-top: 84px;
   }
 
   @include mobile {
     @include containerMax(768px);
-    width: 244px;
+    @include paddingX(50px);
     padding-top: 58px;
   }
 }
@@ -35,35 +35,40 @@ body{
   position: relative;
 }
 
-.form-input__search{  
+.form-input__search {
   width: 100%;
+  appearance: none;
+  outline: none;
   font-weight: 600;
   line-height: 150%;
   background: transparent;
+  border: 0;
+  border-radius: 0;
   border-bottom: 3px solid $white;
   padding: 0;
-  
+
   @include desktop {
-    height: 90px;
     font-size: 37.897px;
   }
 
   @include tablet {
-    height: 56px;
+    // height: 56px;
     font-size: 21.328px;
   }
 
   @include mobile {
-    height: 41px;
+    // height: 41px;
     font-size: 16px;
   }
 }
-.form-input__search::placeholder{
+
+.form-input__search::placeholder {
   @include mobile {
     color: transparent;
   }
 }
-.form-input__search::before{
+
+.form-input__search::before {
   @include mobile {
     content: "검색";
     color: $gray700;
@@ -73,7 +78,7 @@ body{
   }
 }
 
-.search-form button{
+.search-form button {
   color: transparent;
   position: absolute;
   right: 0;
@@ -103,27 +108,20 @@ body{
   }
 }
 
-.search_con{
-  @include flexbox($justify: center, $direction: row);
-  @include desktop {
-    width: 1480px;
-    margin-top: 105px;
-  }
-
-  @include tablet {
-    width: 522px;
-    margin-top: 48px;
-  }
+.search_container {
+  @include flexbox($justify: space-between, $direction: row);
+  width: 100%;
+  margin-top: rem(50px);
 
   @include mobile {
-    width: 226px;
-    margin-top: 40px;
+    @include flexbox($direction: column);
   }
 }
 
-.recent_con{
-  width: 50%; 
+.recent_container {
+  width: 100%;
   border-right: 1px solid #2B2B2B;
+
   @include desktop {
     padding-right: 60px;
     height: 613px;
@@ -138,9 +136,11 @@ body{
     display: none;
   }
 }
-.recent_con h2,
-.popula_con h2{
+
+.recent_container h2,
+.popula_container h2 {
   font-weight: 600;
+
   @include desktop {
     font-size: 28.43px;
     margin-bottom: 20px;
@@ -155,10 +155,12 @@ body{
     margin-bottom: 20px;
   }
 }
-.recent_con p,
-.popula_con a{
+
+.recent_container p,
+.popula_container a {
   font-size: 21.328px;
   color: $gray300;
+
   @include desktop {
     font-size: 21.328px;
   }
@@ -167,27 +169,19 @@ body{
     font-size: 12.003px;
   }
 }
-.popula_con{
-  width: 50%;
 
-  @include desktop {
-    margin-left: 60px;
-  }
-
-  @include tablet {
-    margin-left: 35px;
-  }
-
-  @include mobile {
-    width: 226px;
-    margin-left: 0;
-  }
+.popula_container {
+  width: 90%;
+  @include autoMargin;
 }
-.popula_con ul{
+
+.popula_container ul {
   margin-top: 36px;
 }
-.popula_con a{
+
+.popula_container a {
   display: inline-block;
+
   @include desktop {
     padding-bottom: 16px;
   }
@@ -196,12 +190,14 @@ body{
     padding-bottom: 9px;
   }
 }
-.popula_con a::before{
+
+.popula_container a::before {
   counter-increment: listNumber;
   content: counter(listNumber);
   color: #FF153C;
   font-weight: 700;
   display: inline-block;
+
   @include desktop {
     width: 48px;
   }
@@ -210,7 +206,8 @@ body{
     width: 20px;
   }
 }
-.popula_con p{
+
+.popula_container p {
   color: $gray500;
   margin-top: 16px;
 
