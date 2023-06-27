@@ -116,3 +116,10 @@
   text-overflow: ellipsis;
   overflow: hidden;
 }
+
+// background-image 설정
+@mixin bgSetting {
+  background-repeat: no-repeat, no-repeat;
+  background-position: bottom, bottom;
+  background-size: cover;
+}
