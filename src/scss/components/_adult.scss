@@ -1,0 +1,14 @@
+@use './../utils/color' as *;
+
+.i-adult {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: rem(15px);
+    padding: 5px;
+    display: inline-block;
+    width: rem(30px);
+    height: rem(30px);
+    border-radius: 50%;
+    background: $red;
+}

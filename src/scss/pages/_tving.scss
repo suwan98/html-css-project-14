@@ -26,6 +26,8 @@
         @include paddingX(70px);
         height: rem(855px);
         background: url(./../../assets/images/figma-desktop/d_banner-img.png);
+        @include imageCover;
+
 
         .thumbnailWrapper{
             position: absolute; 
@@ -42,14 +44,6 @@
             flex-shrink: 0;
             @include paddingY(20px);
             cursor: pointer;
-
-            &:hover {
-                background: $gray400;
-                transition:  all 0.3s ease-in-out;
-                font-weight: 700;
-                border: 0;
-                border-radius: 4px;
-            }
         }
         &__icon {
             padding-top: rem(20px);
@@ -72,6 +66,7 @@
          width: 100%;
          height: rem(342px);
          background: url(./../../assets/images/figma-tablet/t_banner-img.png);
+            @include imageCover;
 
          .thumbnailWrapper{
             position: absolute; 
@@ -89,14 +84,6 @@
             flex-shrink: 0;
             @include paddingY(20px);
             cursor: pointer;
-
-            &:hover {
-                background: $gray400;
-                transition:  all 0.3s ease-in-out;
-                font-weight: 700;
-                border: 0;
-                border-radius: 4px;
-            }
         }
         &__icon {
             padding-top: rem(20px);
@@ -115,21 +102,29 @@
     // 메인페이지 배너 모바일
     @include mobile {
         @include containerMax(768px);
-        width: rem(320px);
-        height: rem(142.445px);   
+        @include paddingX(12px);
         background: url(./../../assets/images/figma-mobile/m_banner-img.png);
+        @include imageCover;
 
         .thumbnailWrapper {
-            @include flexbox($justify:space-between);
-            @include paddingX(12px);
+            @include flexbox;
+            @include paddingX(24px);
+            width: 100%;
         }
-        
         .mainThumbnail {
-            .mainThumbnail__description {
+            &__description {
+                font-weight: 600;
                 font-size: rem(12px);
+                flex-grow: 1;
             }
             &__btn {
-                width: rem(64px);
+                flex-shrink: 0;
+                font-size: rem(12px);
+                width: 64px;
+                height: 27px;
+                white-space: nowrap;
+                @include flexbox($items:center, $justify:center);
+                @include paddingY(20px);
             }
         }
     }
@@ -138,8 +133,6 @@
 //티빙에서 꼭 봐야하는 컨텐츠 영역
 .section1 {
     color: $white;
-    background: $black;
-
     //티빙에서 꼭 봐야하는 컨텐츠 데스크탑 
     @include desktop {
         @include containerMax(1920px);
@@ -156,6 +149,7 @@
             gap: rem(16px);
         } 
         &__image {
+            position: relative;
             //티빙 오리지널 아이콘 컨텐츠 
             @include flexbox($items:center,$justify:flex-end,$direction:column);
             padding-bottom: 22px;
@@ -170,7 +164,6 @@
         }
         &__image2 {
             background: url(./../../assets/images/figma-desktop/러브캐쳐\ \(2\).png);
-
             @include imageCover;
         }
         &__image3 {
@@ -204,8 +197,7 @@
 
     //티빙에서 꼭 봐야하는 컨텐츠 태블릿
     @include tablet {
-        @include containerMax(1280px);
-        @include paddingX(40px);
+        @include tabletCon;
 
         &__title {
             font-weight: 700;
@@ -217,6 +209,7 @@
             gap: rem(16px);
         }
         &__image {
+            position: relative;
             //티빙 오리지널 아이콘 컨텐츠 
             @include flexbox($items:center,$justify:flex-end,$direction:column);
             padding-bottom: 22px;
@@ -230,7 +223,6 @@
         }
         &__image2 {
             background: url(./../../assets/images/figma-desktop/러브캐쳐\ \(2\).png);
-
             @include imageCover;
         }
         &__image3 {
@@ -260,18 +252,46 @@
             font-size: rem(12px);
             margin-top: rem(8px);
         }
+        &__imageSub {
+            font-size: rem(12px);
+        }
     }
 
     //티빙에서 꼭 봐야하는 컨텐츠 모바일
     @include mobile {
+        @include containerMax(768px);
+        @include paddingX(8px);
+        padding-bottom: rem(16px);
+        &__title {
+            font-weight: 700;
+            font-size: rem(12px);
+            margin-bottom: rem(12px);
+        }
 
+        &__imageList {
+            @include flexbox;
+            gap: rem(16px);
+            overflow: hidden;
+        }
+        &__image {
+            @include imageCover;
+            //기본 크기 높이
+            width: rem(92.894px);
+            height: rem(134px);
+        }
+        .tvingOriginalIcon {
+            @include a11yHidden;
+        }
+        &__imageTitle {
+            @include a11yHidden;
+        }
     }
 }
 
 // Quick VOD 영역
     .section2{
         color : $white;
-        background: $black;
+        overflow: hidden;
         //Quick VOD 영역 데스크탑
         @include desktop {
             @include containerMax(1920px);
@@ -369,10 +389,10 @@
                 height: rem(16px); 
                 background: $vod-red;
                 text-align: center;
-                font-size: rem(9px);
-                white-space: nowrap;
                 margin-top: rem(5px);
                 margin-left: rem(5px);
+                font-size: rem(9px);
+                white-space: nowrap;
                 @include paddingX(9px);
                 @include flexbox($items:center, $justify:center);
                 border-radius: 4px;
@@ -393,16 +413,38 @@
 
         //Quick VOD 영역 모바일
         @include mobile {
-            @include containerMax(768px)
+            @include containerMax(768px);
+            @include paddingX(8px);
+            padding-bottom: rem(16px);
+            &__imageList {
+                @include flexbox;
+                gap:rem(8px);
+            }
+
+            &__title {
+                padding-bottom: rem(8px);
+                font-weight: 700;
+                font-size: rem(12px);
+            }
+
+            &__image {
+                @include imageCover;
+                position: relative;
+                width: rem(145.778px);
+                height: rem(82px); 
+            }
+
+            &__quickVODWrapper{
+                margin-top: rem(3px);
+                margin-left: rem(3px);
+            }
         }
-
-
     }
 
     //실시간 인기프로그램 영역
     .section3{
         color : $white;
-        background: $black;
+        overflow: hidden;
 
     //실시간 인기프로그램 영역 데스크탑
         @include desktop {
@@ -423,6 +465,7 @@
                 }
             }
             &__image{
+                position: relative;
                 width : rem(240px);
                 height: rem(345px);
                 @include imageCover;
@@ -467,7 +510,6 @@
         //실시간 인기프로그램 영역 태블릿
         @include tablet {
             @include tabletCon;
-            padding-top: rem(36px);
             padding-bottom: rem(28px);
             &__title {
                 padding-bottom: rem(8px);
@@ -483,6 +525,7 @@
                 }
             }
             &__image{
+                position: relative;
                 width : rem(130px);
                 height: rem(189px);
                 @include imageCover;
@@ -526,14 +569,40 @@
 
         //실시간 인기프로그램 영역 모바일
         @include mobile {
+            @include containerMax(768px);
+            @include paddingX(8px);
+            padding-bottom: rem(16px);
 
+            &__title { 
+                padding-bottom: rem(8px);
+                font-weight: 700;
+                font-size: rem(12px);
+            }
+            &__imageList{
+                @include flexbox;
+                gap:rem(16px);
+
+                .rating {
+                    @include rating;
+                    padding-right: rem(24px);
+                }
+            }
+            &__image{
+                position: relative;
+                width : rem(130px);
+                height: rem(189px);
+                @include imageCover;
+            }
+            .tvingOriginalIcon {
+                @include a11yHidden;
+            }
         }
     }
 
     // 인기라이브 채널 영역 (섹션4)
     .section4 {
-        background: $black;
         color : $white;
+        overflow: hidden;
 
         // 인기라이브 채널 영역 데스크탑
         @include desktop {
@@ -610,7 +679,7 @@
             }
             .image {
                 width: rem(225px);
-                height: rem(192px);
+                height: rem(126.563px);
                 margin-bottom: rem(8px);
                 @include imageCover;
             }
@@ -657,10 +726,25 @@
         }
 
         // 인기라이브 채널 영역 모바일
-        @include mobile {
-
+        @include mobile {   
+            @include containerMax(768px);
+            @include paddingX(8px);
+            padding-bottom: rem(16px);
+            &__title {
+                font-weight: 700;
+                font-size: rem(12px);
+            }
+            &__imageList {
+                @include flexbox;
+                gap:rem(4px);
+            }
+            .image {
+                width: rem(225px);
+                height: rem(126.563px);
+                margin-bottom: rem(8px);
+                @include imageCover;
+            }
         }
-
     }
 
     //오직 티빙에만 있어요 영역 (5번째 섹션)
@@ -721,13 +805,11 @@
                 font-weight: 700;
                 margin-bottom: rem(12px);
             }
-
             &__imageList {
                 @include flexbox;
                 gap:rem(8px);
                 overflow: hidden;
             }
-
             .image {
                 @include imageCover;
                 width: rem(168px);
@@ -755,10 +837,30 @@
                 background-image: url(./../../assets/images/figma-desktop/푸드크로니클.png);
             } 
         }
-
+        
+        //오직 티빙에만 있어요 영역 모바일
+        @include mobile {   
+            @include containerMax(768px);
+            @include paddingX(8px);
+            padding-bottom: rem(16px);
+            &__title {
+                font-weight: 700;
+                font-size: rem(12px);
+            }
+            &__imageList {
+                @include flexbox;
+                gap:rem(4px);
+            }
+            .image {
+                @include imageCover;
+                width: rem(168px);
+                height: rem(336px); 
+                margin-bottom: rem(8px);
+            }
+        }
     }
 
-    //TVING sportes 경기 생중계 영역 (6번째 섹션)
+    //TVING sportes 경기 생중계 영역 (6번째 섹션)         
     .section6{
         background: $black;
         //TVING sportes 경기 생중계 영역 데스크탑
@@ -781,6 +883,7 @@
             padding-bottom: rem(28px);
             &__image {
                 width: 100%;
+                height: rem(68px);
                 @include paddingY(28px);
                 @include paddingX(39px);
                 @include imageCover;
@@ -790,68 +893,102 @@
 
         //TVING sportes 경기 생중계 영역 모바일
         @include mobile {
-
+            @include containerMax(768px);
+            @include paddingX(8px);
+            padding-bottom: rem(16px);
+            &__image {
+                width: 100%;
+                @include marginY(16px);
+                @include marginX(8px);
+                @include imageCover;
+                background-image: url(./../../assets/images/figma-desktop/section6/d_section6-banner.png);
+            }
         }
-
     }
 
     //이벤트 영역 (7번째 섹션)
     .section7 {
-        background: $black;
         color : $white;
-
+        overflow: hidden;
         //이벤트 영역 데스크탑
         @include desktop {
             @include containerMax(1920px);
             @include paddingX(70px);
             padding-bottom: rem(36px);
-
-
             &__title {
                 @include title;
                 padding-bottom: rem(12px);
-            }
-
+            }   
             &__imageList {
                 @include flexbox;
                 gap: rem(14px);
-                background: wheat;
             }
-
             &.section2__imageItem {
                 width: 100%;
             }
-
             .image {
                 @include imageCover;
                 height: 120px;
+                width: 347.899px;
             }
-
             &__image1 {
                 background-image: url('./../../assets/images/figma-desktop/이벤트1.png');
             }
             &__image2 {
-                background-image: url('./../../assets/images/figma-desktop/이벤트2.png');
-            }
-            &__image3 {
                 background-image: url('./../../assets/images/figma-desktop/이벤트3.png');
             }
-            &__image4 {
+            &__image3 {
                 background-image: url('./../../assets/images/figma-desktop/이벤트4.png');
             }
-            &__image5 {
+            &__image4 {
                 background-image: url('./../../assets/images/figma-desktop/이벤트5.png');
             }
-            &__image6 {
+            &__image5 {
                 background-image: url('./../../assets/images/figma-desktop/이벤트6.png');
+            }
+            &__image6 {
+                background-image: url('./../../assets/images/figma-desktop/이벤트2.png');
             }
         }
 
         //이벤트 영역 태블릿
         @include tablet {
             @include tabletCon;
+            &__title {
+                @include title;
+                padding-bottom: rem(12px);
+            }
+            &__imageList {
+                @include flexbox;
+                gap: rem(8px);
+            }
+            &.section2__imageItem {
+                width: 100%;
+            }
+            .image {
+                @include imageCover;
+                height: rem(73px);
+                width: rem(214px);
+            }
+            &__image1 {
+                background-image: url('./../../assets/images/figma-desktop/이벤트1.png');
+            }
+            &__image2 {
+                background-image: url('./../../assets/images/figma-desktop/이벤트3.png');
+            }
+            &__image3 {
+                background-image: url('./../../assets/images/figma-desktop/이벤트4.png');
+            }
+            &__image4 {
+                background-image: url('./../../assets/images/figma-desktop/이벤트5.png');
+            }
+            &__image5 {
+                background-image: url('./../../assets/images/figma-desktop/이벤트6.png');
+            }
+            &__image6 {
+                background-image: url('./../../assets/images/figma-desktop/이벤트2.png');
+            }
         }
-        
     }
 }
 
