@@ -825,11 +825,11 @@ button:focus:not(:focus-visible) {
 }
 
 .onboading__section_0 {
-  padding-top: 10rem;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: flex-start;
-  align-items: stretch;
+  justify-content: center;
+  align-items: center;
+  padding: 160px 0 130px 0;
   height: 95vh;
   max-height: 68vw;
   width: 100%;
@@ -873,12 +873,12 @@ button:focus:not(:focus-visible) {
 }
 @media (max-width: 1279px) {
   .onboading__section_1 {
-    margin-top: 3rem;
+    margin-top: 2.5rem;
   }
 }
 @media (max-width: 767px) {
   .onboading__section_1 {
-    margin-top: 2.5rem;
+    margin-top: 3rem;
   }
 }
 @media (min-width: 1280px) {
@@ -950,45 +950,45 @@ button:focus:not(:focus-visible) {
     transform: translate3d(0, 0, 0);
   }
 }
+.intro__section_0 > p {
+  font-weight: 700;
+  line-height: 140%;
+}
 @media (min-width: 1280px) {
   .intro__section_0 > p {
     font-size: 2.5rem;
-    font-weight: 700;
-    line-height: 140%;
-  }
-  .intro__section_0 .text__signup {
-    color: #898989;
-    font-size: 1.25rem;
-    font-weight: 600;
-    line-height: 160%;
-    margin: 10px 0 60px 0;
   }
 }
 @media (max-width: 1279px) {
   .intro__section_0 > p {
     font-size: 1.3125rem;
-    font-weight: 700;
-    line-height: 140%;
-  }
-  .intro__section_0 .text__signup {
-    color: #898989;
-    font-size: 0.75rem;
-    font-weight: 600;
-    line-height: 160%;
-    margin: 10px 0 30px 0;
   }
 }
 @media (max-width: 767px) {
   .intro__section_0 > p {
     font-size: 1rem;
-    font-weight: 700;
-    line-height: 140%;
   }
+}
+.intro__section_0 .text__signup {
+  color: #898989;
+  font-weight: 600;
+  line-height: 160%;
+}
+@media (min-width: 1280px) {
   .intro__section_0 .text__signup {
-    color: #898989;
+    font-size: 1.25rem;
+    margin: 10px 0 60px 0;
+  }
+}
+@media (max-width: 1279px) {
+  .intro__section_0 .text__signup {
     font-size: 0.75rem;
-    font-weight: 600;
-    line-height: 160%;
+    margin: 10px 0 30px 0;
+  }
+}
+@media (max-width: 767px) {
+  .intro__section_0 .text__signup {
+    font-size: 0.75rem;
     margin: 10px 0 16px 0;
   }
 }
@@ -1013,7 +1013,7 @@ button:focus:not(:focus-visible) {
   }
 }
 .intro__text_1 {
-  margin-top: 0.625rem;
+  margin-top: 0.5rem;
   font-weight: 600;
   line-height: 150%;
   color: #C4C4C4;
@@ -1050,8 +1050,11 @@ button:focus:not(:focus-visible) {
 }
 @media (max-width: 767px) {
   .intro__text_2 {
-    font-size: 0.75rem;
+    display: none;
   }
+}
+.intro__section_1 {
+  justify-content: center;
 }
 .intro__section_3 {
   justify-content: center;
@@ -1080,7 +1083,7 @@ button:focus:not(:focus-visible) {
   justify-content: flex-start;
   align-items: stretch;
   overflow: hidden;
-  margin-top: 2.5rem;
+  margin-top: 2rem;
 }
 .image__section_3 {
   position: relative;

@@ -3,8 +3,8 @@
 
 // 스크롤 섹션 0
 .onboading__section_0 {
-  padding-top: rem(160px);
-  @include flexbox($direction: column);
+  @include flexbox($direction: column, $items: center, $justify: center);
+  padding: 160px 0 130px 0;
   height: 95vh;
   max-height: 68vw;
   width: 100%;
@@ -15,9 +15,7 @@
     background-image:
       url(./../../assets/images/figma-desktop/gradation-img.png),
       url(./../../assets/images/figma-desktop/background-img.png);
-    background-repeat: no-repeat, no-repeat;
-    background-position: bottom, bottom;
-    background-size: cover;
+    @include bgSetting;
   }
 
   @include tablet {
@@ -25,9 +23,7 @@
     background-image:
       url(./../../assets/images/tablet/gradation-img.png),
       url(./../../assets/images/tablet/background-img.png);
-    background-repeat: no-repeat, no-repeat;
-    background-position: bottom, bottom;
-    background-size: cover;
+    @include bgSetting;
   }
 
   @include mobile {
@@ -35,9 +31,7 @@
     background-image:
       url(./../../assets/images/figma-mobile/gradation-img.png),
       url(./../../assets/images/figma-mobile/background-img.png);
-    background-repeat: no-repeat, no-repeat;
-    background-position: bottom, bottom;
-    background-size: cover;
+    @include bgSetting;
   }
 }
 
@@ -49,11 +43,11 @@
     }
 
     @include tablet {
-      margin-top: rem(48px);
+      margin-top: rem(40px);
     }
 
     @include mobile {
-      margin-top: rem(40px);
+      margin-top: rem(48px);
     }
   }
 
@@ -123,50 +117,36 @@
       }
     }
 
-    @include desktop {
-      >p {
-        font-size: rem(40px);
-        font-weight: 700;
-        line-height: 140%;
-      }
+    >p {
+      font-weight: 700;
+      line-height: 140%;
 
-      .text__signup {
-        color: $gray400;
+      @include desktop {
+        font-size: rem(40px);
+      }
+      @include tablet {
+        font-size: rem(21px);
+      }
+      @include mobile{
+        font-size: rem(16px);
+      }
+    }
+
+    .text__signup {
+      color: $gray400;
+      font-weight: 600;
+      line-height: 160%;
+
+      @include desktop {
         font-size: rem(20px);
-        font-weight: 600;
-        line-height: 160%;
         margin: 10px 0 60px 0;
       }
-    }
-
-    @include tablet {
-      >p {
-        font-size: rem(21px);
-        font-weight: 700;
-        line-height: 140%;
-      }
-
-      .text__signup {
-        color: $gray400;
+      @include tablet {
         font-size: rem(12px);
-        font-weight: 600;
-        line-height: 160%;
         margin: 10px 0 30px 0;
       }
-    }
-
-    @include mobile {
-      >p {
-        font-size: rem(16px);
-        font-weight: 700;
-        line-height: 140%;
-      }
-
-      .text__signup {
-        color: $gray400;
+      @include mobile{
         font-size: rem(12px);
-        font-weight: 600;
-        line-height: 160%;
         margin: 10px 0 16px 0;
       }
     }
@@ -194,7 +174,7 @@
   // 인트로 섹션 텍스트(공통)
   &__text {
     &_1 {
-      margin-top: rem(10px);
+      margin-top: rem(8px);
       font-weight: 600;
       line-height: 150%;
       color: $gray200;
@@ -226,9 +206,13 @@
       }
 
       @include mobile {
-        font-size: rem(12px);
+        display: none;
       }
     }
+  }
+
+  &__section_1 {
+    justify-content: center;
   }
 
   &__section_3 {
@@ -257,7 +241,7 @@
     width: 100%;
     @include flexbox;
     overflow: hidden;
-    margin-top: rem(40px);
+    margin-top: rem(32px);
   }
 
   &__section_3 {
