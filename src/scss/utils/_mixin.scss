@@ -1,4 +1,5 @@
 @use "./../utils/unit" as *;
+@use './../utils/color' as *;
 
 // 포지션 관련 믹스인
 @mixin pos {
@@ -40,6 +41,12 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+
+// 태블릿 컨테이너 믹스인
+@mixin tabletCon {
+  @include containerMax(1280px);
+  @include paddingX(40px);
 }
 
 // 컨테이너 max width
@@ -110,6 +117,11 @@
   height: $height;
 }
 
+@mixin fit($fit : cover, $posX: 0, $posY : 0) {
+  object-fit: $fit;
+  object-position: $posX $posY;
+}
+
 // 말줄임표
 @mixin textOver {
   white-space: nowrap;
@@ -122,4 +134,17 @@
   background-repeat: no-repeat, no-repeat;
   background-position: bottom, bottom;
   background-size: cover;
+}
+
+//div 이미지 크기 커버관련
+@mixin imageCover {
+  background-repeat: no-repeat, no-repeat;
+  background-position: bottom, bottom;
+  background-size: cover;
+}
+
+// 제목 타이틀 믹스인
+@mixin title {
+  font-size: rem(28.43px);
+  font-weight: 700;
 }
