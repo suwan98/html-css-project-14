@@ -355,9 +355,6 @@ iframe {
   height: 100%;
 }
 
-/* // 기본 색상  */
-/* // 테마 색상  */
-/* 티빙 기본 배경 */
 .a11yHidden,
 legend {
   overflow: hidden;
@@ -373,7 +370,6 @@ legend {
   visibility: hidden;
 }
 
-/* @forward "sprites"; */
 .button {
   border: 0;
   appearance: none;
