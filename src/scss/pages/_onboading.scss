@@ -62,6 +62,10 @@
 
     @include mobile {
       margin-top: rem(48px);
+
+      .intro__text_2 {
+        display: none;
+      }
     }
   }
 
@@ -206,7 +210,7 @@
       }
 
       @include mobile {
-        display: none;
+        font-size: rem(12px);
       }
     }
   }

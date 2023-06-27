@@ -895,6 +895,9 @@ button:focus:not(:focus-visible) {
   .onboading__section_2 {
     margin-top: 3rem;
   }
+  .onboading__section_2 .intro__text_2 {
+    display: none;
+  }
 }
 @media (min-width: 1280px) {
   .onboading__section_3 {
@@ -1050,7 +1053,7 @@ button:focus:not(:focus-visible) {
 }
 @media (max-width: 767px) {
   .intro__text_2 {
-    display: none;
+    font-size: 0.75rem;
   }
 }
 .intro__section_1 {
