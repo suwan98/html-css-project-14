@@ -736,6 +736,54 @@ button:focus:not(:focus-visible) {
   background: #FF153C;
 }
 
+.menu__live::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-55%);
+}
+@media (min-width: 1280px) {
+  .menu__live::before {
+    width: 2.125rem;
+    height: 2.125rem;
+    background: url(./../../assets/icon/desktop/d_live.svg) no-repeat;
+  }
+}
+@media (max-width: 1279px) {
+  .menu__live::before {
+    width: 1.25rem;
+    height: 1.25rem;
+    background: url(./../../assets/icon/tablet/t_live.svg) no-repeat;
+  }
+}
+
+@media (min-width: 1280px) {
+  .menu__live:hover::before {
+    width: 2.125rem;
+    height: 2.125rem;
+    background: url(./../../assets/icon/desktop/d_live_hover.svg) no-repeat;
+  }
+}
+@media (max-width: 1279px) {
+  .menu__live:hover::before {
+    width: 1.25rem;
+    height: 1.25rem;
+    background: url(./../../assets/icon/tablet/t_live_hover.svg) no-repeat;
+  }
+}
+
+@media (min-width: 1280px) {
+  .menu__text {
+    margin-left: 2.75rem;
+  }
+}
+@media (max-width: 1279px) {
+  .menu__text {
+    margin-left: 1.875rem;
+  }
+}
+
 .login {
   padding-top: 10.625rem;
   margin: 0 auto;
@@ -2290,6 +2338,7 @@ body {
     padding-right: 4.375rem;
     height: 53.4375rem;
     background: url(./../../assets/images/figma-desktop/d_banner-img.png);
+    width: 100%;
   }
   .appMain .mainThumbnail .thumbnailWrapper {
     bottom: 25%;
@@ -2838,7 +2887,7 @@ body {
     background-image: url(./../../assets/images/figma-desktop/쇼미더머니.png);
   }
   .appMain .section3__image7 {
-    background-image: url(./../../assets/images/figma-desktop/러브캐쳐\ \(1\).png);
+    background-image: url(./../../assets/images/figma-desktop/d_러브캐처.png);
   }
   .appMain .section3__imageTitle {
     margin-top: 1.125rem;
@@ -3109,7 +3158,7 @@ body {
     background-image: url(./../../assets/images/figma-desktop/전체관람가.png);
   }
   .appMain .section5__image2 {
-    background-image: url(./../../assets/images/figma-desktop/러브캐쳐-1.png);
+    background-image: url(./../../assets/images/figma-desktop/only-tving2.png);
   }
   .appMain .section5__image3 {
     background-image: url(./../../assets/images/figma-desktop/환승연애2.png);
@@ -3149,7 +3198,7 @@ body {
     background-image: url(./../../assets/images/figma-desktop/전체관람가.png);
   }
   .appMain .section5__image2 {
-    background-image: url(./../../assets/images/figma-desktop/러브캐쳐-1.png);
+    background-image: url(./../../assets/images/figma-desktop/only-tving2.png);
   }
   .appMain .section5__image3 {
     background-image: url(./../../assets/images/figma-desktop/환승연애2.png);
@@ -3385,6 +3434,7 @@ body {
 .appMain .form-input__userEmailConfirm {
   border-radius: 4px;
   width: 100%;
+  border: 0;
   background: #404040;
   font-weight: 600;
   color: #898989;
@@ -3430,6 +3480,7 @@ body {
   color: #898989;
 }
 .appMain .findSelf__button {
+  border: 0;
   font-weight: 600;
   border-radius: 4px;
 }
@@ -3441,6 +3492,7 @@ body {
     padding-right: 4.375rem;
   }
   .appMain .findIdTitle {
+    padding-top: 10.625rem;
     padding-bottom: 3.75rem;
     font-size: 2.3125rem;
   }
