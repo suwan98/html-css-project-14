@@ -5,7 +5,7 @@
   @include flexbox($items: center);
   position: fixed;
   z-index: 200;
-  width: calc(100vw - $scrollbar-width);
+  width: 100vw;
   color: $gray200;
   transition: all 0.3s;
   @include desktop {
