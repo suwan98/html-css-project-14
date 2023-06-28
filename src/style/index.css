@@ -333,11 +333,6 @@ a {
   text-decoration: none;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-/* Accessibility Styles */
-=======
->>>>>>> e17002580502508f95713e54ac50a7db58940e88
 .a11yHidden,
 legend {
   overflow: hidden;
@@ -356,14 +351,6 @@ legend {
 body {
   font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   background: #000000;
-<<<<<<< HEAD
-=======
-body {
-  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-  /* font: inherit; */
-  background-color: #000000;
->>>>>>> dev
-=======
 }
 
 /* 유연한 미디어 */
@@ -375,7 +362,6 @@ img {
 video {
   width: 100%;
   height: auto;
->>>>>>> e17002580502508f95713e54ac50a7db58940e88
 }
 
 /* 유연한 미디어 */
@@ -394,33 +380,6 @@ iframe {
   height: 100%;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-.bullet {
-  display: inline-block;
-  width: 0.75rem;
-  height: 0.75rem;
-  border-radius: 50%;
-  background: #898989;
-}
-.bullet--white {
-  background: #FFFFFF;
-=======
-/* Accessibility Styles */
-.a11yHidden,
-legend {
-  overflow: hidden;
-  position: absolute !important;
-  clip: rect(0, 0, 0, 0);
-  clip-path: inset(50%);
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-}
-
-/* @forward "sprites"; */
-=======
->>>>>>> e17002580502508f95713e54ac50a7db58940e88
 .button {
   border: 0;
   appearance: none;
@@ -602,20 +561,9 @@ button:focus:not(:focus-visible) {
 
 .layout-lastright {
   position: absolute;
-<<<<<<< HEAD
-  min-width: 3rem;
-  height: 2rem;
-  border-radius: 100%;
-  background-image: url(./../../assets/icon/desktop/d_eyes.svg);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: 100% auto;
->>>>>>> dev
-=======
   right: 0.9375rem;
   top: 60%;
   transform: translateY(-50%);
->>>>>>> e17002580502508f95713e54ac50a7db58940e88
 }
 
 .sns {
@@ -722,8 +670,17 @@ button:focus:not(:focus-visible) {
   }
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+.bullet {
+  display: inline-block;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background: #898989;
+}
+.bullet--white {
+  background: #FFFFFF;
+}
+
 .rating {
   font-style: italic;
   padding-right: 0.625rem;
@@ -764,42 +721,6 @@ button:focus:not(:focus-visible) {
   height: 8px;
   border-radius: 8px;
   background: #FF153C;
-}
-
-.i-adult {
-  position: absolute;
-  top: 0;
-  right: 0;
-  font-size: rem(15px);
-  padding: 5px;
-  display: inline-block;
-  width: rem(30px);
-  height: rem(30px);
-  border-radius: 50%;
-  background: #FF153C;
-=======
-.menu__live::before {
-=======
-.bullet {
-  display: inline-block;
-  width: 0.75rem;
-  height: 0.75rem;
-  border-radius: 50%;
-  background: #898989;
-}
-.bullet--white {
-  background: #FFFFFF;
-}
-
-.arrowRight::after {
->>>>>>> e17002580502508f95713e54ac50a7db58940e88
-  content: "";
-  display: inline-block;
-  width: rem(70px);
-  height: rem(70px);
-  transform: rotate(45deg);
-  border-top: 0.1rem solid #333;
-  border-right: 0.1rem solid #333;
 }
 
 .i-adult {
@@ -1493,30 +1414,16 @@ fieldset {
   .onboading__title {
     font-size: 1rem;
   }
-<<<<<<< HEAD
->>>>>>> dev
-}
-
-.appHeader {
-=======
 }
 
 .regist-container {
   padding-top: 4.375rem;
->>>>>>> e17002580502508f95713e54ac50a7db58940e88
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
   color: #6B6B6B;
   transition: all 0.3s;
-<<<<<<< HEAD
-<<<<<<< HEAD
-  background: #000000;
-=======
->>>>>>> dev
-=======
->>>>>>> e17002580502508f95713e54ac50a7db58940e88
 }
 @media (min-width: 1280px) {
   .regist-container {
@@ -2349,14 +2256,10 @@ body {
   background: #565656;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 .appHaeder {
   width: 100%;
 }
 
-=======
->>>>>>> e17002580502508f95713e54ac50a7db58940e88
 .appMain .mainThumbnail {
   color: #FFFFFF;
   position: relative;
@@ -3444,10 +3347,6 @@ body {
   }
 }
 
-<<<<<<< HEAD
-=======
->>>>>>> dev
-=======
 .appMain {
   color: #FFFFFF;
   display: flex;
@@ -3991,5 +3890,4 @@ body {
   text-decoration: underline;
 }
 
->>>>>>> e17002580502508f95713e54ac50a7db58940e88
 /*# sourceMappingURL=index.css.map */
