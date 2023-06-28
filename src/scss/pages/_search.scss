@@ -68,7 +68,7 @@ body {
   }
 }
 
-.form-input::before {
+.form-input__search::before {
   @include mobile {
     content: "검색";
     color: $gray700;

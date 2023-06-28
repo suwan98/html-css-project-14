@@ -13,9 +13,11 @@
     @include desktop {
       max-width: 732px;
     }
+
     @include tablet {
       max-width: 416px;
     }
+
     @include mobile {
       max-width: 319px;
     }
@@ -30,7 +32,7 @@
 
   @include desktop {
     @include containerMax(1920px);
-    font-size: rem(16px);
+    font-size: rem(20px);
 
     &-title {
       font-size: rem(38px);
@@ -39,7 +41,7 @@
 
   @include tablet {
     @include containerMax(1280px);
-    font-size: rem(14px);
+    font-size: rem(16px);
 
     &-title {
       font-size: rem(28px);
@@ -48,7 +50,7 @@
 
   @include mobile {
     @include containerMax(768px);
-    font-size: rem(13px);
+    font-size: rem(14px);
 
     &-title {
       font-size: rem(16px);
@@ -61,13 +63,39 @@ fieldset {
 }
 
 // 아이디, 비밀번호 입력
+.form-item__input {
+  height: rem(96px);
+  @include padding(24px);
+}
+
 .input {
+
   &__id {
-    margin-top: rem(24px);
+    @include desktop {
+      margin-top: rem(60px);
+    }
+
+    @include tablet {
+      margin-top: rem(24px);
+    }
+
+    @include mobile {
+      margin-top: rem(28px);
+    }
   }
 
   &__pwd {
-    margin-top: rem(12px);
+    @include desktop {
+      margin-top: rem(12px);
+    }
+
+    @include tablet {
+      margin-top: rem(8px);
+    }
+
+    @include mobile {
+      margin-top: rem(6px);
+    }
   }
 }
 
@@ -85,14 +113,13 @@ fieldset {
 
   &__input:checked+label {
     background: url(./../../assets/icon/desktop/d_check_red.svg) no-repeat;
-    padding-left: rem(24px);
     background-size: contain;
     color: $white;
   }
 
   &__label {
     background: url(./../../assets/icon/desktop/d_check.svg) no-repeat;
-    padding-left: rem(24px);
+    padding-left: rem(26px);
     background-position: left;
     background-size: contain;
     color: $gray500;
@@ -106,15 +133,37 @@ fieldset {
   column-gap: rem(36px);
   color: $gray300;
   text-align: center;
-  padding-top: rem(20px); // 48px
+
+  @include desktop {
+    padding-top: rem(48px);
+  }
+
+  @include tablet {
+    padding-top: rem(24px);
+  }
+
+  @include mobile {
+    padding-top: rem(20px);
+  }
 }
 
 // 회원가입
 .signup {
   @include flexbox($justify: center, $items: center);
   text-align: center;
-  padding-top: rem(20px); //44px
   column-gap: rem(9.5px);
+
+  @include desktop {
+    padding-top: rem(44px);
+  }
+
+  @include tablet {
+    padding-top: rem(16px);
+  }
+
+  @include mobile {
+    padding-top: rem(20px);
+  }
 
   &__text {
     color: $gray500;
