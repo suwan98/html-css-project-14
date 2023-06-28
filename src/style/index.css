@@ -2383,6 +2383,7 @@ body {
   background-repeat: no-repeat, no-repeat;
   background-position: bottom, bottom;
   background-size: cover;
+  overflow: hidden;
 }
 .appMain .mainThumbnail .thumbnailWrapper {
   position: absolute;
@@ -2443,6 +2444,9 @@ body {
     width: 100%;
     height: 21.375rem;
     background: url(./../../assets/images/figma-tablet/t_banner-img.png);
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom, bottom;
+    background-size: cover;
   }
   .appMain .mainThumbnail .thumbnailWrapper {
     bottom: 12%;
@@ -2956,7 +2960,7 @@ body {
     background-image: url(./../../assets/images/figma-desktop/쇼미더머니.png);
   }
   .appMain .section3__image7 {
-    background-image: url(./../../assets/images/figma-desktop/d_러브캐처.png);
+    background-image: url(./../../assets/images/figma-desktop/d_러브캐쳐인발리.png);
   }
   .appMain .section3__imageTitle {
     margin-top: 1.125rem;
@@ -3004,7 +3008,7 @@ body {
     background-image: url(./../../assets/images/figma-desktop/쇼미더머니.png);
   }
   .appMain .section3__image7 {
-    background-image: url(./../../assets/images/figma-desktop/러브캐쳐\ \(1\).png);
+    background-image: url(./../../assets/images/figma-desktop/러브캐쳐인발리.png);
   }
   .appMain .section3__imageTitle {
     margin-top: 1.125rem;
@@ -3731,8 +3735,6 @@ body {
 }
 @media (min-width: 1280px) {
   .appHeader {
-    max-width: 120rem;
-    margin: 0 auto;
     padding-left: 4.375rem;
     padding-right: 4.375rem;
     height: 6.25rem;

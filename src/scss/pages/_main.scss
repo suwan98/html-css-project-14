@@ -8,12 +8,14 @@
 
 //메인 콘텐츠 영역  
 .appMain{
+
     //메인페이지 최상단 썸네일 공통 영역
 
 .mainThumbnail{
     color : $white;
     position: relative;
     @include imageCover;
+    overflow: hidden;
 
     .thumbnailWrapper{
         position: absolute; 
@@ -69,7 +71,7 @@
          width: 100%;
          height: rem(342px);
          background: url(./../../assets/images/figma-tablet/t_banner-img.png);
-
+        @include imageCover;
          .thumbnailWrapper{
             bottom: 12%;
             width: calc(100% - 140px);
@@ -507,7 +509,7 @@
                 background-image: url(./../../assets/images/figma-desktop/쇼미더머니.png);
             }
             &__image7{
-                background-image: url(./../../assets/images/figma-desktop/d_러브캐처.png);
+                background-image: url(./../../assets/images/figma-desktop/d_러브캐쳐인발리.png);
             }
             &__imageTitle {
                 margin-top: rem(18px);
@@ -553,7 +555,7 @@
                 background-image: url(./../../assets/images/figma-desktop/쇼미더머니.png);
             }
             &__image7{
-                background-image: url(./../../assets/images/figma-desktop/러브캐쳐\ \(1\).png);
+                background-image: url(./../../assets/images/figma-desktop/러브캐쳐인발리.png);
             }
             &__imageTitle {
                 margin-top: rem(18px);

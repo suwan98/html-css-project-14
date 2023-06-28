@@ -9,7 +9,6 @@
   color: $gray200;
   transition: all 0.3s;
   @include desktop {
-    @include containerMax(1920px);
     @include paddingX(70px);
     height: rem(100px);
     column-gap: rem(52px);
