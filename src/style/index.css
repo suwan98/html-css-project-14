@@ -390,7 +390,7 @@ iframe {
 }
 .button--login {
   width: 100%;
-  height: 3em;
+  height: 3.3em;
   border-radius: 4px;
   background: #FF153C;
   color: #FFFFFF;
@@ -562,7 +562,7 @@ button:focus:not(:focus-visible) {
 .layout-lastright {
   position: absolute;
   right: 0.9375rem;
-  top: 60%;
+  top: 55%;
   transform: translateY(-50%);
 }
 
@@ -821,7 +821,7 @@ button:focus:not(:focus-visible) {
   .login {
     max-width: 120rem;
     margin: 0 auto;
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
   .login-title {
     font-size: 2.375rem;
@@ -831,7 +831,7 @@ button:focus:not(:focus-visible) {
   .login {
     max-width: 80rem;
     margin: 0 auto;
-    font-size: 0.875rem;
+    font-size: 1rem;
   }
   .login-title {
     font-size: 1.75rem;
@@ -841,7 +841,7 @@ button:focus:not(:focus-visible) {
   .login {
     max-width: 48rem;
     margin: 0 auto;
-    font-size: 0.8125rem;
+    font-size: 0.875rem;
   }
   .login-title {
     font-size: 1rem;
@@ -852,11 +852,43 @@ fieldset {
   width: 100%;
 }
 
-.input__id {
-  margin-top: 1.5rem;
+.form-item__input {
+  height: 6rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
-.input__pwd {
-  margin-top: 0.75rem;
+
+@media (min-width: 1280px) {
+  .input__id {
+    margin-top: 3.75rem;
+  }
+}
+@media (max-width: 1279px) {
+  .input__id {
+    margin-top: 1.5rem;
+  }
+}
+@media (max-width: 767px) {
+  .input__id {
+    margin-top: 1.75rem;
+  }
+}
+@media (min-width: 1280px) {
+  .input__pwd {
+    margin-top: 0.75rem;
+  }
+}
+@media (max-width: 1279px) {
+  .input__pwd {
+    margin-top: 0.5rem;
+  }
+}
+@media (max-width: 767px) {
+  .input__pwd {
+    margin-top: 0.375rem;
+  }
 }
 
 .autoLogin {
@@ -873,7 +905,6 @@ fieldset {
 }
 .autoLogin__input:checked + label {
   background: url(./../../assets/icon/desktop/d_check_red.svg) no-repeat;
-  padding-left: 1.5rem;
   background-size: contain;
   color: #FFFFFF;
 }
@@ -885,6 +916,16 @@ fieldset {
   color: #6B6B6B;
   font-weight: 600;
 }
+@media (min-width: 1280px) {
+  .autoLogin__label {
+    padding-left: 1.875rem;
+  }
+}
+@media (max-width: 767px) {
+  .autoLogin__label {
+    padding-left: 1.25rem;
+  }
+}
 
 .findInfo {
   display: flex;
@@ -894,7 +935,21 @@ fieldset {
   column-gap: 2.25rem;
   color: #A6A6A6;
   text-align: center;
-  padding-top: 1.25rem;
+}
+@media (min-width: 1280px) {
+  .findInfo {
+    padding-top: 3rem;
+  }
+}
+@media (max-width: 1279px) {
+  .findInfo {
+    padding-top: 1.5rem;
+  }
+}
+@media (max-width: 767px) {
+  .findInfo {
+    padding-top: 1.25rem;
+  }
 }
 
 .signup {
@@ -903,8 +958,22 @@ fieldset {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding-top: 1.25rem;
   column-gap: 0.59375rem;
+}
+@media (min-width: 1280px) {
+  .signup {
+    padding-top: 2.75rem;
+  }
+}
+@media (max-width: 1279px) {
+  .signup {
+    padding-top: 1rem;
+  }
+}
+@media (max-width: 767px) {
+  .signup {
+    padding-top: 1.25rem;
+  }
 }
 .signup__text {
   color: #6B6B6B;
@@ -1995,7 +2064,7 @@ body {
 }
 
 @media (max-width: 767px) {
-  .form-input::before {
+  .input_before::before {
     content: "검색";
     color: #404040;
     font-size: 16px;
