@@ -86,8 +86,9 @@
 
 > 로그인페이지 데스크탑 뷰
 <img width="980" src="https://github.com/suwan98/html-css-project-14/assets/74893676/77ef73d5-3f7f-4df3-97ff-d1f3f01db90c.png" />
-* form의 input(id, password)과 button 영역을 컴포넌트화 시켰습니다.
-* button component에는 로그인, 온보딩 시작 버튼, 확인, 테두리 없는 버튼의 네 가지 스타일을 세분화시켰습니다.
+
+-  form의 input(id, password)과 button 영역을 컴포넌트화 시켰습니다.
+- button component에는 로그인, 온보딩 시작 버튼, 확인, 테두리 없는 버튼의 네 가지 스타일을 세분화시켰습니다.
  
 ### 온보딩페이지
 > 온보딩페이지 모바일 뷰
@@ -99,6 +100,7 @@
 
 > 온보딩페이지 데스크탑 뷰
 <img width="980" src="https://github.com/suwan98/html-css-project-14/assets/74893676/bf9664c5-b50a-4c50-be8f-fd7f9ca0e7d6.png" />
+
 * 온보딩 영역의 첫 번째 섹션은 백그라운드 이미지를 두 개 겹침으로써 그라데이션 효과를 완성했습니다.
 * 두 번째, 세 번째 영역의 콘텐츠들은 애니메이션 효과를 통해 무한 슬라이드를 완성했습니다.
 * hover시 애니메이션이 멈추며 사진 크기가 커집니다.
@@ -112,6 +114,7 @@
 
 > 헤더 simple3
 <img width="980" src="https://github.com/suwan98/html-css-project-14/assets/74893676/6e5e006b-2490-43dc-8669-4f132f01cb02.png" />
+
 * 헤더는 simple1, simple2, default type 으로 나뉩니다.
 * 기본 구조는 default type에 맞춰 제작되었으며 class 탈부착을 통해 simple type으로 변화가 가능합니다.
 
@@ -124,6 +127,7 @@
 
 > 푸터 데스크탑 뷰
 <img width="980" src="https://github.com/suwan98/html-css-project-14/assets/74893676/e56e8e80-4596-4688-b77d-7d2edd839d58.png" />
+
 * 푸터는 데스크탑/태블릿이 유사하고 모바일에서 변화가 있습니다. 
 * 따라서 푸터 내비게이션을 제외한 비즈니스 정보 영역을 모바일에서는 숨김 처리하여 반응형을 완성했습니다.
 * 푸터 sns 영역은 이미지 sprite 기법을 활용해 리소스 로딩 속도를 최적화하고자 했습니다.
