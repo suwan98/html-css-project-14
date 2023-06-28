@@ -226,11 +226,11 @@ https://taing14.netlify.app/
 ## 검색 페이지
 
 - PC size
-  <img width="1200" src="./src/assets/readme-images/huijeong/search_pc.png" />
+  <img width="980" src="./src/assets/readme-images/huijeong/search_pc.png" />
 - Tablet size
-  <img width="1200" src="./src/assets/readme-images/huijeong/find-pw_tab.png" />
+  <img width="700" src="./src/assets/readme-images/huijeong/find-pw_tab.png" />
 - Mobile size
-  <img width="1200" src="./src/assets/readme-images/huijeong/find-pw_m.png" />
+  <img width="320" src="./src/assets/readme-images/huijeong/find-pw_m.png" />
 
 - 검색 form과 최근 검색어, 실시간 인기 검색어 순위를 구현하였습니다.\
   전체 영역을 section 태그로 감싸고 form 태그로 검색란을, button 태그로 검색 버튼을 구현하였습니다.\
@@ -239,11 +239,11 @@ https://taing14.netlify.app/
 ## 비밀번호 찾기 페이지
 
 - PC size
-  <img width="1200" src="./src/assets/readme-images/huijeong/search_pc.png" />
+  <img width="980" src="./src/assets/readme-images/huijeong/search_pc.png" />
 - Tablet size
-  <img width="1200" src="./src/assets/readme-images/huijeong/search_tab.png" />
+  <img width="700" src="./src/assets/readme-images/huijeong/search_tab.png" />
 - Mobile size
-  <img width="1200" src="./src/assets/readme-images/huijeong/search_m.png" />
+  <img width="320" src="./src/assets/readme-images/huijeong/search_m.png" />
 
 - 비밀번호 찾기 타이틀과 아이디 입력 form등으로 비밀번호 찾기 페이지를 구현하였습니다.\
   전체 영역을 main 태그로 감싸고 h2 태그로 비밀번호 찾기 타이틀을, form 태그와 button 태그로 각각 아이디 입력란과 검색 버튼을 구현하였습니다.
