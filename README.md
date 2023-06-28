@@ -225,11 +225,14 @@ https://taing14.netlify.app/
 
 ## 검색 페이지
 
-- PC size
+  > PC size
+
   <img width="980" src="./src/assets/readme-images/huijeong/search_pc.png" />
-- Tablet size
+
+  > Tablet size
   <img width="700" src="./src/assets/readme-images/huijeong/find-pw_tab.png" />
-- Mobile size
+
+  > Mobile size
   <img width="320" src="./src/assets/readme-images/huijeong/find-pw_m.png" />
 
 - 검색 form과 최근 검색어, 실시간 인기 검색어 순위를 구현하였습니다.\
@@ -238,11 +241,13 @@ https://taing14.netlify.app/
 
 ## 비밀번호 찾기 페이지
 
-- PC size
+> PC size
   <img width="980" src="./src/assets/readme-images/huijeong/search_pc.png" />
-- Tablet size
+
+> Tablet size
   <img width="700" src="./src/assets/readme-images/huijeong/search_tab.png" />
-- Mobile size
+  
+> Mobile size
   <img width="320" src="./src/assets/readme-images/huijeong/search_m.png" />
 
 - 비밀번호 찾기 타이틀과 아이디 입력 form등으로 비밀번호 찾기 페이지를 구현하였습니다.\
