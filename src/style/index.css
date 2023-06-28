@@ -2054,7 +2054,7 @@ body {
 }
 
 @media (max-width: 767px) {
-  .form-input__search::before {
+  .input_before::before {
     content: "검색";
     color: #404040;
     font-size: 16px;
