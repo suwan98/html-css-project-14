@@ -3236,8 +3236,10 @@ body {
     margin-bottom: 0.5rem;
   }
 }
-.appMain .section6__image {
+.appMain .section6 {
   width: 100%;
+}
+.appMain .section6__image {
   background-repeat: no-repeat, no-repeat;
   background-position: bottom, bottom;
   background-size: cover;
@@ -3251,6 +3253,7 @@ body {
     padding-bottom: 2.25rem;
   }
   .appMain .section6__image {
+    height: 11.0625rem;
     padding-top: 4.94375rem;
     padding-bottom: 4.94375rem;
     background-image: url(./../../assets/images/figma-desktop/section6/d_section6-banner.png);
@@ -3284,6 +3287,7 @@ body {
   .appMain .section6__image {
     margin-top: 1rem;
     margin-bottom: 1rem;
+    height: 1.875rem;
     margin-left: 0.5rem;
     margin-right: 0.5rem;
     background-image: url(./../../assets/images/figma-desktop/section6/d_section6-banner.png);

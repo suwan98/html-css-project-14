@@ -827,9 +827,9 @@
 
     //TVING sportes 경기 생중계 영역 (6번째 섹션)         
     .section6{
+        width: 100%;
         //TVING sportes 경기 생중계 영역 공통부분
         &__image {
-            width: 100%;
             @include imageCover;
         }
 
@@ -839,7 +839,8 @@
             @include paddingX(70px);
             padding-bottom: rem(36px);
             &__image {
-                @include paddingY(79.1px);
+                height: rem(177px);
+                @include paddingY(79.1px); 
                 background-image: url(./../../assets/images/figma-desktop/section6/d_section6-banner.png);
             }
         }
@@ -863,6 +864,7 @@
             padding-bottom: rem(16px);
             &__image {
                 @include marginY(16px);
+                height: rem(30px);
                 @include marginX(8px);
                 background-image: url(./../../assets/images/figma-desktop/section6/d_section6-banner.png);
             }
