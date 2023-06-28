@@ -222,3 +222,28 @@ https://taing14.netlify.app/
 -  아이디 찾기 페이지는 모바일에선 아이디 찾기 텍스트가 TVING ID 로그인으로 바뀌도록 스타일링했습니다
 -  크기가 작아질수록 전체 `padding`을 축소하여  전체 간격을 조정하였고
 -  크기가 작아질 수록 `font-size`도 다르게 부여해 반응형으로 만들었습니다
+
+## 검색 페이지
+
+- PC size
+  <img width="1200" src="./src/assets/readme-images/huijeong/search_pc.png" />
+- Tablet size
+  <img width="1200" src="./src/assets/readme-images/huijeong/find-pw_tab.png" />
+- Mobile size
+  <img width="1200" src="./src/assets/readme-images/huijeong/find-pw_m.png" />
+
+- 검색 form과 최근 검색어, 실시간 인기 검색어 순위를 구현하였습니다.\
+  전체 영역을 section 태그로 감싸고 form 태그로 검색란을, button 태그로 검색 버튼을 구현하였습니다.\
+  최근 검색어와 실시간 인기 검색어는 flex를 이용하여 가로 정렬하였으며 인기 검색어 리스트는 ul태그를 사용, 각 순위의 번호는 ::befor 가상 요소를 사용하여 표현하였습니다.
+
+## 비밀번호 찾기 페이지
+
+- PC size
+  <img width="1200" src="./src/assets/readme-images/huijeong/search_pc.png" />
+- Tablet size
+  <img width="1200" src="./src/assets/readme-images/huijeong/search_tab.png" />
+- Mobile size
+  <img width="1200" src="./src/assets/readme-images/huijeong/search_m.png" />
+
+- 비밀번호 찾기 타이틀과 아이디 입력 form등으로 비밀번호 찾기 페이지를 구현하였습니다.\
+  전체 영역을 main 태그로 감싸고 h2 태그로 비밀번호 찾기 타이틀을, form 태그와 button 태그로 각각 아이디 입력란과 검색 버튼을 구현하였습니다.
