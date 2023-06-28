@@ -20,8 +20,18 @@ body {
     height: auto;
   }
 
-  iframe {
-    width: 100%;
-    height: 100%;
-  }
-  
+/* 유연한 미디어 */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+video {
+  width: 100%;
+  height: auto;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+}

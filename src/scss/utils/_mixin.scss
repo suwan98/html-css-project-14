@@ -117,11 +117,6 @@
   height: $height;
 }
 
-@mixin fit($fit : cover, $posX: 0, $posY : 0) {
-  object-fit: $fit;
-  object-position: $posX $posY;
-}
-
 // 말줄임표
 @mixin textOver {
   white-space: nowrap;

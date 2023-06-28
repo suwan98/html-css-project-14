@@ -19,10 +19,7 @@
     @include containerMax(1280px);
     @include paddingX(40px);
     height: rem(56px); 
-    column-gap: rem(28px);
-
   }
-
   @include mobile {
     @include containerMax(768px);
     @include paddingX(16px);
