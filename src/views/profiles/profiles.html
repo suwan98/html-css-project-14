@@ -1,19 +1,12 @@
 <!DOCTYPE html>
-<html lang="ko-KR">
-
+<html lang="ko">
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>TAING</title>
   <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon" />
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
-  <link rel="preload" as="style" crossorigin
-    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.7/dist/web/static/pretendard.css" />
-  <link rel="stylesheet" href="./../style/index.css" />
+  <link rel="stylesheet" href="../../style/index.css" />
 </head>
-
 <body>
   <header class="appHeader">
     <h1 class="logo">
@@ -33,45 +26,51 @@
     </aside>
   </header>
 
-  <main class="login">
-    <h2 class="login-title">TVING ID 로그인</h2>
-
-    <form class="login-form">
-      <fieldset>
-        <legend class="a11yHidden">회원 로그인 폼</legend>
-
-        <div class="form-input">
-          <label for="userId" class="a11yHidden">아이디</label>
-          <input id="userId" name="userId" class="form-input__input input__id" type="text" placeholder="아이디" required />
+  <main class="profile-container">
+    <div class="profile">
+      <h1 class="profile-title">프로필 선택</h1>
+      <p class="profile-subtitle">시청할 프로필을 선택해주세요.</p>
+        <div class="profile-list">
+          <!-- 프로필 리스트 -->
+          <ul class="profile-items" aria-label="사용자 프로필 리스트">
+            <li class="profile-items__img">
+              <button type="button" class="button">
+                <img src="../../assets/images/figma-desktop/profile-1.png" aria-label="사용자 프로필 1" />
+              </button>
+              <span>슬비님</span>
+            </li>
+            <li class="profile-items__img">
+              <button type="button" class="button">
+                <img src="../../assets/images/figma-desktop/profile-3.png" aria-label="사용자 프로필 2" />
+              </button>
+              <span>야무</span>
+            </li>
+            <li class="profile-items__img">
+              <button type="button" class="button">
+                <img src="../../assets/images/figma-desktop/profile-2.png" aria-label="사용자 프로필 3" />
+              </button>
+              <span>범쌤</span>
+            </li>
+            <li class="profile-items__img">
+              <button type="button" class="button">
+                <img src="../../assets/images/figma-desktop/profile-4.png" aria-label="사용자 프로필 4" />
+              </button>
+              <span>이듬</span>
+            </li>
+          </ul>
+          <!-- 프로필 리스트 끝 -->
+          <!-- 프로필 잠금 이미지 -->
+          <ul class="profile-items profile-items__locklist" aria-hidden="true">
+            <li class="profile-items__lock"></li>
+            <li class="profile-items__lock"></li>
+            <li class="profile-items__lock"></li>
+          </ul>
+          <!-- 프로필 잠금 이미지 끝 -->
         </div>
-
-        <div class="form-input form-input__pwd">
-          <label for="userPassword" class="a11yHidden">비밀번호</label>
-          <input id="userPassword" name="userPassword" class="form-input__input input__pwd" type="password"
-            placeholder="비밀번호" required />
-          <button id="pw-hide" class="button layout-lastright icon-hide"></button>
-        </div>
-
-        <div class="autoLogin">
-          <input class="autoLogin__input" type="checkbox" id="auto-login" name="auto-login" />
-          <label for="auto-login" class="autoLogin__label">자동 로그인</label>
-        </div>
-
-        <button type="submit" class="button button--login">로그인하기</button>
-
-        <div class="findInfo">
-          <button type="button" class="button button--no-border" onclick="location.href = './find-pw.html'">아이디 찾기</button>
-          <button type="button" class="button button--no-border" onclick="location.href = './find-pw.html'">비밀번호 찾기</button>
-        </div>
-      </fieldset>
-    </form>
-
-    <div class="signup">
-      <p class="signup__text">아직 계정이 없으신가요?</p>
-      <button type="button" class="button button--no-border" onclick="location.href = './join.html'">회원가입 하기</button>
+        <button type="button" class="profile-btn">프로필 편집</button>
     </div>
   </main>
-
+  <!-- footer -->
   <footer class="appFooter">
     <section class="footer-section">
       <nav class="footer-nav">
@@ -100,6 +99,6 @@
       <p class="copyright">Copyright © 주식회사 티빙 All right reserved.</p>
     </section>
   </footer>
+  <!-- footer 끝 -->
 </body>
-
 </html>

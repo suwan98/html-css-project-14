@@ -33,43 +33,28 @@
     </aside>
   </header>
 
-  <main class="login">
-    <h2 class="login-title">TVING ID 로그인</h2>
+  <main class="find-pw">
+    <h2 class="find-pw-title">비밀번호 찾기</h2>
+    <p class="find-pw-text">아이디 확인 후 등록된 이메일 주소로 비밀번호 재설정을 위한 인증 메일이 발송됩니다. 이메일을 확인하여 12시간 이내에 비밀번호 재설정을 완료해주세요.</p>
 
     <form class="login-form">
       <fieldset>
+        <!-- 접근성 고려 - ally -->
         <legend class="a11yHidden">회원 로그인 폼</legend>
 
+        <!-- 아이디 입력 서식 -->
         <div class="form-input">
+          <!-- 접근성 고려 - ally -->
           <label for="userId" class="a11yHidden">아이디</label>
-          <input id="userId" name="userId" class="form-input__input input__id" type="text" placeholder="아이디" required />
+          <input id="userId" name="userId" class="form-input__input input__find-pw" type="text" placeholder="아이디"
+            required />
+          <!-- 버튼 active 활성화 -->
+          <!-- <button id="id-close" class="button icon-close"></button> -->
         </div>
 
-        <div class="form-input form-input__pwd">
-          <label for="userPassword" class="a11yHidden">비밀번호</label>
-          <input id="userPassword" name="userPassword" class="form-input__input input__pwd" type="password"
-            placeholder="비밀번호" required />
-          <button id="pw-hide" class="button layout-lastright icon-hide"></button>
-        </div>
-
-        <div class="autoLogin">
-          <input class="autoLogin__input" type="checkbox" id="auto-login" name="auto-login" />
-          <label for="auto-login" class="autoLogin__label">자동 로그인</label>
-        </div>
-
-        <button type="submit" class="button button--login">로그인하기</button>
-
-        <div class="findInfo">
-          <button type="button" class="button button--no-border" onclick="location.href = './find-pw.html'">아이디 찾기</button>
-          <button type="button" class="button button--no-border" onclick="location.href = './find-pw.html'">비밀번호 찾기</button>
-        </div>
+        <button type="submit" class="button button--login button---pw">확인</button>
       </fieldset>
     </form>
-
-    <div class="signup">
-      <p class="signup__text">아직 계정이 없으신가요?</p>
-      <button type="button" class="button button--no-border" onclick="location.href = './join.html'">회원가입 하기</button>
-    </div>
   </main>
 
   <footer class="appFooter">

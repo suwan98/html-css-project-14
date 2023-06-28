@@ -7,6 +7,20 @@
   @include flexbox($justify: center, $direction: column, $items: center);
   transition: all 0.3s;
 
+  &-form {
+    width: 100%;
+
+    @include desktop {
+      max-width: 732px;
+    }
+    @include tablet {
+      max-width: 416px;
+    }
+    @include mobile {
+      max-width: 319px;
+    }
+  }
+
   &-title {
     font-size: rem(37px);
     font-weight: 700;
@@ -16,7 +30,6 @@
 
   @include desktop {
     @include containerMax(1920px);
-    width: 732px;
     font-size: rem(16px);
 
     &-title {
@@ -26,7 +39,6 @@
 
   @include tablet {
     @include containerMax(1280px);
-    width: 416px;
     font-size: rem(14px);
 
     &-title {
@@ -36,13 +48,16 @@
 
   @include mobile {
     @include containerMax(768px);
-    width: 319px;
     font-size: rem(13px);
 
     &-title {
       font-size: rem(16px);
     }
   }
+}
+
+fieldset {
+  width: 100%;
 }
 
 // 아이디, 비밀번호 입력
@@ -81,6 +96,7 @@
     background-position: left;
     background-size: contain;
     color: $gray500;
+    font-weight: 600;
   }
 }
 
@@ -90,14 +106,14 @@
   column-gap: rem(36px);
   color: $gray300;
   text-align: center;
-  padding-top: rem(16px); // 48px
+  padding-top: rem(20px); // 48px
 }
 
 // 회원가입
 .signup {
   @include flexbox($justify: center, $items: center);
   text-align: center;
-  padding-top: rem(8px); //44px
+  padding-top: rem(20px); //44px
   column-gap: rem(9.5px);
 
   &__text {
