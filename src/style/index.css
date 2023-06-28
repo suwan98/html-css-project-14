@@ -333,11 +333,6 @@ a {
   text-decoration: none;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-/* Accessibility Styles */
-=======
->>>>>>> e17002580502508f95713e54ac50a7db58940e88
 .a11yHidden,
 legend {
   overflow: hidden;
@@ -356,14 +351,6 @@ legend {
 body {
   font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   background: #000000;
-<<<<<<< HEAD
-=======
-body {
-  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-  /* font: inherit; */
-  background-color: #000000;
->>>>>>> dev
-=======
 }
 
 /* 유연한 미디어 */
@@ -375,7 +362,6 @@ img {
 video {
   width: 100%;
   height: auto;
->>>>>>> e17002580502508f95713e54ac50a7db58940e88
 }
 
 /* 유연한 미디어 */
@@ -394,33 +380,6 @@ iframe {
   height: 100%;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-.bullet {
-  display: inline-block;
-  width: 0.75rem;
-  height: 0.75rem;
-  border-radius: 50%;
-  background: #898989;
-}
-.bullet--white {
-  background: #FFFFFF;
-=======
-/* Accessibility Styles */
-.a11yHidden,
-legend {
-  overflow: hidden;
-  position: absolute !important;
-  clip: rect(0, 0, 0, 0);
-  clip-path: inset(50%);
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-}
-
-/* @forward "sprites"; */
-=======
->>>>>>> e17002580502508f95713e54ac50a7db58940e88
 .button {
   border: 0;
   appearance: none;
@@ -602,20 +561,9 @@ button:focus:not(:focus-visible) {
 
 .layout-lastright {
   position: absolute;
-<<<<<<< HEAD
-  min-width: 3rem;
-  height: 2rem;
-  border-radius: 100%;
-  background-image: url(./../../assets/icon/desktop/d_eyes.svg);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: 100% auto;
->>>>>>> dev
-=======
   right: 0.9375rem;
   top: 60%;
   transform: translateY(-50%);
->>>>>>> e17002580502508f95713e54ac50a7db58940e88
 }
 
 .sns {
@@ -722,8 +670,17 @@ button:focus:not(:focus-visible) {
   }
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+.bullet {
+  display: inline-block;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background: #898989;
+}
+.bullet--white {
+  background: #FFFFFF;
+}
+
 .rating {
   font-style: italic;
   padding-right: 0.625rem;
@@ -777,42 +734,54 @@ button:focus:not(:focus-visible) {
   height: rem(30px);
   border-radius: 50%;
   background: #FF153C;
-=======
-.menu__live::before {
-=======
-.bullet {
-  display: inline-block;
-  width: 0.75rem;
-  height: 0.75rem;
-  border-radius: 50%;
-  background: #898989;
-}
-.bullet--white {
-  background: #FFFFFF;
 }
 
-.arrowRight::after {
->>>>>>> e17002580502508f95713e54ac50a7db58940e88
+.menu__live::before {
   content: "";
   display: inline-block;
-  width: rem(70px);
-  height: rem(70px);
-  transform: rotate(45deg);
-  border-top: 0.1rem solid #333;
-  border-right: 0.1rem solid #333;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-55%);
+}
+@media (min-width: 1280px) {
+  .menu__live::before {
+    width: 2.125rem;
+    height: 2.125rem;
+    background: url(./../../assets/icon/desktop/d_live.svg) no-repeat;
+  }
+}
+@media (max-width: 1279px) {
+  .menu__live::before {
+    width: 1.25rem;
+    height: 1.25rem;
+    background: url(./../../assets/icon/tablet/t_live.svg) no-repeat;
+  }
 }
 
-.i-adult {
-  position: absolute;
-  top: 0;
-  right: 0;
-  font-size: rem(15px);
-  padding: 5px;
-  display: inline-block;
-  width: rem(30px);
-  height: rem(30px);
-  border-radius: 50%;
-  background: #FF153C;
+@media (min-width: 1280px) {
+  .menu__live:hover::before {
+    width: 2.125rem;
+    height: 2.125rem;
+    background: url(./../../assets/icon/desktop/d_live_hover.svg) no-repeat;
+  }
+}
+@media (max-width: 1279px) {
+  .menu__live:hover::before {
+    width: 1.25rem;
+    height: 1.25rem;
+    background: url(./../../assets/icon/tablet/t_live_hover.svg) no-repeat;
+  }
+}
+
+@media (min-width: 1280px) {
+  .menu__text {
+    margin-left: 2.75rem;
+  }
+}
+@media (max-width: 1279px) {
+  .menu__text {
+    margin-left: 1.875rem;
+  }
 }
 
 .login {
@@ -1493,30 +1462,16 @@ fieldset {
   .onboading__title {
     font-size: 1rem;
   }
-<<<<<<< HEAD
->>>>>>> dev
-}
-
-.appHeader {
-=======
 }
 
 .regist-container {
   padding-top: 4.375rem;
->>>>>>> e17002580502508f95713e54ac50a7db58940e88
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
   color: #6B6B6B;
   transition: all 0.3s;
-<<<<<<< HEAD
-<<<<<<< HEAD
-  background: #000000;
-=======
->>>>>>> dev
-=======
->>>>>>> e17002580502508f95713e54ac50a7db58940e88
 }
 @media (min-width: 1280px) {
   .regist-container {
@@ -2349,14 +2304,10 @@ body {
   background: #565656;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 .appHaeder {
   width: 100%;
 }
 
-=======
->>>>>>> e17002580502508f95713e54ac50a7db58940e88
 .appMain .mainThumbnail {
   color: #FFFFFF;
   position: relative;
@@ -2387,6 +2338,7 @@ body {
     padding-right: 4.375rem;
     height: 53.4375rem;
     background: url(./../../assets/images/figma-desktop/d_banner-img.png);
+    width: 100%;
   }
   .appMain .mainThumbnail .thumbnailWrapper {
     bottom: 25%;
@@ -2935,7 +2887,7 @@ body {
     background-image: url(./../../assets/images/figma-desktop/쇼미더머니.png);
   }
   .appMain .section3__image7 {
-    background-image: url(./../../assets/images/figma-desktop/러브캐쳐\ \(1\).png);
+    background-image: url(./../../assets/images/figma-desktop/d_러브캐처.png);
   }
   .appMain .section3__imageTitle {
     margin-top: 1.125rem;
@@ -3206,7 +3158,7 @@ body {
     background-image: url(./../../assets/images/figma-desktop/전체관람가.png);
   }
   .appMain .section5__image2 {
-    background-image: url(./../../assets/images/figma-desktop/러브캐쳐-1.png);
+    background-image: url(./../../assets/images/figma-desktop/only-tving2.png);
   }
   .appMain .section5__image3 {
     background-image: url(./../../assets/images/figma-desktop/환승연애2.png);
@@ -3246,7 +3198,7 @@ body {
     background-image: url(./../../assets/images/figma-desktop/전체관람가.png);
   }
   .appMain .section5__image2 {
-    background-image: url(./../../assets/images/figma-desktop/러브캐쳐-1.png);
+    background-image: url(./../../assets/images/figma-desktop/only-tving2.png);
   }
   .appMain .section5__image3 {
     background-image: url(./../../assets/images/figma-desktop/환승연애2.png);
@@ -3444,10 +3396,6 @@ body {
   }
 }
 
-<<<<<<< HEAD
-=======
->>>>>>> dev
-=======
 .appMain {
   color: #FFFFFF;
   display: flex;
@@ -3486,6 +3434,7 @@ body {
 .appMain .form-input__userEmailConfirm {
   border-radius: 4px;
   width: 100%;
+  border: 0;
   background: #404040;
   font-weight: 600;
   color: #898989;
@@ -3531,6 +3480,7 @@ body {
   color: #898989;
 }
 .appMain .findSelf__button {
+  border: 0;
   font-weight: 600;
   border-radius: 4px;
 }
@@ -3542,6 +3492,7 @@ body {
     padding-right: 4.375rem;
   }
   .appMain .findIdTitle {
+    padding-top: 10.625rem;
     padding-bottom: 3.75rem;
     font-size: 2.3125rem;
   }
@@ -3991,5 +3942,4 @@ body {
   text-decoration: underline;
 }
 
->>>>>>> e17002580502508f95713e54ac50a7db58940e88
 /*# sourceMappingURL=index.css.map */
