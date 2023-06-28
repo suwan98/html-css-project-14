@@ -77,43 +77,47 @@
 
 ***전체 페이지를 반응형으로 구성했습니다.***
 
-### **로그인 페이지**
+> 로그인페이지 모바일 뷰
 <img width="320" src="https://github.com/suwan98/html-css-project-14/assets/74893676/1583e730-5ee4-45a0-b9cd-2a80e8bedaa6.png" />
+> 로그인페이지 태블릿 뷰
 <img width="700" src="https://github.com/suwan98/html-css-project-14/assets/74893676/e5ea8284-276e-432e-af0d-7d584702ff41.png" />
+> 로그인페이지 데스크탑 뷰
 <img width="1200" src="https://github.com/suwan98/html-css-project-14/assets/74893676/77ef73d5-3f7f-4df3-97ff-d1f3f01db90c.png" />
-- form의 input(id, password)과 button 영역을 컴포넌트화 시켰습니다.
-- button component에는 로그인, 온보딩 시작 버튼, 확인, 테두리 없는 버튼의 네 가지 스타일을 세분화시켰습니다.
+* form의 input(id, password)과 button 영역을 컴포넌트화 시켰습니다.
+* button component에는 로그인, 온보딩 시작 버튼, 확인, 테두리 없는 버튼의 네 가지 스타일을 세분화시켰습니다.
  
-### **온보딩 페이지**
+### 온보딩페이지
+> 온보딩페이지 모바일 뷰
 <img width="320" src="https://github.com/suwan98/html-css-project-14/assets/74893676/8a0c563b-5ab6-4f9d-ad99-4c35c0c7b841.png" />
+> 온보딩페이지 태블릿 뷰
 <img width="700" src="https://github.com/suwan98/html-css-project-14/assets/74893676/3b94aeac-5229-4a2e-96f0-f8401eb3a962.png" />
+> 온보딩페이지 데스크탑 뷰
 <img width="1200" src="https://github.com/suwan98/html-css-project-14/assets/74893676/bf9664c5-b50a-4c50-be8f-fd7f9ca0e7d6.png" />
-- 온보딩 영역의 첫 번째 섹션은 백그라운드 이미지를 두 개 겹침으로써 그라데이션 효과를 완성했습니다.
-- 두 번째, 세 번째 영역의 콘텐츠들은 애니메이션 효과를 통해 무한 슬라이드를 완성했습니다.
-- hover시 애니메이션이 멈추며 사진 크기가 커집니다.
+* 온보딩 영역의 첫 번째 섹션은 백그라운드 이미지를 두 개 겹침으로써 그라데이션 효과를 완성했습니다.
+* 두 번째, 세 번째 영역의 콘텐츠들은 애니메이션 효과를 통해 무한 슬라이드를 완성했습니다.
+* hover시 애니메이션이 멈추며 사진 크기가 커집니다.
 
-### **헤더**
-<img width="320" src="https://github.com/suwan98/html-css-project-14/assets/74893676/b4be25c3-2c66-4664-b019-efc14b9ee915.png" />
-<img width="700" src="https://github.com/suwan98/html-css-project-14/assets/74893676/2f592a83-bb2f-4f8c-b483-fed829e00947.png" />
+### 헤더
+> 헤더 simple1
+<img width="1200" src="https://github.com/suwan98/html-css-project-14/assets/74893676/bf450509-7f84-469f-aea9-845db7719b9b.png" />
+> 헤더 simple2
+<img width="1200" src="https://github.com/suwan98/html-css-project-14/assets/74893676/9987a456-3f8d-4a4c-8bf9-a92c95df4640.png" />
+> 헤더 simple3
 <img width="1200" src="https://github.com/suwan98/html-css-project-14/assets/74893676/6e5e006b-2490-43dc-8669-4f132f01cb02.png" />
-- 헤더는 simple1, simple2, default type 으로 나뉩니다.
-- 기본 구조는 default type에 맞춰 제작되었으며 class 탈부착을 통해 simple type으로 변화가 가능합니다.
+* 헤더는 simple1, simple2, default type 으로 나뉩니다.
+* 기본 구조는 default type에 맞춰 제작되었으며 class 탈부착을 통해 simple type으로 변화가 가능합니다.
 
-### **푸터**
+### 푸터
+> 푸터 모바일 뷰
 <img width="320" src="https://github.com/suwan98/html-css-project-14/assets/74893676/a3cc91bb-9468-4cf6-be54-623b33c31c75.png" />
+> 푸터 태블릿 뷰
 <img width="700" src="https://github.com/suwan98/html-css-project-14/assets/74893676/d08da4d6-227d-43b9-9337-7db2a0ac6263" />
+> 푸터 데스크탑 뷰
 <img width="1200" src="https://github.com/suwan98/html-css-project-14/assets/74893676/e56e8e80-4596-4688-b77d-7d2edd839d58.png" />
-- 푸터는 데스크탑/태블릿이 유사하고 모바일에서 변화가 있습니다. 
-- 따라서 푸터 내비게이션을 제외한 비즈니스 정보 영역을 모바일에서는 숨김 처리하여 반응형을 완성했습니다.
-- 푸터 sns 영역은 이미지 sprite 기법을 활용해 리소스 로딩 속도를 최적화하고자 했습니다.
+* 푸터는 데스크탑/태블릿이 유사하고 모바일에서 변화가 있습니다. 
+* 따라서 푸터 내비게이션을 제외한 비즈니스 정보 영역을 모바일에서는 숨김 처리하여 반응형을 완성했습니다.
+* 푸터 sns 영역은 이미지 sprite 기법을 활용해 리소스 로딩 속도를 최적화하고자 했습니다.
 
-
-## **회원가입**
-<img src="./src/assets/readme-images/soobin/JOIN_mobile.png" width="15%">
-<img src="./src/assets/readme-images/soobin/JOIN_tablet.png" width="30%">
-<img src="./src/assets/readme-images/soobin/JOIN_desktop.png" width="40%">
-
-* 가입하려는 사용자의 정보를 입력할 수 있고, 가상 선택자를 활용해 체크박스를 커스텀하였습니다.
   
 
 ## **프로필 선택**
