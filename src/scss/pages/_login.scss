@@ -119,11 +119,18 @@ fieldset {
 
   &__label {
     background: url(./../../assets/icon/desktop/d_check.svg) no-repeat;
-    padding-left: rem(26px);
+    padding-left: rem(24px);
     background-position: left;
     background-size: contain;
     color: $gray500;
     font-weight: 600;
+
+    @include desktop{
+      padding-left: rem(30px);
+    }
+    @include mobile {
+      padding-left: rem(20px);
+    }
   }
 }
 

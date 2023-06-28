@@ -910,11 +910,21 @@ fieldset {
 }
 .autoLogin__label {
   background: url(./../../assets/icon/desktop/d_check.svg) no-repeat;
-  padding-left: 1.625rem;
+  padding-left: 1.5rem;
   background-position: left;
   background-size: contain;
   color: #6B6B6B;
   font-weight: 600;
+}
+@media (min-width: 1280px) {
+  .autoLogin__label {
+    padding-left: 1.875rem;
+  }
+}
+@media (max-width: 767px) {
+  .autoLogin__label {
+    padding-left: 1.25rem;
+  }
 }
 
 .findInfo {
