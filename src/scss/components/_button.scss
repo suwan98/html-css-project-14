@@ -69,6 +69,7 @@
 
   &--meet-image {
     background-size: cover;
+    transition: all 0.3s;
 
     @include desktop {
       width: rem(63px);
@@ -91,6 +92,7 @@
 
   // 데스크탑
   @include desktop {
+    transition: all 0.3s;
     // 확인
     &--ok {
       width: rem(732px);
@@ -107,7 +109,7 @@
 
   // 태블릿
   @include tablet {
-
+    transition: all 0.3s;
     // 확인
     &--ok {
       width: rem(416px);
@@ -124,7 +126,7 @@
 
   // 모바일
   @include mobile {
-
+    transition: all 0.3s;
     // 확인
     &--ok {
       width: rem(288px);
