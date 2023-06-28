@@ -3,19 +3,20 @@
 // 버튼 공통 스타일
 .button {
   border: 0;
-  outline: 0;
+  appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  appearance: none;
   cursor: pointer;
   background: transparent;
 
   // 로그인 버튼
   &--login {
-    height: rem(50px);
+    width: 100%;
+    height: 3.3em;
     border-radius: 4px;
     background: $red;
     color: $white;
+    font-size: 1.1em;
   }
 
   // 로그인 버튼 호버
@@ -56,58 +57,97 @@
     color: $white;
   }
 
-  // 데스크탑
-  @include desktop {
-    // 로그인
-    &--login {
-      width: rem(732px);
+  // 새로운 티빙을 만나보세요!
+  &--meet {
+    border-radius: 4px;
+    color: $white;
+    background: $light-red;
+    @include flexbox($items: center, $justify: space-between);
+    font-weight: 600;
+    line-height: 150%;
+  }
+
+  &--meet-image {
+    background-size: cover;
+    transition: all 0.3s;
+
+    @include desktop {
+      width: rem(63px);
+      height: rem(67px);
+      background: url(./../../assets/icon/desktop/d_simbol.svg) no-repeat;
     }
 
+    @include tablet {
+      width: rem(36px);
+      height: rem(48px);
+      background: url(./../../assets/icon/tablet/t_simbol.svg) no-repeat;
+    }
+
+    @include mobile {
+      width: rem(26px);
+      height: rem(34px);
+      background: url(./../../assets/icon/mobile/m_simbol.svg) no-repeat;
+    }
+  }
+
+  // 데스크탑
+  @include desktop {
+    transition: all 0.3s;
     // 확인
     &--ok {
       width: rem(732px);
     }
 
-    // 선 없음
-    // &--no-border {
-    //   width: rem(110px);
-    // }
+    // 새로운 티빙을 만나보세요!
+    &--meet {
+      width: rem(434px);
+      height: rem(67px);
+      padding: 8px 64px 8px 8px;
+      font-size: rem(20px);
+    }
   }
 
   // 태블릿
   @include tablet {
-    // 로그인
-    &--login {
-      width: rem(416px);
-    }
-
+    transition: all 0.3s;
     // 확인
     &--ok {
       width: rem(416px);
     }
 
-    // 선 없음
-    // &--no-border {
-    //   width: rem(82px);
-    // }
+    // 새로운 티빙을 만나보세요!
+    &--meet {
+      width: rem(283px);
+      height: rem(48px);
+      padding: 0px 44px 0px 8px;
+      font-size: rem(16px);
+    }
   }
 
   // 모바일
   @include mobile {
-    // 로그인
-    &--login {
-      width: rem(288px);
-    }
-
+    transition: all 0.3s;
     // 확인
     &--ok {
       width: rem(288px);
     }
 
-    // 선 없음
-    // &--no-border {
-    //   @include paddingX(12px);
-    //   width: rem(48px);
-    // }
+    // 새로운 티빙을 만나보세요!
+    &--meet {
+      width: rem(188px);
+      height: rem(34px);
+      padding: 0px 16px 0px 8px;
+      font-size: rem(12px);
+    }
   }
+}
+
+// 키보드로 버튼에 포커스 시
+button:focus-visible {
+  outline: 1px solid #fff;
+}
+
+// 마우스, 터치로 버튼에 포커스 시
+button:focus:not(:focus-visible) {
+  outline: none;
 }

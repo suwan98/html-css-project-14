@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TAING</title>
+  <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+  <link rel="preload" as="style" crossorigin
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.7/dist/web/static/pretendard.css" />
+  <link rel="stylesheet" href="./../style/index.css" />
+</head>
+
+<body>
+  <header class="appHeader">
+    <h1 class="logo">
+      <a href="/" class="logo__link" aria-label="TVING"></a>
+    </h1>
+
+    <nav class="menu visibleHidden">
+      <a class="menu__link menu__live" href="/"><span class="menu__text">실시간</span></a>
+      <a class="menu__link" href="/">TV프로그램</a>
+      <a class="menu__link" href="/">영화</a>
+      <a class="menu__link menu__paramount" href="/" aria-label="paramount"></a>
+    </nav>
+
+    <aside class="menu__mypage visibleHidden">
+      <button type="button" class="button button--search"></button>
+      <button type="button" class="button button--profile"></button>
+    </aside>
+  </header>
+
+  <main class="find-pw">
+    <h2 class="find-pw-title">비밀번호 찾기</h2>
+    <p class="find-pw-text">아이디 확인 후 등록된 이메일 주소로 비밀번호 재설정을 위한 인증 메일이 발송됩니다. 이메일을 확인하여 12시간 이내에 비밀번호 재설정을 완료해주세요.</p>
+
+    <form class="login-form">
+      <fieldset>
+        <!-- 접근성 고려 - ally -->
+        <legend class="a11yHidden">회원 로그인 폼</legend>
+
+        <!-- 아이디 입력 서식 -->
+        <div class="form-input">
+          <!-- 접근성 고려 - ally -->
+          <label for="userId" class="a11yHidden">아이디</label>
+          <input id="userId" name="userId" class="form-input__input input__find-pw" type="text" placeholder="아이디"
+            required />
+          <!-- 버튼 active 활성화 -->
+          <!-- <button id="id-close" class="button icon-close"></button> -->
+        </div>
+
+        <button type="submit" class="button button--login button---pw">확인</button>
+      </fieldset>
+    </form>
+  </main>
+
+  <footer class="appFooter">
+    <section class="footer-section">
+      <nav class="footer-nav">
+        <a class="nav__item" href="/">고객센터</a>
+        <a class="nav__item" href="/">이용약관</a>
+        <a class="nav__item" href="/">개인정보처리방침</a>
+        <a class="nav__item" href="/">청소년 보호정책</a>
+        <a class="nav__item" href="/">법적고지</a>
+        <a class="nav__item" href="/">이벤트</a>
+        <a class="nav__item" href="/">인재채용</a>
+      </nav>
+      <div class="buisness-wrap">
+        <p><span>대표이사 : YANG JIEUL</span><span><a class="link__buisiness" href="/">사업자정보확인</a></span><span>사업자등록번호 :
+            188-88-01893</span><span>통신판매신고번호 : 2020-서울마포-3641호</span></p>
+        <p><span>사업장 : 서울특별시 마포구 상암산로 34, DMC디지털큐브 15층(상암동)</span><span>호스팅사업자 : 씨제이올리브네트웍스(주)</span></p>
+        <p><span><a class="link__inquiry" href="/">고객문의 바로가기</a></span><span>대표메일 : tving@cj.net</span><span>고객센터 :
+            1670-1525(평일 09시~18시)</span></p>
+        <p><span>ENM 시청자 상담실 (편성 문의 및 시청자 의견) : 080-080-0780</span><span>Mnet 고객센터(방송편성문의) : 1855-1631</span></p>
+      </div>
+      <div class="sns">
+        <a class="youtube" href="/" aria-label="유튜브"></a>
+        <a class="insta" href="/" aria-label="인스타그램"></a>
+        <a class="twitter" href="/" aria-label="트위터"></a>
+        <a class="facebook" href="/" aria-label="페이스북"></a>
+      </div>
+      <p class="copyright">Copyright © 주식회사 티빙 All right reserved.</p>
+    </section>
+  </footer>
+</body>
+
+</html>

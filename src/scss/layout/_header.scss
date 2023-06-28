@@ -5,12 +5,10 @@
   @include flexbox($items: center);
   position: fixed;
   z-index: 200;
-  width: calc(100vw - $scrollbar-width);
+  width: 100vw;
   color: $gray200;
   transition: all 0.3s;
-
   @include desktop {
-    @include containerMax(1920px);
     @include paddingX(70px);
     height: rem(100px);
     column-gap: rem(52px);
@@ -23,7 +21,6 @@
     column-gap: rem(28px);
 
   }
-
   @include mobile {
     @include containerMax(768px);
     @include paddingX(16px);

@@ -3,19 +3,25 @@
 // input 공통 스타일
 .form-input {
   &__input {
+    width: 100%;
+    height: 4em;
     appearance: none;
     outline: none;
     border: 0;
-    display: block;
     border-radius: 4px;
-    height: rem(54px);
     background: $dark-bg-2;
     @include paddingX(16px);
     color: $white;
   }
 
+  // icon-hide를 위한 위치 설정
+  &__pwd {
+    position: relative;
+  }
+
   &__input::placeholder {
     color: $gray600;
+    font-size: 1.2em;
   }
 
   // input focus
@@ -27,52 +33,33 @@
   &__input:active::placeholder {
     color: $white;
   }
-
-  // 데스크탑
-  @include desktop {
-    &__input {
-      width: rem(732px);
-    }
-  }
-
-  // 태블릿
-  @include tablet {
-    &__input {
-      width: rem(416px);
-    }
-  }
-
-  // 모바일
-  @include mobile {
-    &__input {
-      width: rem(288px);
-    }
-  }
 }
-
-// .icon-close {
-//   position: absolute;
-//   min-width: 3rem;
-//   height: 2rem;
-//   border-radius: 100%;
-//   background-image: url(./../../assets/icon/desktop/d_close.svg);
-//   background-position: center center;
-//   background-repeat: no-repeat;
-//   background-size: 100% auto;
-// }
 
 .icon-hide {
-  position: absolute;
-  min-width: 3rem;
-  height: 2rem;
   border-radius: 100%;
-  background-image: url(./../../assets/icon/desktop/d_eyes.svg);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: 100% auto;
+
+  @include desktop {
+    min-width: rem(36px);
+    height: rem(36px);
+    background-image: url(./../../assets/icon/desktop/d_eyes.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  @include tablet {
+    min-width: rem(20px);
+    height: rem(20px);
+    background-image: url(./../../assets/icon/tablet/t_eyes.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
 }
 
-// icon-hide.layout-lastright {
-//   margin-left: auto;
-//   margin-right: 2rem;
-// }
+.layout-lastright {
+  position: absolute;
+  right: rem(15px);
+  top: 55%;
+  transform: translateY(-50%);
+}

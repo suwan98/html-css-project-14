@@ -1,0 +1,9 @@
+.arrowRight::after {
+    content: '';
+    display: inline-block;
+    width: rem(70px);
+    height: rem(70px);
+    transform: rotate(45deg);
+    border-top: 0.1rem solid #333;
+    border-right: 0.1rem solid #333;
+}

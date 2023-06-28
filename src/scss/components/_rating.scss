@@ -1,0 +1,23 @@
+@use './../utils' as *;
+
+
+// 순위 컴포넌트
+.rating {
+    font-style: italic;
+    padding-right: rem(10px);
+    font-family: Noto Sans KR;
+    font-weight: 700;
+    color: $white;
+    float: left;
+
+    @include desktop {
+        font-size: rem(70px);
+    }
+    @include tablet {
+        font-size: rem(46px);
+    }
+    @include mobile {
+        font-size: rem(34px);
+    }
+  }
+  

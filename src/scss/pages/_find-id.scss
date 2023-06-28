@@ -1,0 +1,253 @@
+@use './../utils' as *;
+
+//메인 컨텐츠 공통영역
+.appMain {
+    color : $white;
+    @include flexbox($items:center, $justify:center, $direction:column);
+
+    .findIdTitle {
+        font-weight: 700;
+        line-height: 140%;
+        color: $white;
+        text-align: center;
+    }
+
+    .form-input {
+        color: $white;
+
+        &__FormSummary {
+            @include flexbox(column);
+            font-weight: 600;
+        }
+        &__emailCheck {
+            color : $gray400;
+        }
+
+        &__input {
+            border-radius: 4px;
+            background: $dark-black;
+            width: 100%;
+            border: 0;
+            &::placeholder {
+                color : $gray600;
+            }
+        }
+        &__userEmailConfirm {
+            border-radius: 4px;
+            width: 100%;
+            border: 0;
+            background: $gray700;
+            font-weight: 600;
+            color : $gray400;
+        }
+    }
+
+    .and {
+        position: relative;
+        width: 100%;
+        text-align: center;
+        color : $gray700;
+        &::before {
+            position: absolute;
+            content: '';
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            display: inline-block;
+            width: 45%;
+            height: 1px;
+            background: $gray700;
+        }
+        &::after {
+            position: absolute;
+            content: '';
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            display: inline-block;
+            width: 45%;
+            height: 1px;
+            background: $gray700;
+        }
+    } 
+
+    .findSelf {
+        @include flexbox(column);
+
+        &__sur {
+            font-weight: 600;
+        }
+        &__sub {
+            color: $gray400;
+        }
+        &__button {
+            border: 0;
+            font-weight: 600;
+            border-radius: 4px;
+        }
+    }
+
+    // 데스크탑 영역
+    @include desktop {
+        @include containerMax(1920px);
+        @include paddingX(70px);
+
+        .findIdTitle{
+            padding-top: rem(170px);
+            padding-bottom: rem(60px);
+            font-size: rem(37px);
+        }
+        .form-input {
+            
+            &__FormSummary {
+                padding-bottom: rem(24px);
+                font-size: rem(28.43px);
+            }
+            &__emailCheck {
+                padding-top: rem(12px);
+            }
+
+            &__input {
+                padding: 0px 454px 0px 24px;
+                height : rem(86px);
+                margin-bottom: rem(36px);
+                &::placeholder {
+                    font-size: rem(28.43px);
+                }
+            }
+            &__userEmailConfirm {
+                height: rem(96px);
+                font-size: rem(28.43px);
+            }
+        }
+        .and {
+            @include paddingY(60px);
+            &::before {
+                content: '';
+            }
+        } 
+
+        .findSelf {
+            @include flexbox(column);
+            padding-bottom: rem(140px);
+
+            &__sur {
+                font-size: rem(28.43px);
+                font-weight: 600;
+                padding-bottom: rem(12px);
+            }
+            &__sub {
+                color: $gray400;
+                font-size: rem(21.328px);
+                padding-bottom: rem(36px);
+            }
+            &__button {
+                height: rem(86px);
+                font-size: rem(28.43px);
+                font-weight: 600;
+                border-radius: 4px;
+            }
+        }
+    }
+
+    // 태블릿 영역
+    @include tablet{ 
+        @include containerMax(1280px);
+        @include paddingX(40px);
+
+        .findIdTitle{
+            padding-bottom: rem(24px);
+            padding-top: rem(44px);
+            font-size: rem(28px);
+        }
+        .form-input {            
+            &__FormSummary {
+                padding-bottom: rem(24px);
+            }
+            &__input {
+                padding : 0 20px 0 16px;
+                height : rem(54px);
+                margin-bottom: rem(24px);
+                border: 0;
+            }
+            &__emailCheck{
+                padding-top: rem(12px);
+            }
+            &__userEmailConfirm {
+                height: rem(50px);
+            }
+        }
+        .and {
+            @include paddingY(45px);
+
+        } 
+
+        .findSelf {
+            padding-bottom: rem(70px);
+
+            &__sur {
+                padding-bottom: rem(12px);
+            }
+            &__sub {
+                padding-bottom: rem(36px);
+            }
+            &__button {
+                height: rem(50px);
+            }
+        }
+    }
+
+    //모바일 영역
+    @include mobile{
+        @include containerMax(768px);
+        @include paddingX(16px);
+        font-size: rem(12px);
+        .findIdTitle{
+            color: transparent;
+            padding-bottom: rem(12px);
+            &::before {
+                content : 'TVING ID 로그인';
+                @include flexbox($items:center, $justify:center);
+                padding-top: rem(44px); 
+                font-size: rem(16px);
+                color : $white;
+            }
+        }
+        .form-input {            
+            &__FormSummary {
+                padding-bottom: rem(16px);
+            }
+            &__input {
+                padding : 0 20px 0 16px;
+                height : rem(46px);
+                margin-bottom: rem(20px);
+            }
+            &__emailCheck{
+                padding-top: rem(12px);
+            }
+            &__userEmailConfirm {
+                height: rem(50px);
+                border: 0;
+            }
+        }
+        .and {
+            @include paddingY(40px);
+
+        } 
+
+        .findSelf {
+            padding-bottom: rem(70px);
+
+            &__sur {
+                padding-bottom: rem(12px);
+            }
+            &__sub {
+                padding-bottom: rem(16px);
+            }
+            &__button {
+                height: rem(42px);
+            }
+        }
+
+    }
+}
